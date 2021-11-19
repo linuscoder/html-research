@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>wed</title>
+        <style>
+            #container{  
+                margin-top: 2rem;
+                border-radius: 0.5rem;
+                border-width: 0.5rem;
+                border-color: red;
+                border-style:solid;
+                padding: 2rem;
+            }
+        
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            button{
+                width: 100%;
+            }
+        
+            label {
+                display: block;
+            }
+
+            #container div:not(:first-child){
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"> 
+            <div>
+                <label for="">User</label> 
+                <input type="text"> 
+            </div>
+            <div>
+                <label for="">Password</label> 
+                <input type="password"> 
+            </div>
+            <div>
+                <button>Login</button>  
+            </div> 
+        </div> 
+    </body>
+</html>

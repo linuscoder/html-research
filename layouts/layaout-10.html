@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        header{
+            background-color: skyblue;
+            height: 40px;
+        }
+        .content{
+            flex: 1;
+            background-color: black;
+            display: flex;
+        }
+        .footer-2{
+            height: 80px;
+            background-color: red;
+            display: flex;
+            flex-direction: row;
+        }
+        footer{
+            background-color: orange;
+            height: 40px;
+        }
+        .footerv2{
+            background-color: green;
+            flex: 2;
+        }
+        .footerv3{
+            background-color: pink;
+            flex: 1;
+        }
+        .left{
+            background-color: red;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .right{
+            background-color: blue;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+        article{
+            background-color: #D8CAE3;
+            flex: 1;
+        }
+        .box{
+            background-color: #A7C06F;
+            flex: 2;
+        }
+        .up{
+            background-color: #F0C753;
+            flex: 2;
+        }
+        .down{
+            background-color: gray;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <aside class="content">
+        <aside class="left">
+            <article></article>
+            <aside class="box"></aside>
+        </aside>
+        <section class="right">
+            <aside class="up"></aside>
+            <section class="down"></section>
+        </section>
+    </aside>
+    <section class="footer-2">
+        <aside class="footerv2">
+
+        </aside>
+        <section class="footerv3">
+
+        </section>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
