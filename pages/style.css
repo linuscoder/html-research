@@ -1,0 +1,35 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    display: flex;
+    background-color: green;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    border-bottom: 1px solid black;
+    height: 1.75rem;
+    margin-top: 2rem;
+    padding-left: 4rem;
+}
+a{
+    margin-right: 3rem;
+    border: 1px solid red;
+    background-color: royalblue;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+div:hover{
+    background-color: orange;
+    color: white;
+}
+#active{
+    background-color: green;
+    border-bottom: 1px solid green;
+    margin-bottom: -1px;
+}
