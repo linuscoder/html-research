@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-color: #104B75;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content{
+            background-color: #2C83B5;
+            width: 21%;
+            padding: 1.35rem;
+            box-shadow: 1px 1px 7px 7px #0f3a58;
+        }
+        p{
+            font-size: 1.90rem;
+            color: #A7CAD5;
+            text-align: center;
+            margin: 1.75rem 0 1rem 0;
+        }
+        a{
+            color: #A7CAD5;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        input{
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.65rem;
+            border-radius: 4px;
+            border: 0;
+        }
+        button{
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #BAE1F7;
+            color: black;
+            border: 0;
+            border-radius: 4px;
+            margin: 1.1rem 0;
+        }
+        ::placeholder{
+            color: #EAE5E8;
+            text-align: center;
+        }
+        .a{
+            margin-top: 0.5rem;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        .box1{
+            margin-bottom: 2rem; 
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div>
+            <p>Bienvenido</p>
+        </div>
+        <div>
+            <input type="text" placeholder="Usuario">
+        </div>
+        <div>
+            <input type="password" placeholder="Contraseña">
+        </div>
+        <div>
+            <button>Login</button>
+        </div>
+        <div class="box">
+            <a href="#">Perdiste tu contraseña?</a>
+        </div>
+        <div class="box box1">
+            <span><a href="#">No tienes cuenta?</a> <a href="#">Registrate</a></span>
+        </div>
+    </div>
+    <a href="#" class="a">volver</a>
+</body>
+</html>

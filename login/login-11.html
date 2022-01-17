@@ -1,36 +1,74 @@
-<html>
-    <head>
-        <title>Login</title>
-        <style>
-            #container {
-                margin-top: 2rem;
-                border-radius: 0.5rem;
-                border-width: 0.5rem;
-                border-color: blue;
-                border-style:solid;
-                padding: 2rem;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            flex-direction: column;
+        }
+        #container{
+            background-color: rgba(0, 0, 255, 0.555);
+            padding: 2.5rem;
+            width: 15%;
+        }
+        button{
+            width: 109%;
+            background-color: #AEE2FF;
+            border: 0;
+            padding: 0.5rem;
+            border-radius: 3px;
+            margin-bottom: 1rem;
+        }
+        h2{
+            text-align: center;
+            color: #AEE2FF;
+            margin-top: 0;
+        }
+        input{
+            padding: 0.5rem;
+            border: 1px solid #95DAC9;
+            border-radius: 3px;
+            width: 100%;
+        }
+        ::placeholder{
+            color: #a4a3a7;
 
-            body{
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-            }
-
-            button{
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-       <div id="container"> 
-           <label for="">User</label> <br>
-           <input type="text"> <br> <br>
-
-           <label for="">Password</label> <br>
-           <input type="password"> <br> <br> <br>
-
-           <button>Login</button> 
-       </div> 
-    </body>
+        }
+        span{
+            color: #BAE1F7;
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Bienvenido</h2>
+        <div>
+            <input type="text"placeholder="Usuario">
+        </div><br>
+        <div>
+            <input type="password"placeholder="Contraseña">
+        </div>
+        <br>
+        <button>Login</button>
+        <span>perdiste un contraseña?</span><br>
+        <span> No tienes cuenta? registrate</span>
+    </div>
+        <p>volver</p>
+</body>
 </html>

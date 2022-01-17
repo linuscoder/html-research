@@ -6,127 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            box-sizing: border-box;
-        }
         html,body{
-            height: 100%;
             margin: 0;
+            height: 100%;
         }
         body{
             display: flex;
-            background-image: url(../img/interbank.jpeg);
-            background-size: cover;
-            justify-content: space-between;
-            margin-top: 4.5rem;
-            margin-right: 4.5rem;
-            align-items: flex-start;
+            background-image:linear-gradient(to right,#4185F4,green);
+            justify-content: center;
+            align-items: center;
         }
-        .container{
-            width: 28%;
-            margin-left: 4.5rem;
-            box-shadow: 1px 1px 50px rgb(0 0 0 / 78%);
-            border-radius: 25px 0 25px 0;
+        #container{
+            border: 2px solid red;
+            padding: 2rem;
+            background-color: white;
         }
         input{
+            background-color: cyan;
             border: 0;
-            border-bottom: 1px solid #D4D4D5;
-            margin-left: 0.75rem;
-            width: 100%;
         }
         button{
-            width: 52%;
-            background-color: green;
-            padding: 0.75rem;
-            border: 0;
-            border-radius: 3px;
-            color: white;
-            margin-top: 2rem;
-            margin-left: 4.5rem;
-        }
-        .actions{
-            padding: 0.75rem;
-            border-radius: 0 0 25px 0;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        .box1{
-            padding-top: 3rem;
-        }
-        .box2{
-           margin-top: 1rem;
-           display: flex;
-           gap: 1rem;
-        }
-        .box3{
+            width: 100%;
             margin-top: 1rem;
+            border: 0;
+            background-color: gray;
+            border-radius: 7px;
+        }
+        label{
+            display: block;
         }
         img{
-            width: 205px;
-            height: 38px;
-        }
-        ::placeholder{
-            color: #D4D4D5;
-        }
-        .up{
-            border-radius: 25px 0;
-            background-color: white;
-            padding: 1.5rem;
-            z-index: 1;
-            position: relative;
-        }
-        .document-type{
-            flex: 1;
-        }
-        .document-number{
-            flex: 3; 
-        }
-        .down{
-            background: linear-gradient(90deg,rgba(0,78,30,.8),rgba(2,48,70,.8));
-            border-radius: 0 0 25px 0;
-            margin-top: -2rem;
-            padding-top: 2rem;
-        }
-        input[type="checkbox"] {
-            width: auto;
-        }
-        .document-type ::placeholder{
-            color: black;
+            height: 150px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="up">
-            <div class="box1">
-                <input type="password" placeholder="Número de targeta">
-            </div><br>
-            <div class="box2">
-                <div  class="document-type">
-                    <input type="text" placeholder="DNI">
-                </div>
-                <div class="document-number">
-                    <input type="text" placeholder="Número de documento">
-                </div>
-            </div><br>
-            <div class="box3">
-                <input type="password" placeholder="Clave web">
-            </div><br>
-            <input type="checkbox" class="checkbox"> Recordar datos<br>
-            <button>ingresar</button>
+    <div id="container">
+        <img src="../img/user-2.jpeg">
+        <div>
+            <label for="">Username</label>
+            <input type="text">
         </div>
-        <div class="down"> 
-            <div class="actions">
-                <a href="#">Regístrate &nbsp|&nbsp</a> 
-                <a href="#">Olvidé mi clave web &nbsp|&nbsp</a>
-                <a href="#">Ayuda</a>
-            </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password">
         </div>
-    </div>  
-    <div class="image">
-        <img src="../img/interbank.png">
+        <button>Send</button>
     </div>
 </body>
 </html>
