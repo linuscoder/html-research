@@ -1,72 +1,49 @@
-<html>
-    <head>
-        <title>chess</title>
-        <style>
-            #container{
-                margin-top: 0;
-                height: 500px;
-                width: 500px;  
-            }
-            body{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            #container div{
-                border: 3px solid green;
-                display: flex;
-               
-            }
-            p{
-                width: 4rem;
-                height: 3rem;
-                border: 3px solid green;
-                margin: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            #container div:nth-child(-n + 2) span, #container div:nth-last-child(-n +2) span{
-                border-radius: 50%;
-                height: 50%;
-                width: 50%;
-                background-color: red; 
-            }
-            #container div:nth-child(odd) p:nth-child(even){
-                background-color: green;
-            }
-            #container div:nth-child(even) p:nth-child(odd){
-                background-color: green;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            height: 500px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
 
-        </style>
-    </head>
-    <body>
-        <div id="container">
-                <div> 
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-                <div>
-                    <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> <p><span></span></p> 
-                </div>
-        </div>
-    </body>
+        .container * {
+            flex: 1;
+        }
+
+        .container div:not(:last-child) {
+            height: 100%;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        a {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: purple;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="green">Hellow</div>
+        <div class="red">Test</div>
+        <a href="#"></a>
+    </div>
+</body>
 </html>

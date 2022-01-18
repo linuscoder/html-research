@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         *{
             margin: 0;
@@ -14,82 +15,141 @@
             height: 100%;
         }
         body{
-            background-color: #104B75;
+            background-color: #F1F1F1;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            position: relative;
         }
-        .content{
-            background-color: #2C83B5;
-            width: 21%;
-            padding: 1.35rem;
-            box-shadow: 1px 1px 7px 7px #0f3a58;
+        .left{
+            background-color: #FFFFFF;
+            padding: 2rem;
+            width: 130%;
         }
-        p{
-            font-size: 1.90rem;
-            color: #A7CAD5;
-            text-align: center;
-            margin: 1.75rem 0 1rem 0;
-        }
-        a{
-            color: #A7CAD5;
-            text-decoration: none;
-            font-size: 0.85rem;
+        .p{
+            color: #787576;
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
         }
         input{
-            width: 100%;
-            padding: 0.5rem;
-            margin-top: 0.65rem;
-            border-radius: 4px;
+            margin-top: 1rem;
             border: 0;
+            border-bottom: 1px solid #CFCFCF;
+            width: 94%;
+            padding: 0.25rem;
         }
-        button{
-            width: 100%;
-            padding: 0.5rem;
-            background-color: #BAE1F7;
-            color: black;
+        .button{
             border: 0;
-            border-radius: 4px;
-            margin: 1.1rem 0;
+            margin-top: 1rem;
+            background-color: #FF6F04;
+            color: white;
+            padding: 0.5rem;
+            margin-bottom: 2rem;
         }
-        ::placeholder{
-            color: #EAE5E8;
-            text-align: center;
-        }
-        .a{
-            margin-top: 0.5rem;
-        }
-        .box{
+        #container{
             display: flex;
+            flex-direction: row;
+            width: 35%;
             justify-content: center;
+            align-items: center;
         }
-        .box1{
-            margin-bottom: 2rem; 
+        .right{
+            background-image: linear-gradient(to right,#00B6B2,#00AE70);
+            width: 130%;
+            padding: 2rem;
+        }
+        .p-2{
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        a{
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            border: 0;
+            width: 100%;
+            border: 1px solid #00818E;
+            display: block;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        a:not(first-child){
+            margin-top: 1.5rem;
+        }
+        .facebook{
+            background-color: #4A6EA8;
+        }
+        .twitter{
+            background-color: #00ACF0;
+        }
+        .gmail{
+            background-color: #00D6CF;
+            margin-bottom: 4.40rem;
+        }
+        .mt-2{
+            margin-top: 2rem;
+        }
+        img{
+            width: 1rem;
+            vertical-align: middle;
+            position: absolute;
+            left: 0.5rem;
+        }
+        .button-a{
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: #F1F1F1;
+            border: 0;
+        }
+        span{
+            color: gray;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <div>
-            <p>Bienvenido</p>
+    <div id="container">
+        <div class="left">
+            <div>
+                <p class="p">Registrate</p>
+            </div>
+            <div>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div>
+                <input type="text" placeholder="Correo">
+            </div>
+            <div>
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <div>
+                <input type="password" placeholder="Confirma contraseña">
+            </div>
+            <div>
+                <button class="button">Registrarse</button>
+            </div>
         </div>
-        <div>
-            <input type="text" placeholder="Usuario">
-        </div>
-        <div>
-            <input type="password" placeholder="Contraseña">
-        </div>
-        <div>
-            <button>Login</button>
-        </div>
-        <div class="box">
-            <a href="#">Perdiste tu contraseña?</a>
-        </div>
-        <div class="box box1">
-            <span><a href="#">No tienes cuenta?</a> <a href="#">Registrate</a></span>
+        <a href="#" class="button-a"> <span class="material-icons">navigate_next</span></a>
+        <div class="right">
+            <p class="p-2">Iniciar Sesión</p>
+            <div class="mt-2">
+                <a class="facebook">
+                    <img src="../img/facebook-icon.jpeg">
+                    Acceder con Facebook
+                </a>
+                <a class="twitter">
+                    <img src="../img/twitter-icon.png">
+                    Acceder con Twitter
+                </a>
+                <a class="gmail">
+                    <img src="../img/mail-icon.png">
+                    Acceder con Correo
+                </a>
+            </div>
         </div>
     </div>
-    <a href="#" class="a">volver</a>
+
 </body>
 </html>

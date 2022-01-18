@@ -7,126 +7,89 @@
     <title>Document</title>
     <style>
         *{
+            margin: 0;
             box-sizing: border-box;
         }
         html,body{
             height: 100%;
-            margin: 0;
         }
         body{
+            background-color: #104B75;
             display: flex;
-            background-image: url(../img/interbank.jpeg);
-            background-size: cover;
-            justify-content: space-between;
-            margin-top: 4.5rem;
-            margin-right: 4.5rem;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .container{
-            width: 28%;
-            margin-left: 4.5rem;
-            box-shadow: 1px 1px 50px rgb(0 0 0 / 78%);
-            border-radius: 25px 0 25px 0;
+        .content{
+            background-color: #2C83B5;
+            width: 21%;
+            padding: 1.75rem;
+            box-shadow: 1px 1px 7px 7px #0f3a58;
         }
-        input{
-            border: 0;
-            border-bottom: 1px solid #D4D4D5;
-            margin-left: 0.75rem;
-            width: 100%;
-        }
-        button{
-            width: 52%;
-            background-color: green;
-            padding: 0.75rem;
-            border: 0;
-            border-radius: 3px;
-            color: white;
-            margin-top: 2rem;
-            margin-left: 4.5rem;
-        }
-        .actions{
-            padding: 0.75rem;
-            border-radius: 0 0 25px 0;
+        p{
+            font-size: 1.90rem;
+            color: #A7CAD5;
+            text-align: center;
+            margin: 1.75rem 0 1rem 0;
         }
         a{
+            color: #A7CAD5;
             text-decoration: none;
-            color: white;
+            font-size: 0.85rem;
         }
-        .box1{
-            padding-top: 3rem;
+        input{
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.65rem;
+            border-radius: 4px;
+            border: 0;
         }
-        .box2{
-           margin-top: 1rem;
-           display: flex;
-           gap: 1rem;
-        }
-        .box3{
-            margin-top: 1rem;
-        }
-        img{
-            width: 205px;
-            height: 38px;
+        button{
+            width: 100%;
+            padding: 0.5rem;
+            background-color: #BAE1F7;
+            color: black;
+            border: 0;
+            border-radius: 4px;
+            margin: 1.1rem 0;
         }
         ::placeholder{
-            color: #D4D4D5;
+            color: #EAE5E8;
+            text-align: center;
         }
-        .up{
-            border-radius: 25px 0;
-            background-color: white;
-            padding: 1.5rem;
-            z-index: 1;
-            position: relative;
+        .a{
+            margin-top: 0.5rem;
         }
-        .document-type{
-            flex: 1;
+        .box{
+            display: flex;
+            justify-content: center;
         }
-        .document-number{
-            flex: 3; 
-        }
-        .down{
-            background: linear-gradient(90deg,rgba(0,78,30,.8),rgba(2,48,70,.8));
-            border-radius: 0 0 25px 0;
-            margin-top: -2rem;
-            padding-top: 2rem;
-        }
-        input[type="checkbox"] {
-            width: auto;
-        }
-        .document-type ::placeholder{
-            color: black;
+        .box1{
+            margin-bottom: 2rem; 
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="up">
-            <div class="box1">
-                <input type="password" placeholder="Número de targeta">
-            </div><br>
-            <div class="box2">
-                <div  class="document-type">
-                    <input type="text" placeholder="DNI">
-                </div>
-                <div class="document-number">
-                    <input type="text" placeholder="Número de documento">
-                </div>
-            </div><br>
-            <div class="box3">
-                <input type="password" placeholder="Clave web">
-            </div><br>
-            <input type="checkbox" class="checkbox"> Recordar datos<br>
-            <button>ingresar</button>
+    <div class="content">
+        <div>
+            <p>Bienvenido</p>
         </div>
-        <div class="down"> 
-            <div class="actions">
-                <a href="#">Regístrate &nbsp|&nbsp</a> 
-                <a href="#">Olvidé mi clave web &nbsp|&nbsp</a>
-                <a href="#">Ayuda</a>
-            </div>
+        <div>
+            <input type="text" placeholder="Usuario">
         </div>
-    </div>  
-    <div class="image">
-        <img src="../img/interbank.png">
+        <div>
+            <input type="password" placeholder="Contraseña">
+        </div>
+        <div>
+            <button>Login</button>
+        </div>
+        <div class="box">
+            <a href="#">Perdiste tu contraseña?</a>
+        </div>
+        <div class="box box1">
+            <span><a href="#">No tienes cuenta?</a> <a href="#">Registrate</a></span>
+        </div>
     </div>
+    <a href="#" class="a">volver</a>
 </body>
 </html>
