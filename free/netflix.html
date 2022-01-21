@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="../img/N.ico">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../fonts/NetflixSans_W_Rg.woff2);
+            font-weight: 400;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../fonts/NetflixSans_W_Md.woff2);
+            font-weight: 500;
+        }
+        @font-face{
+            font-family: linus;
+            src: url(../fonts/MochiyPopPOne-Regular.ttf);
+        }
+        html,body{
+            height: 100%;
+            font-family: netflix;
+        }
+        body{
+            background-color: #000000;
+        }
+        body div{
+            display: flex;
+            justify-content: center;
+        }
+        .netflix{
+            height: 6.55rem;
+            width: 11.57rem;
+            margin-top: -1.1rem;
+            margin-left: 0.7rem;
+        }
+        p{
+            color: white;
+            font-size: 50.4px;
+            margin-top: 9.9rem;
+            font-weight: unset;
+        }
+        img{
+            height: 9rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            margin: 2.2rem 0.9rem 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            text-decoration: none;
+
+        }
+        .span{
+            color: gray;
+            font-size: 18.72px;
+            margin-top: 0.7rem;
+            text-align: center;
+            font-weight: 400;
+        }
+        .images:hover img{
+            border: 0.15rem solid white;
+        }
+        .images:hover span{
+            color: white;
+        }
+        .images{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <img src="../img/netflix.jpeg" class="netflix">
+    <div class="container">
+        <div class="p">
+            <p>Who's watching?</p>
+        </div>
+        <div>
+            <div class="image-1 images">
+                <img src="../img/blue.png">
+                <span class="span">Cristian</span>
+            </div>
+            <div class="image-2 images">
+                <img src="../img/yellow.png">
+                <span class="span">Linus</span>
+            </div>
+            <div class="image-3 images">
+                <img src="../img/red.png">
+                <span class="span">Betha</span>
+            </div>
+            <div class="image-4 images">
+                <img src="../img/royalblue.png">
+                <span class="span">Cesia</span>
+            </div>
+            <div class="image-5 images">
+                <img src="../img/green.png" class="green">
+                <span class="span">Jose</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
