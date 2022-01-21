@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout</title>
+    <title>Document</title>
     <style>
-        * {
+        html,body{
+            height: 100%;
             margin: 0;
         }
-        html, body {
-            height: 100%;
-        }
-        body {
+        body{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        body>div {
+        div div{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+        }
+        body>div{
             display: flex;
             justify-content: space-between;
         }
-        div>div {
-            width: 100px;
-            height: 100px;
-            background-color: red;
+
+        body>div:nth-child(odd){
+            background-color: #090;
         }
     </style>
 </head>
@@ -32,10 +34,17 @@
     <div>
         <div></div>
         <div></div>
+        <div></div>
     </div>
     <div>
         <div></div>
         <div></div>
-    </div>
+        <div></div>
+    </div> 
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>  
 </body>
 </html>

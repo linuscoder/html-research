@@ -8,43 +8,44 @@
     <style>
         html, body{
             height: 100%;
-        }
-        body{
             margin: 0;
         }
-        div div{
+        body{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .row2 div{
             flex: 1;
         }
-        .box1{
-            background-color: royalblue;
+        .row1{
+            background-color: green;
+            flex: 1;
         }
-        .box2{
-            background-color: salmon;
-        }
-        .box3{
-            background-color: sandybrown;
-        }
-        .box4{
-            background-color: seagreen;
-        }
-        .box5{
-            background-color: black;
-        }
-        .row{
-
-            height: 200px;
+        .row2{
+            background-color: #D83864;
             flex: 1;
             display: flex;
+        }
+        .col1{
+            background-color: blue;
+        }
+        .col2{
+            background-color: red;
+        }
+        .col3{
+            background-color: royalblue;
         }
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="box1">1</div>
-        <div class="box2">2</div>
-        <div class="box3">3</div>
-        <div class="box4">4</div>
-        <div class="box5">5</div>
+    <div class="row1">
+
+    </div>
+    <div class="row2">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
     </div>
 </body>
 </html>

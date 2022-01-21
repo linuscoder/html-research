@@ -4,49 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Layout</title>
     <style>
-        html,body{
+        * {
             margin: 0;
+        }
+        html, body {
             height: 100%;
         }
-        body{
+        body {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
         }
-        header{
-            background-color: aliceblue;
-            height: 100px;
-        }
-        main{
-            flex: 1;
-            background-color: aquamarine;
+        body>div {
             display: flex;
+            justify-content: space-between;
         }
-        footer{
-            background-color: red;
+        div>div {
+            width: 100px;
             height: 100px;
-        }
-        aside{
-            background-color: royalblue;
-            flex: 1;
-        }
-        section{
-            background-color: saddlebrown;
-            flex: 2;
+            background-color: red;
         }
     </style>
 </head>
 <body>
-    <header>
-       
-    </header>
-    <main>
-        <aside></aside>
-        <section></section>
-    </main>
-    <footer>
-
-    </footer>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
 </body>
 </html>

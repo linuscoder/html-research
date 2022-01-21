@@ -6,25 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html{
+        html, body{
             height: 100%;
+            margin: 0;
         }
         body{
             display: flex;
-            margin: 0;
-            justify-content: space-between;
-            align-items: flex-end;
-            height: 100%;
+            flex-direction: column;
         }
-        div{
+        header{
+            background-color: #408AF3;
             height: 100px;
-            width: 100px;
+        }
+        section{
+            flex: 1;
             background-color: blue;
+            display: flex;
+        }
+        footer{
+            background-color: black;
+            height: 100px;
+            display: flex;
+        }
+        main{
+            background-color: red;
+            flex: 1;
+        }
+        aside{
+            background-color: green;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .col1{
+            background-color: green;
+            flex: 1;
+        }
+        .col2{
+            background-color: skyblue;
+            flex: 1;
+        }
+        .col3{
+            background-color: purple;
+            flex: 2;
+        }
+        .box1{
+           background-color: yellow; 
+           flex: 1;
+        }
+        .box2{
+            background-color: violet;
+            flex: 1;
         }
     </style>
 </head>
 <body>
-    <div></div>
-    <div></div>
+    <header>
+
+    </header>
+    <section>
+        <main></main>
+        <aside>
+            <section class="box1"></section>
+            <section class="box2"></section>
+        </aside>
+    </section>
+    <footer>
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
+    </footer>
 </body>
 </html>

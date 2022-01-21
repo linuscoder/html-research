@@ -8,88 +8,63 @@
     <style>
         html, body{
             height: 100%;
-        }
-        *{
             margin: 0;
-            padding: 0;
         }
         body{
             display: flex;
             flex-direction: column;
         }
         header{
-            background-color: #00FF00;
+            background-color: indianred;
             height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+        nav{
+            background-color: indigo;
+            height: 50px;
         }
         section{
-            background-color: red;
+            background-color: khaki;
             flex: 1;
             display: flex;
         }
         footer{
-            background-color: yellow;
+            background-color: lawngreen;
             height: 50px;
+        }
+        .content{
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            flex: 2;
         }
         aside{
+            flex: 1;
+            
+        }
+        .box1{
             background-color: blue;
             flex: 1;
         }
-        main{
-            background-color: rebeccapurple;
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-        }
-        main div{
-            flex: 1;
-        }
-        .box{
-            display: flex;
-        }
-        .boxes{
-            display: flex;
-        }
-        .box1{
-            background-color: pink;
-        }
         .box2{
-            background-color: purple;
-        }
-        .box3{
-            background-color: seagreen;
-        }
-        .box4{
             background-color: red;
+            flex: 1;
         }
     </style>
 </head>
 <body>
     <header>
-        header
+        
     </header>
+    <nav></nav>
     <section>
+        <section class="content">
+            <section class="box1">1</section>
+            <article class="box2">2</article>
+        </section>
         <aside>
-
         </aside>
-        <main>
-            <div class="box">
-                <div class="box1"></div>
-                <div class="box2"></div>
-            </div>
-            <div class="boxes">
-                <div class="box3"></div>
-                <div class="box4"></div>
-            </div>
-        </main>
     </section>
     <footer>
-        footer
+
     </footer>
 </body>
 </html>

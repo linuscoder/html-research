@@ -6,28 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html,body{
-            margin: 0;
+        html, body{
             height: 100%;
+            margin: 0;
         }
         body{
             display: flex;
+            flex-direction: column;
+        }
+    
+        div div {
+            display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex: 1;
         }
-        div{
-            background-color: red;
-            height: 100px;
-            width: 100px;
+        body>div{
+            display: flex;
+            flex: 1;
         }
+        .box1{
+            background-color: #00BFFE;
+        }
+        .box2{
+            background-color: #FED700;
+        }
+        .box3{
+            background-color: #FF7F50;
+        }
+        .box4{
+            background-color:  #FF430C;
+        }
+        .box5{
+            background-color: #8A2BE1;
+        }
+        .box6{
+            background-color: #20B1AA;
+        }
+        .box7{
+            background-color: #3B68E3;
+        }
+        .box8{
+            background-color: #32CD33;
+        }
+        .box9{
+            background-color: #800000;
+        }
+
     </style>
 </head>
 <body>
     <div>
-
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
     </div>
     <div>
-
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+    </div>
+    <div>
+        <div class="box7">7</div>
+        <div class="box8">8</div>
+        <div class="box9">9</div>
     </div>
 </body>
 </html>
