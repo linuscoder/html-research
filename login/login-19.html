@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="shortcut icon" href="../img/N.ico">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        @font-face{
+            font-family: linus;
+            src: url(../fonts/MochiyPopPOne-Regular.ttf);
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right,#9B0051,#FD0080);
+        }
+        .container{
+            width: 20%;
+            background-color: white;
+            padding: 2.2rem 1.5rem;
+            border-radius: 4px;
+        }
+        button{
+            background-image: linear-gradient(to right,#9F0054,#FB0081);
+            border: 0;
+            margin-top: 1.5rem;
+            padding: 0.5rem;
+            width: 100%;
+            border-radius: 4px;
+            color: white;
+        }
+        input{
+            border: 0;
+            border-bottom: 2px solid #974A71;
+            width: 100%;
+            margin-top: 0.8rem;
+            padding: 0.4rem;
+        }
+        p{
+            margin: 1rem 0rem;
+            text-align: center;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            margin-top: 0.8rem;
+            padding: 0.45rem;
+            width: 100%;
+        }
+        .user{
+            margin-top: 1.4rem;
+        }
+        .twitter{
+            background-color: #14BAFC;
+        }
+        .facebook{
+            background-color: #4A6EA8;
+            margin-bottom: 1.5rem;
+        }
+        span{
+            font-weight: bold;
+            font-size: 1.3rem;
+            font-family: linus;
+        }
+        .span{
+            border-style: solid;
+            border-bottom-width: 3px;
+            border-image: linear-gradient(45deg, #9D004E,#FB0081) 12;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .icons{
+            align-items: center;
+            margin-top: 0.75rem;
+        }
+        .material-icons{
+            color: white;
+            font-size: 1rem;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <span class="span">Lo</span><span>gin</span>
+        </div>
+        <div>
+            <input type="text" placeholder="User" class="user">
+        </div>
+        <div>
+            <input type="password" placeholder="Password">
+        </div>
+        <div>
+            <button>Continue</button>
+        </div>
+        <p>or connect With Social Media</p>
+        <div class="icons">
+            <a href="#" class="twitter"><span class="material-icons">flutter_dash</span>Sign in with Twitter </a>
+        </div>
+        <div class="icons">
+            <a href="#" class="facebook"><span class="material-icons">filter_alt</span>Sign in withacebook</a>
+        </div>
+    </div>
+</body>
+</html>

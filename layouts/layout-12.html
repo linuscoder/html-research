@@ -6,46 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         html, body{
             height: 100%;
-            margin: 0;
         }
         body{
             display: flex;
             flex-direction: column;
-
         }
-        .row2 div{
-            flex: 1;
-        }
-        .row1{
-            background-color: green;
-            flex: 1;
-        }
-        .row2{
-            background-color: #D83864;
+        body>div{
+            border: 1px solid black;
             flex: 1;
             display: flex;
         }
-        .col1{
-            background-color: blue;
+        body>div:nth-child(odd) div:nth-child(even){
+            background-color: green;
         }
-        .col2{
-            background-color: red;
+        body>div:nth-child(even) div:nth-child(odd){
+            background-color: green;
         }
-        .col3{
-            background-color: royalblue;
+        div div{
+            flex: 1;
         }
     </style>
 </head>
 <body>
-    <div class="row1">
-
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-    <div class="row2">
-        <div class="col1"></div>
-        <div class="col2"></div>
-        <div class="col3"></div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </body>
 </html>

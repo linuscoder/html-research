@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
     <style>
         *{
             margin: 0;
@@ -16,84 +14,54 @@
             height: 100%;
         }
         body{
-            background-color: #9325AA;
+            background-image: linear-gradient(to right,#F4DA5F,#F7D159);
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .up{
-            background-color: #5C1769;
-            padding: 1rem;
-            border-radius: 5px 5px 0 0;
-        }
-        .down{
-            background-color: white;
-            padding: 1.15rem;
-            border-radius: 0 0 3px 3px;
-        }
         .container{
-            width: 20%;
-        }
-        p{
-            color: white;
-            font-size: 1.25rem;
-        }
-        input{
-            padding: 0.45rem;
-            border-radius: 3px;
-            border: 0;
-            flex: 1;
-            outline: none;
+            background-color: white;
+            width: 25%;
+            padding: 2rem 1rem 2rem 0;
+            box-shadow: 1px 10px 10px black;
         }
         button{
-            width: 35%;
-            background-color: #5C1769;
-            color: white;
+            background-color: #90C400;
+            padding: 0.55rem 1.5rem;
             border: 0;
-            padding: 0.45rem;
-            margin: 1.75rem 0 1.25rem 0;
-            border-radius: 3px;
+            color: white;
         }
-        a{
-            color: #5C1769;
-            text-decoration: none;
-            padding: 1rem;
+        input{
+            padding: 0.5rem;
+            width: 95%;
+            border: 1px solid #90C400;
+            margin: 1rem 0 0 1rem;
         }
-        .form-group{
-            border: 1px solid #E4E4E4;
+        .button{
+            margin-bottom: 1rem;
+        }
+        .button-2{
+            margin-top: 1rem;
+        }
+        .box{
             display: flex;
-            align-items: center;
-            margin-top: 0.75rem;
-            padding-right: 0.5rem;
-        }
-        .material-icons{
-            color: #838180;
-            font-size: 1.25rem;
-        }
-        .form-group:focus-within {
-            border: 1px solid blue;
+            justify-content: right;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="up">
-            <div>
-                <p>Login Form</p>
-            </div>
+        <div>
+            <button class="button">Let's Login</button>
         </div>
-        <div class="down">
-            <div class="form-group">
-                <input type="text" placeholder="Email or Username" autofocus>
-                <span class="material-icons">mail</span>
-            </div>
-            <div class="form-group">
-                <input type="password" placeholder="Password">
-                <span class="material-icons">lock</span>
-            </div>
-            <div>
-                <button>Sign in</button> <a href="#">Forgot Password?</a>
-            </div>
+        <div>
+            <input type="text" placeholder="Username">
+        </div>
+        <div>
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="box">
+            <button class="button-2">Log in</button>
         </div>
     </div>
 </body>
