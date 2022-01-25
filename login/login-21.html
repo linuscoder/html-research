@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        @font-face{
+            font-family: login;
+            src: url(../fonts/NetflixSans_W_rg.woff2);
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-color: #C02CDE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: login;
+        }
+        .container{
+            width: 20%;
+            background-color: white;
+            border-radius: 5px;
+            padding: 1.25rem;
+        }
+        h2{
+            text-align: center;
+            margin-top: 0.75rem;
+            font-size: 1.4rem;
+        }
+        input:not(input[type=checkbox]){
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.75rem;
+            border: 1px solid #D8D8D8;
+            border-radius: 3px;
+            padding-left: 1.75rem;
+        }
+        ::placeholder{
+            color: #808181;
+        }
+        button{
+            padding: 0.5rem;
+            border: 0;
+            border-radius: 3px;
+            color: white;
+        }
+        .facebook{
+            background-color: #4A6EA8;
+            margin: 1.5rem 0 1rem 0;
+            width: 46%;
+            height: 2rem;
+            margin-right: 0.65rem;
+        }
+        .twitter{
+            background-color: #1AA1F3;
+            margin: 1.5rem 0 1rem 0;
+            width: 48%;
+            height: 2rem;
+        }
+        .checkbox{
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        a{
+            text-decoration: none;
+            color: #BE2EDE;
+            font-size: 0.75rem;
+        }
+        .a{
+            margin-left: 3rem;
+        }
+        .login{
+            background-color: #BE2EDE;
+            width: 100%;
+            margin: 0.75rem 0 1rem 0;
+        }
+        .footer{
+            text-align: center;
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        img{
+            height: 12px;
+        }
+        .form-group{
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .material-icons{
+            position: absolute;
+            font-size: 1rem;
+            left: 0.5rem;
+            top: 1.2rem;
+            color: #7E8183;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Form</h2>
+        <div>
+            <button class="facebook"> <img src="../img/facebook-icon.jpeg"> Facebook</button> <button class="twitter"> <img src="../img/twitter-icon.png">  Twitter</button>
+        </div>
+        <div class="form-group">
+            <span class="material-icons">person</span>
+            <input type="text" placeholder="Email or Phone">
+        </div>
+        <div class="form-group">
+            <span class="material-icons">lock</span>
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="rememberme"> <label for="rememberme">Remember me</label> <a href="#" class="a">Forgot password?</a>
+        </div>
+        <div>
+            <button class="login">Login</button>
+        </div>
+        <div class="footer">
+            <span>Not a member?</span> <a href="#">Signup Now</a>
+        </div>
+    </div>
+</body>
+</html>
