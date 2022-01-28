@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         *{
             margin: 0;
@@ -14,67 +15,141 @@
             height: 100%;
         }
         body{
-            background-image:linear-gradient(to right,#E2A41A,#964E9E);
+            background-color: #F1F1F1;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
-        .content{
-            width: 20%;
-            background-color: white;
+        .left{
+            background-color: #FFFFFF;
             padding: 2rem;
-            border-radius: 10px;
+            width: 130%;
         }
-        p{
-            font-size: 1.75rem;
-            text-align: center;
-            margin: 2rem 0 2rem;
+        .p{
+            color: #787576;
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
         }
         input{
-            width: 100%;
+            margin-top: 1rem;
             border: 0;
-            border-bottom: 1px solid gray;
-            margin-top: 1.5rem;
-            padding: 0.5rem;
+            border-bottom: 1px solid #CFCFCF;
+            width: 94%;
+            padding: 0.25rem;
         }
-        ::placeholder{
-            color: #BFBFBE;
-        }
-        button{
-            width: 100%;
-            margin-top: 1.40rem;
-            padding: 0.65rem;
-            background-image: linear-gradient(to right,#DFA11F,#9A5396);
+        .button{
             border: 0;
+            margin-top: 1rem;
+            background-color: #FF6F04;
             color: white;
-            font-size: 0.65rem;
+            padding: 0.5rem;
+            margin-bottom: 2rem;
         }
-        .link{
-            font-size: 0.85rem;
-            text-align: center;
-            margin: 3rem 0 5rem 0;
+        #container{
+            display: flex;
+            flex-direction: row;
+            width: 35%;
+            justify-content: center;
+            align-items: center;
+        }
+        .right{
+            background-image: linear-gradient(to right,#00B6B2,#00AE70);
+            width: 130%;
+            padding: 2rem;
+        }
+        .p-2{
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
         a{
-            text-decoration: none;
-            color: blue; 
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            border: 0;
+            width: 100%;
+            border: 1px solid #00818E;
+            display: block;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        a:not(first-child){
+            margin-top: 1.5rem;
+        }
+        .facebook{
+            background-color: #4A6EA8;
+        }
+        .twitter{
+            background-color: #00ACF0;
+        }
+        .gmail{
+            background-color: #00D6CF;
+            margin-bottom: 4.40rem;
+        }
+        .mt-2{
+            margin-top: 2rem;
+        }
+        img{
+            width: 1rem;
+            vertical-align: middle;
+            position: absolute;
+            left: 0.5rem;
+        }
+        .button-a{
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: #F1F1F1;
+            border: 0;
+        }
+        span{
+            color: gray;
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <p>Login</p>
-        <div>
-            <input type="text" placeholder="Username">
+    <div id="container">
+        <div class="left">
+            <div>
+                <p class="p">Registrate</p>
+            </div>
+            <div>
+                <input type="text" placeholder="Nombre">
+            </div>
+            <div>
+                <input type="text" placeholder="Correo">
+            </div>
+            <div>
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <div>
+                <input type="password" placeholder="Confirma contraseña">
+            </div>
+            <div>
+                <button class="button">Registrarse</button>
+            </div>
         </div>
-        <div>
-            <input type="password" placeholder="Password">
-        </div>
-        <div>
-            <button>Login</button>
-        </div>
-        <div class="link">
-            <span>Don't have an account?</span> <a href="#">Sign up</a>
+        <a href="#" class="button-a"> <span class="material-icons">navigate_next</span></a>
+        <div class="right">
+            <p class="p-2">Iniciar Sesión</p>
+            <div class="mt-2">
+                <a class="facebook">
+                    <img src="../assets/img/facebook-icon.jpeg">
+                    Acceder con Facebook
+                </a>
+                <a class="twitter">
+                    <img src="../assets/img/twitter-icon.png">
+                    Acceder con Twitter
+                </a>
+                <a class="gmail">
+                    <img src="../assets/img/mail-icon.png">
+                    Acceder con Correo
+                </a>
+            </div>
         </div>
     </div>
+
 </body>
 </html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney+ | Movies and Shows</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-color: #0D0E16;
+            font-family: netflix;
+        }
+        .container{
+            padding-left: 0.25rem;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        .disney-logo{
+            height: 2.52rem;
+            margin: 1rem 0 0 2.2rem;
+        }
+        header{
+            display: flex;
+        }
+        .menu a{
+            color: white;
+            margin-right: 0.45rem;
+            font-size: 0.85rem;
+            text-decoration: none;
+            padding: 1.35rem 18px;
+            display: flex;
+        }
+        .menu{
+            display: flex;
+            margin-left: 2.2rem;
+            flex: 1;
+            margin-top: 0.25rem;
+        }
+        .menu a:hover .text{
+            border-bottom: 3px solid white;
+        }
+        .image{
+            display: flex;
+        }
+        .material-icons{
+            font-size: 1.1rem;
+            color: white;
+            margin-right: 0.7rem;
+            margin-top: 0.2rem;
+        }
+        .add{
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: -0.05rem;
+        }
+        .search{
+            font-weight: bold;
+        }
+        .mickey-logo{
+            height: 48px;
+            margin-left: 1rem;
+        }
+        .encanto-image{
+            height: 330px;
+            border-radius:0.25rem;
+        }
+        .slider{
+            text-align: center;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+        .profile{
+            margin: 0.8rem 1.3rem;
+            color: #dad8d8;
+            display: flex;
+            align-items: center;
+        }
+        .encanto-image:hover{
+            box-shadow: 0 0 0 0.25rem #E0E2E5;
+        }
+        .index{
+            display: flex;
+            padding: 2.35rem 3.5rem 1.8rem 4.5rem;
+        }
+        .chose{
+            width: 20%;
+            height: 8.4rem;
+            background-image: linear-gradient(#2F303C,#1F202B);
+            margin-right: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 3px solid #3a3a47;
+        }
+        .logo{
+            height: 8.3rem;
+        }
+        p{
+            color: white;
+            font-size: 1.25rem;
+            margin-left: 4.7rem;
+        }
+        .chose:hover{
+            border: 3px solid white;
+            transform: scale(1.05);
+            transition: all 505ms;
+        }
+        .chose:hover img{
+            display: none;
+        }
+        .chose:hover video{
+            display: block;
+        }
+        video{
+            display: none;
+            height: 100%;
+            width: 100%;
+        }
+        .image-slider{
+            height: 8.5rem;
+            margin: 1rem 0 0 1rem;
+            border-radius: 4px;
+        } 
+        .image-slider:hover{
+            box-shadow: 0 0 0 0.25rem #CBC9CD;
+            border-radius: 4px;
+            transform: scale(1.03);
+            transition: all 505ms;
+        }
+        .increibles{
+            margin-left: 4.5rem;
+        }
+        .my-profile{
+            font-size: 0.95rem;
+        }
+        .encanto-letter{
+            transform: translateX(30px);
+            transition: transform 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 150ms;
+            inset: 0px;
+            display: block;
+            height: 92%;
+            object-fit: cover;
+            position: absolute;
+            width: 98%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="image"> 
+                <img src="../assets/img/disney.svg" class="disney-logo">
+            </div>
+            <nav class="menu">
+                <a href="#"><span class="material-icons">home</span> <span class="text">HOME</span></a>
+                <a href="#"><span class="material-icons search">search</span><span class="text">SEARCH</span></a>
+                <a href="#"><span class="material-icons add">add</span><span class="text">WATCHLIST</span></a>
+                <a href="#"><span class="material-icons">star</span><span class="text">ORIGINALS</span></a>
+                <a href="#"><span class="material-icons">crop_original</span><span class="text">MOVIES</span></a>
+                <a href="#"><span class="material-icons">live_tv</span><span class="text">SERIES</span></a>
+            </nav>
+            <div  class="profile">
+                <span class="my-profile">My Profile</span>
+                <img src="../assets/img/mickey.png" class="mickey-logo">
+            </div>
+        </header>
+        <div class="slider">
+            <img src="../assets/img/encanto-letter.png" class="encanto-letter">
+            <img src="../assets/img/encanto.jpeg" class="encanto-image">
+        </div>
+        <div class="index">
+            <div class="chose">
+                <img src="../assets/img/disney-logo.png" class="logo">
+                <video loop autoplay playsinline>
+                    <source src="../assets/videos/disney.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="chose">
+                <img src="../assets/img/pixar-logo.png" class="logo">
+                <video loop autoplay playsinline>
+                    <source src="../assets/videos/pixar.mp4">
+                </video>
+            </div>
+            <div class="chose">
+                <img src="../assets/img/marvel-icon.png" class="logo">
+                <video>
+                    <source src="../assets/videos/marvel.mp4"> 
+                </video>
+            </div>
+            <div class="chose">
+                <img src="../assets/img/star,wars-icon.png" class="logo">
+                <video>
+                    <source src="../assets/videos/star-wars.mp4">
+                </video>
+            </div>
+            <div class="chose">
+                <img src="../assets/img/national-icon.png" class="logo">
+                <video>
+                    <source src="../assets/videos/geographic.mp4">
+                </video>
+            </div>
+        </div>
+        <div>
+            <p>Recommended For You</p>
+        </div>
+        <div>
+            <span>
+                <img src="../assets/img/increibles-2.jpeg" class="image-slider increibles">
+            </span>
+            <span>
+                <img src="../assets/img/luca.jpeg" class="image-slider">
+            </span>
+            <span>
+                <img src="../assets/img/onward.jpeg" class="image-slider">
+            </span>
+            <span>
+                <img src="../assets/img/gravity-falls.jpeg" class="image-slider">
+            </span>
+            <span>
+                <img src="../assets/img/diary-of-greg.jpeg" class="image-slider">
+            </span>
+        </div>
+    </div>
+</body>
+</html>

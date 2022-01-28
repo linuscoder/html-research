@@ -1,59 +1,38 @@
 <html>
     <head>
-        <title>login-3</title>
+        <title>Login</title>
         <style>
-            #container{
-                border: 3px solid red;
+            #container {
+                margin-top: 2rem;
                 border-radius: 0.5rem;
-                padding: 1rem;
-                background-color: green;
+                border-width: 0.5rem;
+                border-color: blue;
+                border-style:solid;
+                padding: 2rem;
+                background-color: gray;
             }
             body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: slateblue;
-            }
-            img{
-                width: 100px;
+                background-color: aqua;
 
             }
 
-            label{
-                display: block;
-                margin-bottom: 0.25rem;
-            }
-            #container div:not(:first-child){
-                margin-top: 1rem;   
-            }
             button{
                 width: 100%;
-                border-radius: 24px;
-                background-color: green;
-            }
-
-            input {
-                border-radius: 24px;
-            }
-            #container div:first-child {
-                text-align: center;
             }
         </style>
     </head>
     <body>
-        <div id="container">
-            <div><img src="../img/login.jpg"></div>
-            <div>
-                <label for="">user</label>
-                <input type="text">
-            </div>
-            <div>
-                <label for="">password</label>
-                <input type="password">
-            </div>
-            <div>
-                <button>login</button>
-            </div>
-        </div>
+       <div id="container"> 
+           <label for="">User</label> <br>
+           <input type="text"> <br> <br>
+
+           <label for="">Password</label> <br>
+           <input type="password"> <br> <br> <br>
+
+           <button>Login</button> 
+       </div> 
     </body>
 </html>

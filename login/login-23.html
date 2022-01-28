@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(#C3D3DB,#9BBDCF);
+            font-family: netflix;
+        }
+        .container{
+            background-image: linear-gradient(#48B28E,#4C86B4);
+            width: 24%;
+        }
+        h2{
+            text-align: center;
+            color: white;
+            font-size: 1.85rem;
+            margin-bottom: 2rem;
+        }
+        .input{
+            width: 100%;
+            border: 0;
+            padding: 0.6rem;
+            margin-top: 1rem;
+            background-color: transparent;
+            font-size: 0.75rem;
+        }
+        .input-2{
+            border: 0;
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            border-radius: 0 30px 30px 0;
+        }
+        .input-3{
+            border: 0;
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            border-bottom: 1px solid white;
+            border-radius: 30px 0 0 30px;
+        }
+        ::placeholder{
+            color: white;
+            text-align: center;
+        }
+        .main{
+            padding: 3rem 2.5rem;
+        }
+        button{
+            width: 100%;
+            padding: 0.6rem;
+            border: 0;
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+            margin: 1rem 0;
+            border-radius: 0 30px 30px 0;
+            background-color: transparent;
+            color: white;
+            font-size: 0.75rem;
+        }
+        .checkbox{
+            color: white;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .div{
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            border-radius: 30px;
+        }
+        
+        .div-2{
+            margin-top: 3rem;
+        }
+        .forgot{
+            padding: 0.25rem 1.5rem;
+            font-size: 0.75rem;
+        }
+        .join-us{
+            padding: 0.3rem 3.7rem;
+            font-size: 0.75rem;
+        }
+        .material-icons{
+            color: #A7C6D9;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 1.5rem 0.5rem ;
+        }
+        .check{
+            width: 14px;
+            height: 14px;
+            border: 1px solid white;
+            border-radius: 3px;
+            margin-right: 0.25rem;
+        }
+        .new{
+            position: absolute;
+            color: white;
+            padding: 1rem 1rem 0 2.5rem;
+            font-size: 1rem;
+        }
+        .mail{
+            padding-left: 13rem;
+        }
+        .form{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div>
+                <h2>Login</h2>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Username" class="input input-2">
+                <span class="material-icons new mail">mail</span>
+            </div>
+            <div class="form">
+                <span class="material-icons new">lock</span>
+                <input type="password" placeholder="Password" class="input input-3">
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+            <div class="checkbox">
+                <div class="check"></div> Remember
+            </div>
+            <div class="div">
+                <a href="#" class="forgot">Forgot</a>
+            </div>
+            <div class="div div-2">
+                <a href="#" class="join-us">Jon us!</a>
+            </div>
+        </div>
+        <footer>
+            <span class="material-icons">reply</span>
+            <span class="material-icons">grid_view</span>
+            <span class="material-icons">menu</span>
+        </footer>
+    </div>
+</body>
+</html>

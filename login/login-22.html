@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-color: #e2e1e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: netflix;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        .container{
+            width: 20%;
+        }
+        .main{
+            background-color: #FFFFFF;
+            padding: 1.5rem 1.5rem 2.5rem;
+            border-radius: 0 0 10px 10px;
+        }
+        .header{
+            background-image: linear-gradient(to right,#4857CF,#C251C2);
+            text-align: center;
+            padding: 1.2rem;
+            border-radius: 10px 10px 0 0;
+        }
+        h2{
+            color: white;
+            font-size: 1.35rem;
+        }
+        .input{
+            width: 100%;
+            padding: 0.45rem;
+            border-radius: 20px;
+            border: 1px solid #d6d5d5;
+            margin-bottom: 0.8rem;
+        }
+        a{
+            text-decoration: none;
+            color: #8C90DE;
+            font-size: 0.75rem;
+        }
+        input:focus{
+            background-image: linear-gradient(to right,#5457C8,#BB4FBF);
+            padding-left: 1rem;
+            color: white;
+        }
+        button{
+            width: 100%;
+            padding: 0.45rem;
+            border-radius: 20px;
+            background-image: linear-gradient(to right,#5457C8,#BB4FBF);
+            border: 0;
+            color: white;
+            margin: 1rem 0;
+            font-size: 1rem;
+        }
+        .member{
+            text-align: center;
+        }
+        ::placeholder{
+            color: #ACACAC;
+            padding-left: 0.5rem;
+        }
+        span{
+            font-size: 0.75rem;
+            color: #777777;
+        }
+        .remember{
+            margin: 0 2.25rem 0 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Login Form</h2>
+        </div>
+        <div class="main">
+            <div>
+                <input type="text" placeholder="Email Adress" class="input">
+            </div>
+            <div>
+                <input type="password" placeholder="password" class="input">
+            </div>
+            <div class="a">
+                <input type="checkbox"><span class="remember">Remember me</span> <a href="#">Forgot password?</a>
+            </div>
+            <div>
+                <button>Login</button>
+            </div>
+            <div class="member">
+                <span>Not a member?</span> <a href="#">Signup now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

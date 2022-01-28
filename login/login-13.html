@@ -5,108 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         *{
             margin: 0;
+            box-sizing: border-box;
         }
-       html,body{
-           height: 100%;
-       }
-       body{
-           background-color: #17BD9E;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       }
-       .login{
-            width: 20%;
-       }
-       .login-header{
-        background-color: #159F7F;
-        color: #ffffff;
-        text-align: center;
-        border-radius: 0.25rem 0.25rem 0 0;
-        padding: 1rem 0;
-       }
-       .login-body{
-        background-color: #ffffff;
-        border-radius: 0 0 0.25rem 0.25rem;
-        padding: 1.5rem;
-       }
-       button{
-           width: 100%;
-           color: #ffffff;
-           background-color: #179E85;
-           border-radius: 0.25rem;
-           border: 0;
-           padding: 0.5rem;
-       }
-       .mt-1{
-        margin-top: 1rem;
-       }
-       a{
-           text-decoration: none;
-           color: #179E85;
-       }
-       .mt-025{
-           margin-top: 0.25rem;
-       }
-       .ta-center{
-        text-align: center;
-       }
-       .form-group{
-           display: flex;
-           border-radius: 0.5rem;
-       }
-       .form-group:not(:first-child){
-            margin-top: 0.75rem;
-       }
-       input{
-           flex: 1;
-           padding: 0.5rem;
-           border: 1px solid #E9E8EA;
-           border-left: 0;
-           border-radius: 0 0.25rem 0.25rem 0;
-       }
-       .icon{
-           background-color: #179E87;
-           width: 2rem;
-           color: #ffffff;
-           display: flex;
-           justify-content: center;
-           align-items: center;
-           border-radius: 0.25rem 0 0 0.25rem;
-       }
-       ::placeholder{
-           color: #BEB8B4;
-       }
+        html,body{
+            height: 100%;
+        }
+        body{
+            background-image: linear-gradient(to right,#F4DA5F,#F7D159);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: white;
+            width: 25%;
+            padding: 2rem 1rem 2rem 0;
+            box-shadow: 1px 10px 10px black;
+        }
+        button{
+            background-color: #90C400;
+            padding: 0.55rem 1.5rem;
+            border: 0;
+            color: white;
+        }
+        input{
+            padding: 0.5rem;
+            width: 95%;
+            border: 1px solid #90C400;
+            margin: 1rem 0 0 1rem;
+        }
+        .button{
+            margin-bottom: 1rem;
+        }
+        .button-2{
+            margin-top: 1rem;
+        }
+        .box{
+            display: flex;
+            justify-content: right;
+        }
     </style>
 </head>
 <body>
-    <div class="login">
-        <div class="login-header">
-            <h2>Login Form</h2>
+    <div class="container">
+        <div>
+            <button class="button">Let's Login</button>
         </div>
-        <div class="login-body">
-            <div class="form-group">
-                <div class="icon"><span class="material-icons">person</span></div>
-                <input type="text" placeholder="Email or Phone" class="box1">
-            </div>
-            <div class="form-group">
-                <div class="icon"><span class="material-icons">lock</span></div>
-                <input type="password" placeholder="Password">
-            </div>
-            <div class="mt-025">
-                <a href="#">Forgot Password?</a>
-            </div>
-            <div class="mt-1">
-                <button>Login</button>
-            </div>
-            <div class="mt-1 ta-center">
-                <span>Not a member?</span> <a href="#" class="a">Singup now</a>
-            </div>
+        <div>
+            <input type="text" placeholder="Username">
         </div>
-    </div> 
+        <div>
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="box">
+            <button class="button-2">Log in</button>
+        </div>
+    </div>
 </body>
 </html>
