@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        body{
+            display: flex;
+            background-color: #e5e9e8;
+            font-family: netflix;
+            align-items: center;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .content-1{
+            background-image: linear-gradient(#42b89c,#49cca3);
+            padding: 1.75rem;
+            border-radius: 10px 0 0 10px;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            font-size: 1.65rem;
+            margin-top: 5.75rem;
+        }
+        p{
+            font-size: 0.7rem;
+            color: rgb(208, 255, 243);
+            text-align: center;
+            margin-top: 0.25rem;
+        }
+        .p{
+            margin-top: 1rem ;
+        }
+        a{
+            color: white;
+            border: 1px solid white;
+            background-color: transparent;
+            padding: 0.65rem 3.2rem;
+            border-radius: 20px;
+            font-size: 0.55rem;
+            text-decoration: none;
+        }
+        .align{
+            text-align: center;
+            margin: 2rem 0 5rem;
+        }
+        .material-icons{
+            color: white;
+            font-size: 1.3rem;
+            margin: -1.1rem 0 0 -1rem;
+        }
+        span{
+            font-size: 0.5rem;
+            color: white;
+        }
+        .form{
+            display: flex;
+            align-items: center;
+        }
+        .span{
+            margin-top: -1.2rem;
+            margin-left: 0.15rem;
+        }
+        .content-2{
+            background-color: white;
+            width: 30%;
+            border-radius: 0 10px 10px 0;
+        }
+        .h1{
+            color: #39ABA7;
+            margin-top: 3.75rem;
+        }
+        .p-register{
+            color: #b1b1b1;
+            margin: 0 0 0.75rem;
+        }
+        button{
+            background-color: #43B390;
+            color: white;
+            border: 0;
+            padding: 0.65rem 3.2rem;
+            font-size: 0.55rem;
+            border-radius: 20px;
+            margin: 1.75rem 0 3.5rem;
+        }
+        .align-c{
+            text-align: center;
+            margin-top: 0.45rem;
+        }
+        input{
+            background-color: #F2F7F5;
+            border: 0;
+            padding: 0.5rem;
+            width: 50%;
+            outline: 0;
+        }
+        ::placeholder{
+            color: rgb(160, 159, 159);
+            font-size: 0.65rem;
+            padding-left: 0.5rem;
+        }
+        img{
+            height: 25px;
+            opacity: .5;
+            margin-left: 0.5rem;
+        }
+        .images{
+            text-align: center;
+            margin: 1rem 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-1">
+            <div class="form">
+                <span class="material-icons">open_in_new</span> <span class="span">Diprella</span>
+            </div>
+            <div>
+                <h1>Welcome back!</h1>
+            </div>
+            <div>
+                <p class="p">To keep connected with us please</p>
+                <p>login with your personal info</p>
+            </div>
+            <div class="align">
+                <a href="#">SIGN IN</a>
+            </div>
+        </div>
+        <div class="content-2">
+            <h1 class="h1">Create Account</h1>
+            <div class="images">
+                <img src="../assets/img/facebook-image.svg">
+                <img src="../assets/img/in.svg">
+                <img src="../assets/img/twitter.svg">
+            </div>
+            <p class="p-register">or use mail for registaion</p>
+            <div class="align-c">
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="align-c">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="align-c">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="align-c">
+                <button>SIGN UP</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
