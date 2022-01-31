@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disney+ | Movies and Shows</title>
+    <link rel="shortcut icon" href="../assets/img/disney-icon.svg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <style>
@@ -101,9 +102,12 @@
             border-radius: 8px;
             text-align: center;
             border: 3px solid #3a3a47;
+            position: relative;
         }
         .logo{
             height: 8.3rem;
+            position: absolute;
+            left: 0;
         }
         p{
             color: white;
@@ -114,9 +118,6 @@
             border: 3px solid white;
             transform: scale(1.05);
             transition: all 505ms;
-        }
-        .chose:hover img{
-            display: none;
         }
         .chose:hover video{
             display: block;
@@ -194,19 +195,19 @@
             </div>
             <div class="chose">
                 <img src="../assets/img/marvel-icon.png" class="logo">
-                <video>
+                <video loop autoplay playsinline>
                     <source src="../assets/videos/marvel.mp4"> 
                 </video>
             </div>
             <div class="chose">
                 <img src="../assets/img/star,wars-icon.png" class="logo">
-                <video>
+                <video loop autoplay playsinline>
                     <source src="../assets/videos/star-wars.mp4">
                 </video>
             </div>
             <div class="chose">
                 <img src="../assets/img/national-icon.png" class="logo">
-                <video>
+                <video loop autoplay playsinline>
                     <source src="../assets/videos/geographic.mp4">
                 </video>
             </div>
