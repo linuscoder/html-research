@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            background-image: url(../assets/img/google.png);
+            background-size: cover;
+        }
+        body{
+            font-family: netflix;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        header{
+            padding: 1.2rem 0.75rem 0 0;
+            display: flex;
+            justify-content: right;
+        }
+        .hover:hover{
+            border-bottom: 1px solid white;
+        }
+        .a{
+            color: white;
+            text-decoration: none;
+            margin-right: 0.65rem;
+            font-size: 0.82rem;
+        }
+        .material-icons{
+            color: white;
+            margin:0.1rem 0.3rem 0 0.75rem;
+            font-size: 1.45rem;
+        }
+        .img{
+            height: 43px;
+            margin: -0.5rem -0.65rem 0 0;
+        }
+        .logo{
+            height: 92px;
+            width: 272px;
+            margin-top: 6.65rem;
+        }
+        .google{
+            display: flex;
+            justify-content: center;
+        }
+        .icon:hover{
+            background-color: rgba(255, 255, 255, 0.137);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        .img:hover{
+            background-color: rgba(255, 255, 255, 0.137);
+            padding: 1px;
+            border-radius: 50%;
+        }
+        input{
+            width: 37%;
+            padding: 0.9rem;
+            border: 0;
+            border-radius: 30px;
+            outline: 0;
+            margin-left: -1rem;
+        }
+        .form{
+            margin-top: 2.35rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ::placeholder{
+            color: rgb(109, 107, 107);
+            font-size: 0.98rem;
+            padding-left: 2.25rem;
+        }
+        .icons{
+            height: 20px;
+            width: 20px;
+        }
+        .search{
+            position: absolute;
+            left: 28.65rem;
+        }
+        .micro{
+            margin-left: -2.5rem;
+        }
+        .form-1{
+            height: 48px;
+            width: 48px;
+            background-color: white;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .git{
+            background-color: rgb(233, 232, 232);
+        }
+        p{
+            color: white;
+            font-size: 0.8rem;
+            margin-top: 0.9rem;
+        }
+        .links-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 2.25rem;
+        }
+        .links{
+            width: 457px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .links a{
+            text-decoration: none;
+            text-align: center;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .links>a:hover{
+            background-color: rgba(255, 255, 255, 0.116);
+            width: 7rem;
+            height: 6rem;
+            border-radius: 5px;
+            padding-top: 1rem;
+            margin: 0;
+            margin-top: -1rem;
+        }
+        input:focus{
+            font-size: 0.9rem;
+        }
+        footer{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1.15rem 0 0.7rem;
+            align-items: flex-end;
+            margin-top: 8rem;
+        }
+        .pencil{
+            font-size: 1rem;
+        }
+        footer a{
+            color: white;
+            font-size: 0.85rem;
+        }
+        .link{
+            font-size: 1.25rem;
+            position: absolute;
+        }
+        .size{
+            font-size: 0.75rem; 
+            margin-left: 0.75rem;
+        }
+        .tesse{
+            margin-left: 2.35rem;
+        }
+        .div:hover .hola{
+            background-color: rgba(88, 88, 88, 0.404);
+            padding: 0.4rem 0.7rem 0.4rem 0;
+            border-radius: 10px;
+            margin-top: -0.4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#" class="a hover">Gmail</a>
+            <a href="#" class="a hover">Images</a>
+        </div>
+        <div>
+            <a href="#" class="a">
+                <span class="material-icons icon">apps</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="a">
+                <img src="../assets/img/linus.png" class="img">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="google">
+            <img src="../assets/img/google_logo.svg" class="logo">
+        </div>
+        <div class="form">
+            <img src="../assets/img/search.svg" class="icons search">
+            <input type="text" placeholder="Search Google or Type a URL">
+            <img src="../assets/img/microfon.svg" class="icons micro">
+        </div>
+        <div class="links-container">
+            <div class="links">
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/netflix-google.png"></div>
+                    <p>Netflix</p>
+                </a>
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/disney-google.png"></div>
+                    <p>Disney+</p>
+                </a>
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/youtube-google.png"></div>
+                    <p>YouTube</p>
+                </a>
+                <a href="#">
+                    <div class="form-1 git"><img src="../assets/img/git hub-google.png"></div>
+                    <p>GitHub</p>
+                </a>
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/drive-google.png"></div>
+                    <p>Drive</p>
+                </a>
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/translate-google.png"></div>
+                    <p>Translate</p>
+                </a>
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/calendar-google.png"></div>
+                    <p>Calendar</p>
+                </a>
+                <a href="#">
+                    <div class="form-1"><img src="../assets/img/add-google.svg"></div>
+                    <p>Add shortcut</p>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="div">
+            <div class="hola">
+                <a href="#">
+                    <span class="material-icons link">link</span>
+                    <a href="#" class="tesse">Tessellation 15</a><br>
+                    <a href="#" class="size">Justin Prno - Walli</a>
+                </a>
+            </div>
+        </div>
+        <div>
+            <span class="material-icons pencil">edit</span>
+        </div>
+    </footer>
+</body>
+</html>
