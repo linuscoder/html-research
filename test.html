@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,96 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+        *{
             margin: 0;
+            box-sizing: border-box;
         }
-        a {
-            display: block;
-            padding: 0.5rem 1rem;
+        html,body{
+            height: 100%;
         }
-
-        a:hover {
-            background-color: rgb(66, 3, 66);
+        body{
+            background-color: rgb(90, 90, 90);
         }
-        li ul li a {
+        header{
+            background-color: rgb(56, 56, 56);
+            height: 4rem;
+        }
+        a{
             color: white;
+            background-color: orange;
+            padding: 0.5rem;
+            display: block;
         }
-        body>ul>li{
-            display: inline-block;
-        }
-        ul {
+        ul{
             list-style-type: none;
             padding-inline-start: 0;
         }
-        li {
+        ul>li{
             position: relative;
         }
-        li ul {
+        ul>li>ul{
             display: none;
             position: absolute;
-            background: purple;
-            width: 150px;
+            left: 0;
+            top: 100%;
         }
-
-        li:hover>ul {
+        ul>li>ul a{
+            background-color: purple;
+        }
+        ul>li:hover>ul{
             display: block;
         }
-
-        ul ul ul {
-            left: 100%;
-            top: 0;
+        header>ul{
+            display: flex;
         }
     </style>
 </head>
 <body>
-    https://www.w3schools.com/howto/howto_css_dropdown.asp
-    https://css-tricks.com/solved-with-css-dropdown-menus/
-    https://www.tutorialrepublic.com/codelab.php?topic=faq&file=show-hide-dropdown-on-mouse-hover
-    https://codepen.io/una/pen/Gxwogy
-    https://ed.team/
-    <ul>
-        <li>
-            <a href="#">Home</a>
-            <ul>
-                <li>
-                    <a href="#">Option 1</a>
-                    <ul>
-                        <li>
-                            <a href="#">Sup Option 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Sup Option 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Option 2</a>
-                </li>
-                <li>
-                    <a href="#">Option 3</a>
-                </li>
-                <li>
-                    <a href="#">Option 4</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">Mision</a>
-            <ul>
-                <li>
-                    <a href="#">Option 1</a>
-                </li>
-                <li>
-                    <a href="#">Option 2</a>
-                </li>
-                <li>
-                    <a href="#">Option 3</a>
-                </li>
-                <li>
-                    <a href="#">Option 4</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <header>
+        <ul>
+            <li>
+                <a href="#">ONE</a>
+                <ul>
+                    <li>
+                        <a href="#" class="a">option1</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
 </body>
 </html>

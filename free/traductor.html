@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor de Google</title>
+    <link rel="shortcut icon" href="../assets/img/traductor.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            font-family: netflix;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            height: 65px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #E0E0E0;
+            padding: 0 0.75rem 0 1.5rem;
+            justify-content: space-between;
+        }
+        @font-face{
+            font-family: roboto;
+            src: url(../assets/fonts/Roboto-ThinItalic.ttf);
+            font-style: italic;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        .google-img{
+            height: 24px;
+            width: 74px;
+            margin: 0.2rem 0 0 0.4rem;
+        }
+        .traductor-span{
+            font-size: 1.3rem;
+            color: #5F6367;
+            margin-left: 0.31rem;
+        }
+       
+        .material-icons{
+            color: #5F6367;
+        }
+        .linus-coder{
+            height: 2.7rem;
+        }
+        .linus-coder:hover{
+            background-color: rgba(44, 44, 44, 0.13);
+            border-radius: 50%;
+        }
+        .app:hover{
+            background-color: rgba(44, 44, 44, 0.13);
+            border-radius: 50%;
+        }
+        .apps:hover{
+            background-color: rgba(44, 44, 44, 0.13);
+            border-radius: 50%;
+        }
+        .apps{
+            color: #5F6367;
+            font-size: 1.5rem;
+            margin-right: 0.3rem;
+            padding: 0.6rem;
+        }
+        section{
+            background-color: #FAFAFA;
+            border-bottom: 1px solid #E0E0E0;
+            height: 98px;
+        }
+        section>div>a{
+            color: #1966D2;
+            text-decoration: none;
+            padding: 0.5rem 1rem 0.5rem 2.3rem; 
+            border: 1px solid #d6d6d6;
+            position: absolute;
+            margin: 0.9rem 0 0 5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .texto{
+            background-color: #e5edfc;
+        }
+        .documentos{
+            margin-left: 11.2rem;
+        }
+        .format{
+            position: absolute;
+            color: #1966D2;
+            margin: -0.1rem 0 0 -3.9rem;
+        }
+        .documentos:hover{
+            background-color: #f0f4ff;
+        }
+        .texto:hover{
+            background-color: #dce8ff;
+        }
+        .task{
+            position: absolute;
+            color: #1966D2;
+            margin: 0 0 0 -6.9rem;
+            font-size: 1.25rem;
+        }
+        .flex{
+            display: flex;
+        }
+        .items-center{
+            align-items: center;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            height: 79%;
+            flex: 1;
+            position: relative;
+        }
+        .content{
+            background-color: white;
+            height: 13.84rem;
+            width: 89%;
+            border-radius: 10px;
+            border: 1px solid #d6d6d6;
+            box-shadow: 0 1px 4px 0 rgba(100, 100, 100, 0.37);
+            margin: -2rem 0 0 0;
+        }
+        .content-header{
+            border-bottom: 1px solid #d6d6d6;
+            height: 3.1rem;
+            padding: 0 0 0 1rem;
+            padding: 0.79rem 0 0 1rem;
+            display: flex;
+        }
+        .content-header>div>span{
+            font-size: 0.86rem;
+            color: rgb(85, 85, 85);
+            margin-right: 0.6rem;
+        }
+        .row{
+            font-size: 1.75rem !important;
+            position: absolute;
+            margin-left: 1rem;
+            padding: 0.4rem;
+            margin-top: -0.5rem;
+        }
+        .form{
+            flex: 1;
+        }
+        .arrow{
+            font-size: 1.5rem !important;
+            margin:-0.5rem 0 0 0.3rem;
+            padding: 0.5rem;
+        }
+        .arrow:hover{
+            background-color: rgba(53, 52, 52, 0.096);
+            border-radius: 50%;
+        }
+        .content-main{
+            display: flex;
+        }
+        .left{
+            flex: 1;
+            border-right: 1px solid #d6d6d6;
+            height: 10.65rem;
+            position: relative;
+
+        }
+        .right{
+            flex: 1;
+            position: relative;
+        }
+        .textarea{
+            border: 0;
+            outline: none;
+            font-size: 1.5rem;
+            padding: 1.5rem;
+            color: #3C4043;
+            resize: none;
+        }
+        ::placeholder{
+            color: #676c6d;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 1.2rem;
+            left: 1.45rem;
+            font-family: netflix;
+        }
+        .a{
+            display: flex;
+            justify-content: right;
+        }
+        .enviar{
+            color: rgb(0, 0, 0);
+            font-size: 0.71rem;
+            font-family: roboto;
+            font-weight: bold;
+            font-style: italic;
+            position: absolute;
+            top: 22.5rem;
+            right: 5rem;
+        }
+        .group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        p{
+            margin: 1.2rem 0 0 1.5rem;
+            color: rgb(94, 94, 94);
+            font-size: 1.5rem;
+        }
+        .mic{
+            margin: 0.68rem 0 0 0.9rem;
+            padding: 0.5rem;
+        }
+        .span{
+            font-size: 0.7rem;
+            color: rgb(102, 102, 102);
+            margin: 1.2rem 5.35rem 0 0;
+        }
+        .board{
+            color: rgb(167, 167, 167);
+            font-size: 1.1rem;
+            position: absolute;
+            right: 3rem;
+        }
+        .down{
+            font-size: 1.1rem;
+            position: absolute;
+            right: 1.25rem;
+        }
+        .rounded{
+            height: 72px;
+            width: 72px;
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: 50%;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.45rem;
+        }
+        .dad{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 17.5rem;
+        }
+        .dad-2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dad-2{
+            margin-left: 3.9rem;
+        }
+
+        .rounded-s{
+            color: gray;
+            font-size: 0.9rem;
+        }
+        .mic:hover{
+            background-color: rgba(196, 196, 196, 0.315);
+            border-radius: 50%;
+        }
+        .margin-r{
+            margin-right: 3.9rem;
+        }
+        .clock{
+            font-size: 2.2rem;
+        }
+        .form .hover{
+            padding: 1rem;
+            margin-left: -1rem;
+        }
+        .form>span:hover {
+            background-color: rgba(128, 128, 128, 0.13);
+        }
+        .app{
+            padding: 0.6rem;
+            margin-left: -0.6rem;
+        }
+        .rows{
+            border-radius: 50%;
+        }
+        .icons{
+            margin-right: 0.75rem;
+        }
+        .hover:hover{
+            color: #1966D2;
+            border-bottom: 1px solid #1966D2;
+        }
+        .selected{
+            border-bottom: 1px solid #1966D2;
+            color: #1966D2 !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="flex items-center">
+            <span class="material-icons app">menu</span>
+            <img src="../assets/img/google1.png" class="google-img">
+            <span class="traductor-span">Traductor</span>
+        </div>
+        <div class="flex items-center">
+            <span class="material-icons apps">apps</span>
+            <img src="../assets/img/linus.png" class="linus-coder">
+        </div>
+    </header>
+    <section>
+        <div>
+            <a href="#" class="texto">Texto 
+            <span class="material-icons format">text_format</span>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="documentos">Documentos
+            <span class="material-icons task">task</span>
+            </a>
+        </div>
+    </section>
+    <main>
+        <div class="content">
+            <div class="content-header">
+                <div class="form">
+                    <span class="hover">DETECTAR IDIOMA</span>
+                    <span class="hover selected">INGLÉS</span> 
+                    <span class="hover">ESPAÑOL</span>
+                    <span class="hover">FRANCÉS</span>
+                    <span class="material-icons row rows">keyboard_arrow_down</span>
+                </div>
+                <div class="icons">
+                    <span class="material-icons arrow rows">swap_horiz</span>
+                </div>
+                <div class="form">
+                    <span class="hover selected">ESPAÑOL</span>
+                    <span class="hover">INGLÉS</span> 
+                    <span class="hover">FRANCÉS</span>
+                    <span class="material-icons row rows">keyboard_arrow_down</span>
+                </div>
+            </div>
+            <div class="content-main">
+                <div class="left">
+                    <div>
+                        <textarea cols="39" rows="2" class="textarea"></textarea>
+                    </div>
+                    <div class="group">
+                        <span class="material-icons mic">mic</span> <span class="span">0 / 5.000 <span class="material-icons board">keyboard</span> <span class="material-icons down">arrow_drop_down</span> </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>Traducción</p>
+                </div>
+            </div>
+        </div>
+        <div class="dad">
+            <div class="dad-2">
+                <span class="material-icons rounded clock">update</span> <span class="rounded-s gab">Historial</span>
+            </div>
+            <div class="dad-2">
+                <span class="material-icons rounded">star</span> <span class="rounded-s gab">Guardado</span>
+            </div>
+            <div class="dad-2 margin-r">
+                <span class="material-icons rounded">people</span> <span class="rounded-s">Contribuir</span>
+            </div>
+        </div>
+    </main>
+    <a class="a"><span class="enviar">Enviar comentarios</span></a>
+</body>
+</html>
