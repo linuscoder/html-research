@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="shortcut icon" href="../assets/img/google-icon.jpeg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        body{
+            background-color: #202124;
+            font-family: netflix;
+            display: flex;
+            flex-direction: column;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        footer{
+            height: 5.9rem;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            height: 50px;
+            display: flex;
+            justify-content: right;
+            -webkit-justify-content: right;
+            align-items: center;
+            padding: 0.23rem 0.78rem 0 0;
+            position: relative;
+        }
+        .linus{
+            height: 43px;
+            margin: 0.4rem 0 0 0.45rem;
+        }
+        header>div{
+            display: flex;
+            align-items: center;
+        }
+        .apps{
+            color: rgb(224, 224, 224);
+            font-size: 1.45rem;
+            padding: 0.5rem;
+            margin: 0.2rem 0 0 0.25rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        header>div>a{
+            color: white;
+            font-size: 0.82rem;
+        }
+        .google{
+            height: 5.75rem;
+        }
+        .google-img-wraper{
+            display: flex;
+            justify-content: center;
+            margin-top: 8.95rem;
+        }
+        input{
+            border: 1px solid #606469;
+            border-radius: 50px;
+            background-color: transparent;
+            padding: 0.81rem 2.9rem;
+            color: white;
+            outline: none;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .hover{
+            margin-right: 0.9rem;
+        }
+        .input-parent{
+            display: flex;
+            align-items: center;
+            margin-top: 1.62rem;
+            position: relative;
+            width: 40.50%;
+            margin-bottom: 2.2rem;
+        }
+        .micro{
+            position: absolute;
+            right: 1.05rem;
+            height: 1.5rem;
+            top: 0.7rem;
+        }
+        .search{
+            position: absolute;
+            left: 0.9rem;
+            height: 1.3rem;
+            top: 0.8rem;
+        }
+        .a-main{
+            background-color: #303134;
+            border-radius: 4px;
+            color: white;
+            font-size: 0.88rem;
+            padding: 0.5rem 1rem 0.6rem 1rem;
+        }
+        .google-search{
+            margin-right: 0.5rem;
+        }
+        .span{
+            color: #BDC1C5;
+            font-size: 0.83rem;
+        }
+        .a-div{
+            color: #8AB4F7;
+            font-size: 0.82rem;
+        }
+        .margin-t{
+            margin-top: 2.2rem;
+        }
+        .footer-top{
+            flex: 1;
+            background-color: #171717;
+            border-bottom: 1px solid rgb(36, 36, 36);
+            display: flex;
+            align-items: center;
+        }
+        p{
+            color: #9c9da0;
+            font-size: 0.94rem;
+            margin-left: 1.85rem;
+        }
+        .footer-bootom{
+            flex: 1;
+            background-color: #171717;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1.25rem;
+        }
+        .display-f{
+            display: flex;
+        }
+        footer a{
+            color: #9c9da0;
+            font-size: 0.85rem;
+        }
+        .hover:hover{
+            text-decoration: underline;
+        }
+        .apps:hover{
+            background-color: rgba(153, 153, 153, 0.116);
+            border-radius: 50px;
+        }
+        .linus:hover{
+            background-color: rgba(153, 153, 153, 0.116);
+            border-radius: 50px;
+        }
+        input:hover{
+            background-color: #2a2b2e;
+            box-shadow: 0 1px 6px 0 #171717;
+            border: 0;
+            height: 1.3rem;
+        }
+        .a-main:hover{
+            border: 1px solid #5F6367;
+        }
+        footer a:hover{
+            text-decoration: underline;
+        }
+        footer a{
+            padding: 0.9rem;
+        }
+        .container{
+            background-color: #303134;
+            width: 290px;
+            position: absolute;
+            border-radius: 7px;
+            box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.452), 0 -2px 6px 2px rgb(0 0 0 / 15%);
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            flex-wrap: wrap;
+            top: 4.15rem;
+            right: 0.95rem;
+            height: 448px;
+            overflow: scroll;
+            display: none;
+        }
+        .img{
+            background-image: url(../assets/img/google-icons.png);
+            height: 64px;
+            width: 64px;
+            transform: scale(calc(5/6));
+            background-size: 100%;
+        }
+        .container>a{
+            height: 96px;
+            width: 96px;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .linus-2{
+            height: 3.5rem;
+        }
+        .container span{
+            color: white;
+            font-size: 0.85rem;
+        }
+        .drive{
+            background-position: 0 -2967px;
+        }
+        .youtube{
+            background-position: 0 -2622px;
+        }
+        .sea{
+            background-position: 0 -1794px;
+        }
+        .maps{
+            background-position: 0 -483px;
+        }
+        .play{
+            background-position: 0 -207px;
+        }
+        .news{
+            background-position: 0 -1311px;
+        }
+        .meet{
+            background-position: 0 -690px;
+        }
+        .contacts{
+            background-position: 0 -2898px;
+        }
+        .gmail{
+            background-position: 0 -2001px;
+        }
+        .calendar{
+            background-position: 0 -2553px;
+        }
+        .translate{
+            background-position: 0 -1932px;
+        }
+        .photos{
+            background-position: 0 -2829px;
+        }
+        .duo{
+            background-position: 0 -2484px;
+        }
+        .chat{
+            background-position: 0 -1656px;
+        }
+        input:checked ~ .container{
+            display: flex;
+        }
+        label{
+            user-select: none;
+            cursor: pointer;
+        }
+        .hr{
+            display: flex;
+            flex-direction: column;
+        }
+        .a-2{
+           margin: 1.5rem 0 1rem 0;
+           display: flex;
+           justify-content: center;
+           width: 100%;
+        }
+        .a-2>a{
+            color: #8AB4F7;
+            font-size: 0.85rem;
+            border: 1px solid #5F6367;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+        }
+        .a-2:hover>a{
+            background-color: #4e4e50be;
+        }
+        .message{
+            position: absolute;
+            top: 3rem;
+            right: -1.69rem;
+            padding: 0.35rem 0.65rem;
+            border: 1px solid white;
+            background-color: #2e2f31;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        input:focus{
+            border-radius: 25px 25px 0 0;
+            border-bottom: 1px solid rgb(94, 94, 94);
+            background-color: #2a2b2e;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            box-shadow: 0 1px 6px 0 #171717;
+            height: 1.23rem;
+        }
+        .message>span{
+            color: white;
+            font-size: 0.75rem;
+        }
+        .triangle{
+            clip-path: polygon(50% 0,100% 100%,0 100%);
+            height: 0.35rem;
+            width: 0.65rem;
+            background-color: #ffffff;
+            position: absolute;
+            top: -0.4rem;
+        }
+        .micro-parent:hover ~ .message{
+            display: flex;
+        }
+        .content{
+            position: absolute;
+            width: 100%;
+            background-color: #2a2b2e;
+            height: 12.6rem;
+            top: 2.94rem;
+            border-radius: 0 0 25px 25px;
+            display: none;
+            box-shadow: 0 4px 6px 0 #171717;
+        }
+        .content>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .span-1{
+            color: #A87AD1;
+        }
+        .span-2{
+            color: rgb(155, 155, 155);
+            font-size: 0.85rem;
+        }
+        .content>div{
+            padding: 0.15rem 0.7rem;
+        }
+        .content>div>div{
+            padding: 0.25rem;
+            display: flex;
+            align-items: center;
+        }
+        .icons{
+            color: #909094;
+            font-size: 1rem;
+            margin-right: 0.85rem;
+        }
+        .google-2{
+            margin-right: 0.75rem;
+        }
+        .buttons{
+            right: 9rem;
+            position: absolute;
+            top: 9rem;
+        }
+        .google-search-2{
+            background-color: #3a3c3f;
+            border: 1px solid #3a3c3f;
+            border-radius: 4px;
+            color: white;
+            font-size: 0.88rem;
+            padding: 0.5rem 1rem 0.6rem 1rem;
+        }
+        .a-div:hover{
+            text-decoration: underline;
+        }
+        .content-child:hover{
+            background-color: #5c626831;
+        }
+        .buttons>a:hover{
+            border: 1px solid gray;
+        }
+        .span-2:hover{
+            text-decoration: underline;
+            color: #528be6;
+        }
+        input:focus ~ .content{
+            display: block;
+        }
+        .tooltip{
+            top: 4.25rem;
+            right: 1.5rem;
+            border-radius: 10px;
+            position: absolute;
+            background-color: #2d2e31;
+            width: 21.8rem;
+            height: 505px;
+            padding: 0.5rem 0;
+            box-shadow: 0 1px 6px 0 #444444;
+            display: none;
+        }
+        .linus-logo{
+            height: 6.5rem;
+            width: 6.5rem;
+        }
+        .wraper{
+            text-align: center;
+        }
+        .p-2{
+            font-size: 1rem !important;
+        }
+        .wraper p{
+            color: white;
+            font-size: 0.8rem;
+            margin: 0.2rem 0 0 -0.01rem;
+        }
+        .tooltip a{
+            color: white;
+            font-size: 0.85rem;
+            border: 1px solid gray;
+            border-radius: 30px;
+            padding: 0.5rem 1rem;
+            width: 11.55rem;
+            margin: 1rem 0 1.4rem 0;
+            display: flex;
+        }
+        .a-parent{
+            display: flex;
+            justify-content: center;
+        }
+        .account{
+            color: white;
+            font-size: 2.25rem;
+            margin-right: 0.35rem;
+        }
+        .div-parent{
+            padding: 0.65rem 2rem;
+            display: flex;
+            align-items: center;
+        }
+        .person-add{
+            color: white;
+            font-size: 1.35rem;
+            margin: 0 0.75rem 0 0.5rem;
+        }
+        .div-parent>span>span{
+            color: white;
+            font-size: 0.75rem;
+        }
+        .letter{
+            font-size: 0.9rem !important;
+            color: white;
+        }
+        .parent{
+            display: flex;
+            justify-content: center;
+        }
+        .parent a{
+           width: 9rem;
+           border-radius: 5px;
+           padding: 0.5rem 2rem;
+        }
+        .content-3 span{
+            color: rgb(161, 161, 161);
+            font-size: 0.75rem;
+        }
+        .content-3{
+            display: flex;
+            justify-content: center;
+            margin-top: 0.65rem;
+        }
+        .content-3>div{
+            padding: 0.15rem 0.5rem;
+        }
+        .container>a:hover{
+            background-color: #2525256c;
+            border-radius: 10px;
+        }
+        .a-parent>a:hover{
+            background-color: #6d6d6d34;
+        }
+        .hover-2:hover{
+            background-color: #3b3b3db7;
+        }
+        .hover-3:hover{
+            background-color: #3b3b3db7;
+            border-radius: 5px;
+        }
+        #check:checked ~ .tooltip{
+            display: block;
+        }
+        hr{
+            border-color: #7a7b7e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="#" class="gmail hover">Gmail</a>
+            <a href="#" class="images hover">Images</a>
+            <input type="checkbox" id="label">
+            <label for="label">
+                <span class="material-icons apps">apps</span>
+            </label>
+            <div class="container">
+                <a href="#">
+                    <img src="../assets/img/linus.png" class="linus-2">
+                    <span>Account</span>
+                </a>
+                <a href="#">
+                    <div class="img drive"></div>
+                    <span class="label">Drive</span>
+                </a>
+                <a href="#"> 
+                    <div class="img youtube"></div>
+                    <span class="label">YouTube</span>
+                </a>
+                <a href="#">
+                    <div class="img sea"></div>
+                    <span class="label">Search</span>
+                </a>
+                <a href="#">
+                    <div class="img maps"></div>
+                    <span class="label">Maps</span>
+                </a>
+                <a href="#">
+                    <div class="img play"></div>
+                    <span class="label">Play</span>
+                </a>
+                <a href="#">
+                    <div class="img news"></div>
+                    <span class="label">News</span>
+                </a>
+                <a href="#">
+                    <div class="img meet"></div>
+                    <span class="label">Meet</span>
+                </a>
+                <a href="#">
+                    <div class="img contacts"></div>
+                    <span class="label">Contacts</span>
+                </a>
+                <a href="#">
+                    <div class="img gmail"></div>
+                    <span class="label">Gmail</span>
+                </a>
+                <a href="#">
+                    <div class="img calendar"></div>
+                    <span class="label">Calendar</span>
+                </a>
+                <a href="#">
+                    <div class="img translate"></div>
+                    <span class="label">Translate</span>
+                </a>
+                <a href="#">
+                    <div class="img photos"></div>
+                    <span class="label">Photos</span>
+                </a>
+                <a href="#">
+                    <div class="img duo"></div>
+                    <span class="label">Duo</span>
+                </a>
+                <a href="#">
+                    <div class="img chat"></div>
+                    <span class="label">Chat</span>
+                </a>
+                <div class="a-2"><a href="#">More from Google</a></div>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <img src="../assets/img/linus.png" class="linus">
+            </label>
+            <div class="tooltip">
+                <div class="wraper">
+                    <img src="../assets/img/linus.png" class="linus-logo">
+                    <p class="p-2">Linus Quispe</p>
+                    <p>linuscdqq@gmail.com</p>
+                </div>
+                <div class="a-parent"><a href="#">Manage your Google Account</a></div>
+                <hr>
+                <div class="div-parent hover-2">
+                    <span class="material-icons account">account_circle</span>
+                    <span>
+                        <span class="letter">Bertha quispe</span>
+                        <span>berthaquispearcos@gmail.com</span>
+                    </span>
+                </div>
+                <div class="div-parent hover-2">
+                    <span class="material-icons account">account_circle</span>
+                    <span>
+                        <span class="letter">Cristian Quispe Ramirez</span>
+                        <span> cristianqram@gmail.com </span>
+                    </span>
+                </div>
+                <div class="div-parent hover-2">
+                    <span class="material-icons person-add">person_add</span>
+                    <span class="letter">Add another account</span>
+                </div>
+                <hr>
+                <div class="parent">
+                    <a href="#" class=" hover-2">Sign out of all accounts</a>
+                </div>
+                <hr>
+                <div class="content-3">
+                    <div class=" hover-3"><span>Privacy Policy</span></div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<div class=" hover-3"><span>Terms of Service</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="google-img-wraper">
+            <img src="../assets/img/google-icon-2.png" class="google">
+        </div>
+        <div class="input-parent">
+            <a href="#"><img src="../assets/img/search.svg" class="search"></a>
+            <input type="text">
+            <div class="content">
+                <div class="content-child">
+                    <div class="margin-top">
+                        <span class="material-icons icons">schedule</span>
+                        <span class="span-1">outlook</span>
+                    </div>
+                    <div>
+                        <a href="#"><span class="span-2">Remove</span></a>
+                    </div>
+                </div>
+                <div class="content-child">
+                    <div>
+                        <span class="material-icons icons">schedule</span>
+                        <span class="span-1">google</span>
+                    </div>
+                    <div>
+                        <a href="#"><span class="span-2">Remove</span></a>
+                    </div>
+                </div>
+                <div class="content-child">
+                    <div>
+                        <span class="material-icons icons">schedule</span>
+                        <span class="span-1">youtube</span>
+                    </div>
+                    <div>
+                        <a href="#"><span class="span-2">Remove</span></a>
+                    </div>
+                </div>
+                <div class="content-child">
+                    <div>
+                        <span class="material-icons icons">schedule</span>
+                        <span class="span-1">drive</span>
+                    </div>
+                    <div>
+                        <a href="#"><span class="span-2">Remove</span></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="buttons">
+                        <a href="#" class="google-search-2 google-2">Google Search</a>
+                        <a href="#" class="google-search-2">I'm Feeling Lucky</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="micro-parent"><img src="../assets/img/microfon.svg" class="micro"></a>
+            <div class="message">
+                <div class="triangle"></div>
+                <span>Search by Voice</span>
+            </div>
+        </div>
+        <div>
+            <a href="#" class="a-main google-search">Google Search</a>
+            <a href="#" class="a-main">I'm Feeling Lucky</a>
+        </div>
+        <div class="margin-t" >
+            <span class="span">Google offered in:</span> <a href="#" class="a-div">Español (Latinoamérica)</a> <a href="#" class="a-div">Quechua</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <p>Peru</p>
+        </div>
+        <div class="footer-bootom">
+            <div class="display-f">
+                <a href="#">About</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business</a>
+                <a href="#">How Search works</a>
+            </div>
+            <div class="display-f">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
