@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp</title>
+    <link rel="shortcut icon" href="../assets/img/logo-whatsapp.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        body{
+            display: flex;
+            font-family: netflix;
+        }
+        .left{
+            width: 29.98%;
+            background-color: #111B21;
+            border-right: 1px solid rgba(255, 255, 255, 0.178);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .rigth{
+            flex: 1;
+            background-color: #222F37;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .whatsapp{
+            height: 22.25rem;
+        }
+        .p{
+            font-size: 2.05rem;
+            color: #D0D6D8;
+            margin: 2rem 0 1.5rem;
+        }
+        .link{
+            color: #149376;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .hr{
+            border-top: 1px solid rgba(128, 128, 128, 0.329);
+            width: 34.75rem;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+            position: relative;
+        }
+        p,span{
+            color: #8696A0;
+            font-size: 0.9rem;
+        }
+        .border-b{
+            border-bottom: 6px solid #128066;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+        }
+        .laptop{
+            display: flex;
+            position: absolute;
+            font-size: 1.1rem;
+            right: 84%;
+        }
+        header{
+            background-color: #1F2C33;
+            height: 3.7rem;
+            padding: 0 1.5rem 0 0.57rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .linus{
+            height: 55px;
+        }
+        .icons{
+            margin-right: 1.4rem;
+        }
+        aside{
+            padding: 0.4rem 0.85rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+            position: relative;
+        }
+        input{
+            outline: none;
+            padding: 0.6rem;
+            width: 100%;
+            color: white;
+            background-color: #243038;
+            border: 0;
+            border-radius: 8px;
+            padding-left: 4rem;
+            font-size: 0.9rem;
+        }
+        ::placeholder{
+            color: #72828b;
+        }
+        .search{
+            position: absolute;
+            top: 0.85rem;
+            left: 1.7rem;
+            font-size: 1.2rem;
+        }
+        main>div>div{
+            display: flex;
+            align-items: center;
+            padding: 0.67rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+            cursor: pointer;
+            position: relative;
+        }
+        main>div>div>p{
+            color: white;
+            font-size: 1.25rem;
+            margin-left: 2rem;
+        }
+        .archived{
+            color: white;
+            margin-left: 1.75rem;
+            font-size: 1rem;
+        }
+        .upload-icon{
+            color: #169477;
+            font-size: 1.3rem;
+        }
+        .div{
+            padding: 0.75rem 1.75rem;
+        }
+        .luca{
+            height: 3rem;
+            width: 5rem;
+            border-radius: 5px;
+        }
+        .more{
+            cursor: pointer;
+        }
+        main>div>:hover{
+            background-color: #2c363b85;
+        }
+        main>div>:hover>span{
+            display: block;
+        }
+        .expand_more{
+            position: absolute;
+            right: 1.75rem;
+            font-size: 1.95rem;
+            display: none;
+        }
+        .content{
+            background-color: #233138;
+            width: 12.5rem;
+            z-index: 1;
+            border-radius: 3px;
+            position: absolute;
+            right: 1.25rem;
+            top: 3.25rem;
+            box-shadow: 1px 1px 3px 3px rgba(2, 2, 2, 0.158);
+            padding: 0.5rem 0;
+            display: none;
+        }
+        .content>a{
+            text-decoration: none;
+            color: rgb(201, 201, 201);
+            font-size: 0.9rem;
+            padding: 0.7rem 1.5rem;
+            display: block;
+        }
+        .content>a:hover{
+            background-color: #111b2193;
+        }
+        #label:checked ~ .content{
+            display: block;
+        }
+        #label{
+            display: none;
+        }
+        .parent{
+            margin-right: -14rem;
+        }
+        main{
+            overflow: hidden;
+        }
+        main>div{
+            overflow: auto;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <header>
+            <a href="#"><img src="../assets/img/linus.png" class="linus"></a>
+            <div class="parent">
+                <a href="#"><span class="material-icons icons">downloading</span></a>
+                <a href="#"><span class="material-icons icons">message</span></a>
+            </div>
+            <input type="checkbox" id="label">
+            <label for="label">
+                <span class="material-icons more">more_vert</span>
+            </label>
+            <div class="content">
+                <a href="#">New group</a>
+                <a href="#">Starred messages</a>
+                <a href="#">Settings</a>
+                <a href="#">Log out</a>
+                <a href="https://www.chess.com/home" target="blank">Click here</a>
+            </div>
+        </header>
+        <aside>
+            <a href="#"><span class="material-icons search">search</span></a>
+            <input type="text" placeholder="Search or start new chat">
+        </aside>
+        <main>
+            <div>
+                <div class="div">
+                    <span class="material-icons upload-icon">upload_file</span>
+                    <p class="archived">Archived</p>
+                </div>
+                <div>
+                    <img src="../assets/img/diary-of-greg.jpeg" class="luca">
+                    <p>Diario de Greg</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/cars-3.jpeg" class="luca">
+                    <p>Cars3</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/onward.jpeg" class="luca">
+                    <p>Unidos</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/increibles-2.jpeg" class="luca">
+                    <p>Ingreibles</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/luca.jpeg" class="luca">
+                    <p>Luca</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/gravity-falls.jpeg" class="luca">
+                    <p>Gravity Falls</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/raya.jpeg" class="luca">
+                    <p>Raya</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/monster.jpeg" class="luca">
+                    <p>Monsters</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/dory.jpeg" class="luca">
+                    <p>Buscando a Dory</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/moana.jpeg" class="luca">
+                    <p>Moana</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/big-hero.webp" class="luca">
+                    <p>Big hero</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+                <div>
+                    <img src="../assets/img/intensamente.jpeg" class="luca">
+                    <p>Intensa mente</p>
+                    <span class="material-icons expand_more">expand_more</span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="rigth">
+        <img src="../assets/img/whatsapp-icon.jpeg" class="whatsapp">
+        <p class="p">Keep your phone connected</p>
+        <p>WhatsApp connects to your phone to sync messages. To reduce data usage, connect</p>
+        <p>your phone to Wi-Fi</p>
+        <div class="hr">
+            <span class="material-icons laptop">laptop</span>
+            <p>Make calls from desktop with WhatsaApp from Mac.</span>
+            <a href="https://www.whatsapp.com/download" target="blank" class="link">Get it here</a>
+        </div>
+        <div class="border-b"></div>
+    </div>
+</body>
+</html>
