@@ -9,27 +9,72 @@
         html,body{
             height: 100%;
         }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(11, 29, 68);
+            flex-direction: column;
+        }
+        th{
+            padding: 0.35rem 3rem;
+            background-color: rgb(20, 20, 117);
+            color: white;
+        }
+        .tr{
+            background-color: rgb(15, 58, 78);
+        }
+        tr{
+            background-color: rgb(13, 128, 128);
+            color: white;
+        }
         td{
-            padding: 0.5rem;
-            background-color: aqua;
+            padding: 0.25rem;
+            text-align: center;
+        }
+        table{
+            border-radius: 5px;
+        }
+        p{
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            background-image: linear-gradient(to right, red, blue);
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
         }
     </style>
 </head>
 <body>
-    <table border="10">
+    <p>TABLE HTML</p>
+    <table border="1">
         <tr>
-            <td colspan="4">&nbsp&nbsp&nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp lab2</td>
+            <th>Title 1</th>
+            <th>Title 2</th>
+            <th>Title 3</th>
         </tr>
         <tr>
-            <td>cell1</td>
-            <td rowspan="2">cell2</td>
-            <td>cell3</td>
-            <td>cell4</td>
+            <td>row 1</td>
+            <td>row 2</td>
+            <td>row 3</td>
+        </tr>
+        <tr class="tr">
+            <td>col 1</td>
+            <td>col 2</td>
+            <td>col 3</td>
         </tr>
         <tr>
-            <td>cell5</td>
-            <td>cell6</td>
-            <td>cell7</td>
+            <td>ad 1</td>
+            <td>ad 2</td>
+            <td>ad 3</td>
+        </tr>
+        <tr>
+            <td colspan="2">col 4</td>
+            <td rowspan="2">row 5</td>
+        </tr>
+        <tr>
+            <td>hola</td>
+            <td>hello</td>
         </tr>
     </table>
 </body>

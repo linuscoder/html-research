@@ -6,113 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
         html, body{
             height: 100%;
         }
         body{
+            margin: 0;
             display: flex;
             flex-direction: column;
         }
-        body>div{
-            border: 1px solid black;
+        .up{
+            background-color: yellow;
+            flex: 1;
+            display: flex;
+            
+        }
+        .down{
+            background-color: orange;
             flex: 1;
             display: flex;
         }
-        body>div:nth-child(odd) div:nth-child(even){
-            background-color: green;
-        }
-        body>div:nth-child(even) div:nth-child(odd){
-            background-color: green;
-        }
-        div div{
+        .box{
             flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .purple{
+            background-color: purple;
+        }
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .box div{
+            border: 1px solid black;
+            width: 50%;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="up">
+        <div class="box purple">
+            
+        </div>
+        <div class="box green">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
     </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    <section class="down">
+        <div class="box red">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <div class="box blue">
+            
+        </div>
+    </section>
 </body>
 </html>
