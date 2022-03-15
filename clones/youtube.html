@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney and Pixar’s Luca | Official</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="short icon" href="../assets/img/youtube-icon.png">
+    <style>
+        *{
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            font-family: netflix;
+        }
+        header{
+            height: 56px;
+            background-color: #282828;
+            display: flex;
+        }
+        main{
+            background-color: #181818;
+            padding: 1.5rem 0 1rem 1.5rem;
+            position: relative;
+        }
+        .material-icons{
+            color: white;
+        }
+        .menu{
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+        header>div{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-left: 1.5rem;
+        }
+        .youtube-img{
+            height: 4.15rem;
+            margin-left: 1.05rem;
+        }
+        input {
+            width: 593px;
+            padding: 0.69rem;
+            background-color: #121212;
+            border: 1px solid #353535;
+            margin-left: 6.25rem;
+            border-radius: 3px 0 0 3px;
+            outline: 0;
+            color: white;
+            font-size: 0.9rem;
+        }
+        ::placeholder{
+            font-size: 0.97rem;
+        }
+        .search{
+            font-size: 1.65rem;
+            background-color: #353535;
+            padding: 0.43rem 1.12rem;
+        }
+        .linus{
+            height: 2.66rem;
+            margin-right: 2.55rem;
+            cursor: pointer;
+        }
+        .right{
+            flex: 1;
+            display: flex;
+            justify-content: right;
+        }
+        .noti{
+            margin-right: 1.55rem;
+            cursor: pointer;
+        }
+        iframe{
+            width: 59.4rem;
+            height: 32rem;
+            margin-bottom: 0.75rem;
+        }
+        .link{
+            color: #3DA6FF;
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+        .title{
+            color: white;
+            font-size: 17.3px;
+        }
+        .sub-title{
+            color: #AAAAAA;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+            display: flex;
+        }
+        .content{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(109, 109, 109, 0.192);
+        }
+        .container{
+            display: flex;
+            flex: 1;
+        }
+        .span{
+            color: white;
+            font-size: 0.9rem;
+            margin: 0 1.45rem 0.9rem 0;
+            cursor: pointer;
+        }
+        .content>div{
+            display: flex;
+            align-items: center;
+            margin-top: 0.85rem;
+        }
+        .like{
+            margin: 0 0.15rem 0.9rem 0;
+            cursor: pointer;
+        }
+        .small{
+            font-size: 1.25rem;
+        }
+        .ball{
+            height: 3rem;
+            border-radius: 50px;
+            margin-top: 0.98rem;
+        }
+        .content-2{
+            display: flex;
+        }
+        .content-2>p{
+            color: white;
+        }
+        .check{
+            color: #AAAAAA;
+            font-size: 0.9rem;
+            margin: 1.55rem 0 0 0.25rem;
+        }
+        .p-pixar{
+            margin: 1.4rem 0 0 1rem;
+            font-size: 0.88rem;
+            color: white;
+            text-decoration: none;
+        }
+        .subscribers{
+            color: #A9A9A9 !important;
+            font-size: 0.75rem;
+            margin: 2.75rem 0 0 -3.25rem;
+        }
+        .container-2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button{
+            text-decoration: none;
+            color: white;
+            background-color: #CC0100;
+            border-radius: 2px;
+            padding: 0.6rem 1rem;
+            font-size: 0.85rem;
+            margin: 1.2rem 0.25rem 0 0;
+            display: flex;
+        }
+        .comentarios{
+            color: white;
+            width: 40rem;
+            font-size: 0.9rem;
+            margin: 0.6rem 0 0 4rem;
+        }
+        .SHOW-MORE{
+            color: #AAAAAA;
+            font-size: 0.72rem;
+            margin: 1.75rem 0 0 4rem;
+            display: flex;
+            cursor: pointer;
+        }
+        hr{
+            border: 1px solid rgba(105, 105, 105, 0.205);
+            margin-top: 1.25rem;
+        }
+        .slidebar{
+            display: flex;
+        }
+        .slidebar span{
+            color: white;
+            font-size: 0.86rem;
+        }
+        .slidebar div{
+            border: 1px solid rgb(82, 82, 82);
+            padding: 0.37rem 0.75rem;
+            border-radius: 20px;
+            background-color: #2b2b2b;
+            margin: 0 0 0 0.6rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        aside{
+            flex: 1;
+            background-color: #181818;
+            padding: 2rem 2rem 0.75rem 2rem;
+        }
+        .all{
+            background-color: white;
+            display: flex;
+            margin-left: -0.5rem !important;
+            background-color: white !important;
+            border: white !important;
+        }
+        .all span{
+            color: black;
+        }
+        .more{
+            font-size: 1.5rem !important;
+            display: flex;
+            align-items: center;
+            margin-left: -2rem;
+            cursor: pointer;
+        }
+        .dot{
+            font-size: 1.3rem !important;
+            margin-top: 1.15rem;
+            right: 1.25rem;
+            cursor: pointer;
+            position: absolute;
+            display: none;
+        }
+        .more::before{
+            background-image: linear-gradient(to right, #181818cc, #181818);
+            height: 100%;
+            width: 25px;
+            content: "";
+            pointer-events: none;
+            margin-left: 0.5rem;
+        }
+        .content-3>div>a>img{
+            height: 6rem;
+            width: 11rem;
+            margin: 0.8rem 0.1rem 0 -0.5rem;
+        }
+        .content-3>div{
+            display: flex;
+        }
+        .content-3>div>div{
+            display: flex;
+            flex-direction: column;
+        }
+        .content-3>div>div p{
+            width: 13rem;
+            color: white;
+            margin: 1rem 0 0 0.35rem;
+        }
+        .content-3>div>div>span{
+            color: rgb(165, 165, 165);
+            font-size: 0.8rem;
+            margin-left: 0.35rem;
+        }
+        .span-2{
+            margin-top: 0.75rem;
+        }
+        .slidebar>div:hover{
+            background-color: #464646;
+        }
+        .parent{
+            display: flex;
+        }
+        .content-3>div:hover .dot{
+            display: block;
+        }
+        .tooltip{
+            width: 614.5px;
+            position: absolute;
+            top: 3rem;
+            color: black;
+            background-color: white;
+            z-index: 1;
+            left: 25.39%;
+            padding: 0.75rem 0;
+            display: none;
+        }
+        input:focus~.tooltip{
+            display: block;
+        }
+        .tooltip>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .tooltip>div>span{
+            margin: 0.25rem 0.6rem;
+            font-weight: bold;
+            color: #51188C;
+            cursor:default;
+        }
+        .remove{
+            color: #3366CC !important;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            margin-right: 1.9rem !important;
+        }
+        .tooltip>div:hover{
+            background-color: #5e5e5e27;
+        }
+        .remove:hover{
+            text-decoration: underline;
+        }
+        .message{
+            position: absolute;
+            color: white;
+            font-size: 0.85rem;
+            background-color: rgba(68, 68, 68, 0.897);
+            border-radius: 2px;
+            padding: 0.65rem 0.5rem;
+            margin-top: 5.7rem;
+            display: none;
+        }
+        .hover:hover ~ .message{
+            display: block;
+        }
+        .hover-2:hover ~ .message-2{
+            display: block;
+        }
+        .message-2{
+            position: absolute;
+            color: white;
+            font-size: 0.85rem;
+            background-color: rgba(68, 68, 68, 0.904);
+            border-radius: 2px;
+            padding: 0.65rem 0.5rem;
+            margin: 5.7rem 0 0 5.5rem;
+            display: none;
+        }
+        .message-3{
+            position: absolute;
+            color: white;
+            font-size: 0.85rem;
+            background-color: rgba(68, 68, 68, 0.904);
+            border-radius: 2px;
+            padding: 0.65rem 0.5rem;
+            margin: 5.7rem 0 0 12.5rem;
+            display: none;
+        }
+        .hover-3:hover ~ .message-3{
+            display: block;
+        }
+        .message-4{
+            position: absolute;
+            color: white;
+            font-size: 0.85rem;
+            background-color: rgba(68, 68, 68, 0.89);
+            border-radius: 2px;
+            padding: 0.65rem 0.5rem;
+            margin: 5.7rem 0 0 18.5rem;
+            display: none;
+        }
+        .hover-4:hover ~ .message-4{
+            display: block;
+        }
+        .click{
+            width: 11rem;
+            position: absolute;
+            background-color: #212121;
+            right: -9rem;
+            margin-top: 6rem;
+            color: #FFFFFF;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+            display: none;
+        }
+        .p-click{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.35rem 1rem;
+        }
+        .p-click:hover{
+            background-color: #383838fd;
+        }
+        .flag{
+            margin-right: 0.5rem;
+        }
+        #label{
+            display: none;
+        }
+        #label:checked ~ .click{
+            display: block;
+        }
+        .tooltip-2{
+            position: absolute;
+            width: 29.8rem;
+            top: 3rem;
+            right: 6.35rem;
+            z-index: 1;
+            border: 1px solid #383838;
+            display: none;
+        }
+        .setting{
+            color: #eeeeee;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+        article>span{
+            color: white;
+        }
+        article{
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #212121;
+            border-bottom: 1px solid #383838;
+        }
+        .notifications{
+            font-size: 7rem;
+            color: #717171;
+        }
+        section>p{
+            color: #9c9c9c;
+            font-size: 1.1rem;
+            margin-top: 1.75rem;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #212121fb;
+            padding: 11rem 0 13rem;
+        }
+        .span-3{
+            width: 18rem;
+            color: #9c9c9c;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        .modal{
+            position: absolute;
+            color: white;
+            background-color: rgba(68, 68, 68, 0.904);
+            padding: 0.65rem;
+            font-size: 0.8rem;border-radius: 2px;
+            right: -0.25rem;
+            top: 3.7rem;
+            display: none;
+        }
+        .setting:hover ~ .modal{
+            display: block;
+        }
+        #label-2{
+            display: none;
+        }
+        #label-2:checked ~ .tooltip-2{
+            display: block;
+        }
+        .linus-2{
+            height: 3.35rem;
+        }
+        .head{
+            display: flex;
+            border-bottom: 1px solid  #383838;
+            padding: 0.5rem;
+            background-color: #212121;
+        }
+        .name{
+            color: white;
+            margin: 0.5rem 0.5rem;
+            font-weight: bold;
+        }
+        .head>div{
+            display: flex;
+            flex-direction: column;
+        }
+        .gmail{
+            color: white;
+            font-size: 0.85rem;
+            margin: -0.5rem 0.5rem;
+        }
+        .tooltip-3{
+            width: 18.65rem;
+            position: absolute;
+            top: 3rem;
+            right: 2rem;
+            border: 1px solid #383838;
+            display: none;
+        }
+        .head>div>a{
+            color: #3B97E5;
+            text-decoration: none;
+            margin: 1.15rem 0.5rem 0.65rem;
+            font-size: 0.85rem;
+        }
+        .main>a>p{
+            color: white;
+        }
+        .main>a{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            text-decoration: none;
+            padding: 0.5rem 0.95rem;
+        }
+        .main{
+            flex-direction: column;
+            display: flex;
+            border-bottom: 1px solid  #383838;
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            background-color: #212121fd;
+        }
+        .icon-2{
+            margin-right: 1rem;
+        }
+        .row-2{
+            position: absolute;
+            right: 1rem;
+        }
+        .footer{
+            flex-direction: column;
+            display: flex;
+            padding: 0.5rem 0;
+            font-size: 0.85rem;
+            background-color: #212121fd;
+        }
+        .footer>a>p{
+            color: white;
+        }
+        .footer>a{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        #check{
+            display: none;
+        }
+        #check:checked ~ .tooltip-3{
+            display: block;
+        }
+        .main>a:hover{
+            background-color: #383838;
+        }
+        .footer>a:hover{
+            background-color: #383838;
+        }
+        .parent-2{
+            width: 13.5rem;
+        }
+        .tooltip-menu{
+            position: absolute;
+            width: 14rem;
+            background-color: #282828;
+            top: 3.5rem;
+            z-index: 1;
+            left: 0;
+            padding: 0.72rem 1rem 0.72rem 0;
+            overflow: auto;
+            max-height: 100%;
+            display: none;
+        }
+        .tooltip-menu>div>a{
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 1.55rem;
+            text-decoration: none;
+        }
+        .tooltip-menu>div>a>p{
+            color: white;
+            font-size: 0.9rem;
+        }
+        .tooltip-icons{
+            margin-right: 1.5rem;
+        }
+        .head-2{
+            padding-bottom: 0.75rem; 
+            border-bottom: 1px solid #383838;
+        }
+        .sub-head{
+            padding-bottom: 0.75rem; 
+            border-bottom: 1px solid #383838;
+        }
+        .sub-head>a:hover{
+            background-color: #383838;
+        }
+        .head-2>a:hover{
+            background-color: #383838;
+        }
+        .main-2>a:hover{
+            background-color: #383838;
+        }
+        .more-2>a:hover{
+            background-color: #383838;
+        }
+        .more-3>a:hover{
+            background-color: #383838;
+        }
+        .a{
+            margin-top: 0.75rem;
+        }
+        .history{
+            font-size: 1.75rem;
+            margin-left: -0.25rem;
+        }
+        .small-2{
+            font-size: 1.35rem;
+        }
+        .title-2{
+            color: #AAAAAA;
+            font-size: 0.9rem;
+            margin-left: 1.5rem;
+        }
+        .margin-t{
+            margin-top: 0.35rem;
+        }
+        .main-2{
+            padding: 0.95rem 0;
+            border-bottom: 1px solid #383838;
+        }
+        .picture{
+            height: 1.5rem;
+            border-radius: 50px;
+            margin-right: 1rem;
+            display: flex;
+        }
+        .main-2>a{
+            padding: 0.6rem 1.6rem !important;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .add{
+            margin-right: 1rem;
+        }
+        .more-2{
+            padding: 0.95rem 0;
+            border-bottom: 1px solid #383838;
+        }
+        .more-3{
+            padding: 0.95rem 0;
+            border-bottom: 1px solid #383838;
+        }
+        .first-p{
+            color: #AAAAAA;
+            font-size: 0.8rem;
+            margin: 1rem 0;
+            width: 9rem;
+        }
+        .second-p{
+            color: #AAAAAA;
+            font-size: 0.8rem;
+            width: 9rem;
+        }
+        .footer-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .credits{
+            font-size: 0.75rem;
+            color: #6d6d6d;
+            margin: 1rem 0;
+        }
+        #checkbox-2{
+            display: none;
+        }
+        #checkbox-2:checked ~ .tooltip-menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="parent-2">
+            <input type="checkbox" id="checkbox-2">
+            <label for="checkbox-2">
+                <span class="material-icons menu">menu</span>
+            </label>
+            <div class="tooltip-menu">
+                <div class="head-2">
+                    <a href="https://www.youtube.com/">
+                        <span class="material-icons tooltip-icons">home</span>
+                        <p>Home</p>
+                    </a>
+                    <a href="https://www.youtube.com/feed/explore">
+                        <span class="material-icons tooltip-icons">explore</span>
+                        <p>Explore</p>
+                    </a>
+                    <a href="https://www.youtube.com/shorts/NV6xSQMTqQY">
+                        <span class="material-icons tooltip-icons">preview</span>
+                        <p>Shorts</p>
+                    </a>
+                    <a href="https://www.youtube.com/feed/subscriptions">
+                        <span class="material-icons tooltip-icons small-2">subscriptions</span>
+                        <p>Subscriptions</p>
+                    </a>
+                </div>
+                <div class="sub-head">
+                    <a href="https://www.youtube.com/feed/library" class="a">
+                        <span class="material-icons tooltip-icons small-2">video_library</span>
+                        <p>Library</p>
+                    </a>
+                    <a href="https://www.youtube.com/feed/history">
+                        <span class="material-icons tooltip-icons history">history</span>
+                        <p>History</p>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons tooltip-icons">schedule</span>
+                        <p>Watch later</p>
+                    </a>
+                    <a href="https://www.youtube.com/playlist?list=LL">
+                        <span class="material-icons tooltip-icons">thumb_up_off_alt</span>
+                        <p>Liked videos</p>
+                    </a>
+                    <a href="https://www.youtube.com/playlist?list=PLvfecebFoYCTLcH43QmUBS8I3x8YKOZ7g">
+                        <span class="material-icons tooltip-icons">menu_open</span>
+                        <p>Jared Inglés</p>
+                    </a>
+                </div>
+                <div class="main-2">
+                    <p class="title-2">SUBSCRIPTIONS</p>
+                    <a href="https://www.youtube.com/channel/UCSyTLBQaIolmvJFSfFbU4Sw" class="margin-t">
+                        <img src="../assets/img/yachay.jpeg" class="picture">
+                        <p>Yachay School</p>
+                    </a>
+                    <a href="https://www.youtube.com/c/MrBeast6000">
+                        <img src="../assets/img/beast.png" class="picture">
+                        <p>MrBeast</p>
+                    </a>
+                    <a href="https://www.youtube.com/c/Casicreativo">
+                        <img src="../assets/img/casi-creativo.jpeg" class="picture">
+                        <p>Fred Lammie</p>
+                    </a>
+                    <a href="https://www.youtube.com/c/PlastiVerse">
+                        <img src="../assets/img/plastiverse.jpeg" class="picture">
+                        <p>PlastiVerse</p>
+                    </a>
+                    <a href="https://www.youtube.com/c/Elpathofail">
+                        <img src="../assets/img/patho.jpeg" class="picture">
+                        <p>PathoFail</p>
+                    </a>
+                    <a href="https://www.youtube.com/c/jquintanac5DeToxoMorocho">
+                        <img src="../assets/img/toxo.jpeg" class="picture">
+                        <p>DeToxoMoroxo</p>
+                    </a>
+                    <a href="https://www.youtube.com/feed/guide_builder">
+                        <span class="material-icons add">add_circle_outline</span>
+                        <span>Browse channelss</span>
+                    </a>
+                </div>
+                <div class="more-2">
+                    <p class="title-2">MORE FROM YOUTUBE</p>
+                    <a href="https://www.youtube.com/gaming" class="margin-t">
+                        <span class="material-icons tooltip-icons">sports_esports</span>
+                        <p>Gaming</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC4R8DWoMoI7CAwX8_LjQHig">
+                        <span class="material-icons tooltip-icons">sensors</span>
+                        <p>Live</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCtFRv9O2AHqOZjjynzrv-xg">
+                        <span class="material-icons tooltip-icons">lightbulb</span>
+                        <p>Learning</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw">
+                        <span class="material-icons tooltip-icons">emoji_events</span>
+                        <p>Sports</p>
+                    </a>
+                </div>
+                <div class="more-3">
+                    <a href="https://www.youtube.com/account" class="margin-t">
+                        <span class="material-icons tooltip-icons">settings</span>
+                        <p>Settings</p>
+                    </a>
+                    <a href="https://www.youtube.com/reporthistory">
+                        <span class="material-icons tooltip-icons">flag</span>
+                        <p>Report history</p>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons tooltip-icons">help_outline</span>
+                        <p>help</p>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons tooltip-icons">feedback</span>
+                        <p>Send feedback</p>
+                    </a>
+                </div>
+                <div class="footer-2">
+                    <p class="first-p">About Press Copyright Contact us Creators Advertise Developers</p>
+                    <p class="second-p">Terms Privacy Policy & Safety How YouTube works Test new features</p>
+                    <p class="credits">@ 2022 Google LLC</p>
+                </div>
+            </div>
+            <a href="https://www.youtube.com/"><img src="../assets/img/youtube-youtube.avif" class="youtube-img"></a>
+        </div>
+        <div>
+            <input type="text" placeholder="Search">
+            <a href="https://www.youtube.com/results?sp=mAEB&search_query=luca+espa%C3%B1ol"><span class="material-icons search">search</span></a>
+            <div class="tooltip">
+                <div>
+                    <span>Onward Trailer</span> <span class="remove">Remove</span>
+                </div>
+                <div>
+                    <span>Luca Trailer</span> <span class="remove">Remove</span>
+                </div>
+                <div>
+                    <span>Coco Trailer</span> <span class="remove">Remove</span>
+                </div>
+                <div>
+                    <span>Turning Red Trailer</span> <span class="remove">Remove</span>
+                </div>
+                <div>
+                    <span>Cars 3 Trailer</span> <span class="remove">Remove</span>
+                </div>
+                <div>
+                    <span>Big hero Trailer</span> <span class="remove">Remove</span>
+                </div>
+                <div>
+                    <span>Diario de Greg Trailer</span> <span class="remove">Remove</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <label for="label-2">
+                <span class="material-icons noti">notifications</span>
+            </label>
+            <input type="checkbox" id="label-2">
+            <div class="tooltip-2">
+                <article>
+                    <span>Notifications</span> <span class="material-icons setting">settings</span> <div class="modal"><p>Settings</p></div>
+                </article>
+                <section>
+                    <span class="material-icons notifications">notifications</span>
+                    <p>Your notifications live here</p>
+                    <span class="span-3">Subscribe to your favorite channels to get notified about their latest videos.</span>
+                </section>
+            </div>
+            <label for="check">
+                <img src="../assets/img/linus.png" class="linus">
+            </label>
+            <input type="checkbox" id="check">
+            <div class="tooltip-3">
+                <div class="head">
+                    <img src="../assets/img/linus.png" class="linus-2">
+                    <div>
+                        <p class="name">Linus Quispe</p>
+                        <p class="gmail">linuscdqq@gmail.com</p>
+                        <a href="https://myaccount.google.com/u/0/?utm_source=YouTubeWeb&tab=rk&utm_medium=act&tab=rk&hl=en" target="blank">Manage your Google Account</a>
+                    </div>
+                </div>
+                <div class="main">
+                    <a href="https://www.youtube.com/paid_memberships?ybp=mAEK">
+                        <span class="material-icons icon-2">monetization_on</span>
+                        <p>Purchases and memberships</p>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons icon-2">switch_account</span>
+                        <p>Switch account</p>
+                        <span class="material-icons row-2">chevron_right</span>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <span class="material-icons icon-2">login</span>
+                        <p>Sign out</p>
+                    </a>
+                </div>
+                <div class="footer">
+                    <a href="">
+                        <span class="material-icons icon-2">brightness_3</span>
+                        <p>Appearance: Device theme</p>
+                        <span class="material-icons row-2">chevron_right</span>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons icon-2">sort_by_alpha</span>
+                        <p>Language:  English</p>
+                        <span class="material-icons row-2">chevron_right</span>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons icon-2">language</span>
+                        <p>Location: Peru</p>
+                        <span class="material-icons row-2">chevron_right</span>
+                    </a>
+                    <a href="https://www.youtube.com/account">
+                        <span class="material-icons icon-2">settings</span>
+                        <p>Settings</p>
+                    </a>
+                    <a href="https://myaccount.google.com/u/0/yourdata/youtube?hl=en&pli=1">
+                        <span class="material-icons icon-2">contact_page</span>
+                        <p>Your data en Youtube</p>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons icon-2">help_outline</span>
+                        <p>Help</p>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons icon-2">feedback</span>
+                        <p>Send feedback</p>
+                    </a>
+                    <a href="">
+                        <span class="material-icons icon-2">keyboard</span>
+                        <p>Keyboard shortcuts</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <div>
+                <iframe src="https://www.youtube.com/embed/mYfJxlgR2jw" frameborder="0"></iframe>
+            </div>
+            <a href="https://www.youtube.com/hashtag/pixarluca" class="link">#PixarLuca</a>
+            <p class="title">Disney and Pixar’s Luca | Official Trailer | Disney+</p>
+            <div class="content">
+                <span class="sub-title">23,255,114 views . Premiered Apr 28, 2021</span>
+                <div>
+                    <span class="material-icons like small hover">thumb_up</span>
+                    <span class="span hover">232K</span>
+                    <div class="message">
+                        <p>I like this</p>
+                    </div>
+                    <span class="material-icons like hover-2">thumb_down_off_alt</span>
+                    <span class="span hover-2">DISLIKE</span>
+                    <div class="message-2">
+                        <p>I dislike this</p>
+                    </div>
+                    <span class="material-icons like small hover-3">share</span>
+                    <span class="span hover-3">SHARE</span>
+                    <div class="message-3">
+                        <p>Share</p>
+                    </div>
+                    <span class="material-icons like hover-4">menu_open</span>
+                    <span class="span hover-4">SAVE</span>
+                    <div class="message-4">
+                        <p>Save</p>
+                    </div>
+                    <input type="checkbox" id="label">
+                    <label for="label">
+                        <span class="material-icons like">more_horiz</span>
+                    </label>
+                    <div class="click">
+                        <div class="p-click">
+                            <span class="material-icons flag">flag</span> <span>report</span>
+                        </div>
+                        <div class="p-click">
+                            <span class="material-icons flag">dvr</span> <span>show transcript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="content-2">
+                    <a href="https://www.youtube.com/c/pixar/videos"><img src="../assets/img/ball-pixar.jpeg" class="ball"></a>
+                    <a href="https://www.youtube.com/c/pixar/videos" class="p-pixar">Pixar</a>
+                    <span class="material-icons check">check_circle</span>
+                    <p class="subscribers">6.68M subscribers</p>
+                </div>
+                <div>
+                    <a href="#" class="button">SUBSCRIBE</a>
+                </div>
+            </div>
+            <div>
+                <p class="comentarios">This summer, you’re invited to Portorosso. Watch the new trailer for Disney and Pixar’s Luca and see the film June 18 on Disney+. </p>
+                <span class="SHOW-MORE">SHOW MORE</span>
+            </div>
+            <hr>
+        </main>
+        <aside>
+            <div class="slidebar">
+                <div class="all">
+                    <span>All</span>
+                </div>
+                <div>
+                    <span>Pixar</span>
+                </div>
+                <div>
+                    <span>Trailers</span>
+                </div>
+                <div>
+                    <span>Related</span>
+                </div>
+                <div>
+                    <span>Recently</span>
+                </div>
+                <a class="more">
+                    <span class="material-icons more">chevron_right</span>
+                </a>
+            </div>
+            <div class="content-3">
+                <div>
+                    <a href="https://www.youtube.com/watch?v=XdKzUbAiswE"><img src="../assets/img/turning-red.jpeg"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Turning red pelicula original de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>7.6M Views . 1 months ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=gn5QmllRCn4&t=46"><img src="../assets/img/onward.jpeg"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Onward una pelicula de fantasia de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>9.2M Views . 2 years ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=Ga6RYejo6Hk"><img src="../assets/img/coco.webp"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Coco una pelicula del dia de muetos de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>10.9M Views . 3 years ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=z3biFxZIJOQ"><img src="../assets/img/big-hero.webp"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Big hero 6 trata de heroes. de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>12.1M Views . 6 years ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=2LeOH9AGJQM"><img src="../assets/img/cars-3.jpeg"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Cars 3 es una pelicula original de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>9.4M Views . 4 years ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=_DTnvFdFW14"><img src="../assets/img/intensamente.jpeg"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Intensamente es una buena pelicula de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>13.2M Views . 6 years ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=EJk_Z-OasXc"><img src="../assets/img/luca.jpeg"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Luca es una pelicula animada de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>9.5M Views . 1 year ago</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="https://www.youtube.com/watch?v=t6GdLWtmb4o"><img src="../assets/img/diary-of-greg.jpeg"></a>
+                    <div>
+                        <div class="parent">
+                            <p>Diario de Greg es una pelicula de | Disney PIXAR</p> <span class="material-icons dot">more_vert</span>
+                        </div>
+                        <span class="span-2">DISNEY PIXAR Clips</span>
+                        <span>7.1M Views . 1 year ago</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
