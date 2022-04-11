@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra en línea, envíos a todo y</title>
+    <link rel="shortcut icon" href="../assets/img/platanitos.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+        }
+        @font-face {
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        @font-face {
+            font-family: netflix-2;
+            src: url(../assets/fonts/NetflixSans_W_Md.woff2);
+        }
+        @font-face {
+            font-family: traductor;
+            src: url(../assets/fonts/Roboto-Thin.ttf);
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            font-family: netflix;
+
+        }
+        article{
+            background-color: #EEEEEE;
+            display: flex;
+            padding: 0.8rem 3.5rem;
+        }
+        header{
+            height: 48px;
+            background-color: #DDDDDD;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+        .subheader{
+            height: 98px;
+            background-color: #EEEEEE;
+            display: flex;
+            align-items: center;
+        }
+        footer{
+            display: flex;
+            background-color: #EEEEEE;
+            justify-content: center;
+        }
+        aside{
+            height: 62px;
+            background-color: #FFFFFF;
+            display: flex;
+            padding-left: 4.1rem;
+            position: relative;
+        }
+        section{
+            background-color: #EEEEEE;
+            padding: 0.5rem 4.5rem 1.5rem 4.5rem;
+        }
+        main{
+            background-color: #EEEEEE;
+            padding: 1rem 4.5rem;
+        }
+        .span-1{
+            font-size: 0.85rem;
+            margin-right: 0.85rem;
+        }
+        .span-2{
+            font-size: 1.1rem !important;
+            margin-right: 4.5rem;
+            font-family: netflix-2;
+            cursor: pointer;
+        }
+        .platanitos-letter{
+            height: 2.3rem;
+            margin: 0.25rem 0 0 4.5rem;  
+        }
+        input{
+            width: 82.7%;
+            padding: 0.9rem 0.9rem 0.9rem 3.2rem;
+            border: 0;
+            border-radius: 7px;
+            outline: 0;
+            margin-left: 3.1rem;
+            font-size: 1rem;
+        }
+        ::placeholder{
+            font-size: 0.9rem;
+            color: #888888;
+        }
+        .input-parent{
+            flex: 1;
+            position: relative;
+        }
+        .search{
+            position: absolute;
+            left: 4.4rem;
+            top: 0.85rem;
+        }
+        .right{
+            display: flex;
+            padding-right: 3.75rem;
+        }
+        .right>a>p{
+            font-size: 0.75rem;
+            margin-top: 0.1rem;
+            color: black;
+        }
+        .right>a{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 1.08rem;
+            text-decoration: none;
+        }
+        aside>div{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        aside>a>p{
+            font-size: 0.88rem;
+        }
+        .icons{
+            height: 1.05rem;
+            margin-right: 0.2rem;
+        }
+        .more{
+            margin: 0.25rem 0 0 0.5rem;
+            height: 0.44rem !important;
+        }
+        .figure{
+            margin-left: 0.25rem;
+        }
+        .oferta{
+            height: 34.2rem;
+            width: 100%;
+            border-radius: 8px;
+        }
+        .anuncio{
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+        .green{
+            background-color: #198718;
+            font-size: 1.65rem;
+            margin-top: 0.4rem;
+            border-radius: 7px 7px 0 0;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bold{
+            font-size: 1.65rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+        .gray{
+            background-color: #DDDDDD;
+            padding: 0.45rem;
+            color: #444444;
+            font-size: 0.75rem;
+            border-radius: 0 0 7px 7px;
+        }
+        .avion{
+            height: 1.65rem;
+            margin: 0 0 0 3rem;
+        }
+        .anuncios{
+            height: 14.79rem;
+            border-radius: 8px;
+        }
+        .margin{
+            margin: 1rem 0.75rem 0 0;
+        }
+        .right>a:hover>p{
+            color: #54B849;
+        }
+        aside>div:hover>p{
+            color: #54B849;
+        }
+        aside>div:hover>label{
+            color: #54B849;
+        }
+        .tooltip{
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            padding: 1.5rem 1.8rem;
+            border-radius: 0 0 8px 8px;
+            width: 83.53%;
+            margin: -0.25rem 0 0 3.1rem;
+            display: none;
+            z-index: 1;
+        }
+        .bold-2{
+            font-family: netflix-2;
+            font-weight: bold;
+            font-size: 1.05rem;
+        }
+        .tooltip>div{
+            padding: 1.25rem 0.85rem 0;
+        }
+        .options{
+            font-size: 0.86rem;
+            margin: 0 1.5rem 1rem 0;
+            cursor: pointer;
+            display: inline-block;
+        }
+        input:focus ~ .tooltip{
+            display: block;
+        }
+        aside>a{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            cursor: pointer;
+            font-size: 0.88rem;
+            color: black;
+        }
+        aside>a:hover>p{
+            color: #54B849;
+        }
+        strong{
+            font-size: 1.3rem !important;
+        }
+        .parent-2{
+            background-color: white;
+            padding: 2.5rem 2.8rem 2rem 2.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: black;
+            margin: 1rem 1.3rem 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .parent-2>img{
+            height: 1.75rem;
+            margin-top: 3rem;
+        }
+        .parent-2>p{
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+        .son{
+            display: flex;
+        }
+        .puma{
+            height: 4.4rem !important;
+            margin-top: 0.5rem !important;
+        }
+        .adidas{
+            height: 4rem !important;
+            margin-top: 0.83rem !important;
+        }
+        .nike{
+            height: 4rem !important;
+            margin-top: 0.83rem !important;
+        }
+        .rebook{
+            height: 4rem !important;
+            margin-top: 0.83rem !important;
+        }
+        .umbro{
+            height: 4rem !important;
+            margin-top: 0.83rem !important;
+        }
+        .link{
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+            border: 1px solid;
+            border-radius: 8px;
+            padding: 0.45rem 6rem;
+            margin-top: 1rem;
+            display: inline-flex;
+            font-family: traductor;
+            font-weight: bolder;
+        }
+        .link-parent{
+            display: flex;
+            justify-content: center;
+        }
+        .link:hover{
+            border: 1px solid #54B849;
+            background-color: #54B849;
+            color: white;
+            transition: all 600ms;
+        }
+        footer>div{
+           padding: 1rem 2.5rem;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+        footer>div>p{
+            font-family: netflix-2;
+            font-size: 1.35rem;
+        }
+        footer>div>div>img{
+            margin: 0.85rem 1.25rem 0.5rem 0.25rem;
+            cursor: pointer;
+        }
+        .border-r{
+            border-radius: 8px;
+        }
+        hr{
+            border: 0.01rem solid rgba(0, 0, 0, 0.315);
+        }
+        .store{
+            margin-left: 1rem;
+            width: 9rem;
+        }
+        article>div>a{
+            text-decoration: none;
+            color: black;
+            padding: 0.15rem 0.9rem 0.15rem 1rem;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            margin: 1rem 1rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            width: 10rem;
+        }
+        article>div>a>img{
+            height: 2rem;
+            margin-right: 2rem;
+        }
+        .sub-footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem;
+        }
+        .circle{
+            height: 4rem;
+        }
+        body>a{
+            position: absolute;
+            right: 1rem;
+        }
+        #label{
+            display: none;
+        }
+        .tooltip-2{
+            position: absolute;
+            background-color: white;
+            top: 3.8rem;
+            width: 91.7%;
+            margin-left: -1.2rem;
+            padding: 0.85rem 0 0 0;
+            display: none;
+        }
+        .tooltip-2>div{
+            padding-right: 3rem;
+        }
+        .tooltip-2>div>strong{
+            font-size: 1rem !important;
+            font-family: netflix-2;
+            margin-left: 0.75rem;
+        }
+        .tooltip-2>div>p{
+            padding: 0.41rem 0.8rem;
+            font-size: 0.9rem;
+        }
+        .padding{
+            padding: 0.9rem 1.4rem;
+        }
+        #label:checked ~ .tooltip-2{
+            display: flex;
+        }
+        .parent-3{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .tooltip-3{
+            position: absolute;
+            background-color: white;
+            top: 3.8rem;
+            width: 91.7%;
+            left: 3.6rem;
+            padding: 0.85rem 0 0 0;
+            display: none;
+        }
+        aside>div>label p{
+            font-size: 0.88rem;
+        }
+        #label-2{
+            display: none;
+        }
+        .parent-4{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        #label-2:checked ~ .tooltip-3{
+            display: flex;
+        }
+        .tooltip-3>div>p{
+            padding: 0.41rem 0.8rem;
+            font-size: 0.9rem;
+        }
+        .tooltip-3>div>strong{
+            font-size: 1rem !important;
+            font-family: netflix-2;
+            margin-left: 0.75rem;
+        }
+        .tooltip-3>div{
+            padding-right: 3rem;
+        }
+        .tooltip-4{
+            position: absolute;
+            background-color: white;
+            top: 3.8rem;
+            width: 91.7%;
+            left: 3.6rem;
+            padding: 0.85rem 0 0 0;
+            display: none;
+        }
+        .tooltip-4>div{
+            padding-right: 3rem;
+        }
+        .tooltip-4>div>strong{
+            font-size: 1rem !important;
+            font-family: netflix-2;
+            margin-left: 0.75rem;
+        }
+        .tooltip-4>div>p{
+            padding: 0.41rem 0.8rem;
+            font-size: 0.9rem;
+        }
+        #label-3{
+            display: none;
+        }
+        .parent-5{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #label-2:checked ~ .tooltip-3{
+            display: flex;
+        }
+        #label-3:checked ~ .tooltip-4{
+            display: flex;
+        }
+        .material-icons{
+            position: absolute;
+            color: rgba(255, 255, 255, 0.678);
+            font-size: 2rem;
+        }
+        .row{
+            margin-left: 0.75rem;
+        }
+        .circle-2{
+            position: absolute;
+            top: 59%;
+            border-radius: 50px;
+            left: 7.5rem;
+            height: 3rem;
+            width: 3rem;
+            background-color: rgba(255, 255, 255, 0.185);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle-3{
+            position: absolute;
+            top: 59%;
+            border-radius: 50px;
+            right: 7.5rem;
+            height: 3rem;
+            width: 3rem;
+            background-color: rgba(255, 255, 255, 0.185);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle-2:hover{
+            background-color: rgba(255, 255, 255, 0.459);
+        }
+        .circle-2:hover>span{
+            color: rgb(255, 255, 255);
+        }
+        .circle-3:hover{
+            background-color: rgba(255, 255, 255, 0.459);
+        }
+        .circle-3:hover>span{
+            color: rgb(255, 255, 255);
+        }
+        .question{
+            height: 3.7rem;
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+        }
+        .hover>p:hover{
+            background-color: #EEECEC;
+        }
+        .padding>p:hover{
+            color:#54B849;
+        }
+        .padding>strong:hover{
+            color:#54B849;
+        }
+        .display-b{
+            display: flex;
+        }
+        @media (max-width:414px){
+            header{
+                display: none;
+            }
+            input{
+                display: none;
+            }
+            .right{
+                display: none;
+            }
+            .search{
+                display: none;
+            }
+            .subheader{
+                height: 54px;
+            }
+            .platanitos-letter{
+                height: 2.3rem;
+                margin: 0.6rem 0 0 77%;
+            }
+            main{
+                padding: 0.8rem;
+
+            }
+            aside>a{
+                display: none;
+            }
+            aside>div>label{
+                display: none;
+            }
+            aside{
+                background-color: #EEEEEE;
+                padding: 0 0 6rem 0;
+            }
+            .oferta{
+                height: 12rem;
+                width: 22.75rem;
+                border-radius: 5px;
+                margin-top: 1rem;
+            }
+            .circle-2{
+                display: none;
+            }
+            .circle-3{
+                display: none;
+            }
+            .green{
+                display: flex;
+                width: 21.75rem;
+                border-radius: 5px 5px 0 0;
+                position: relative;
+            }
+            .gray{
+                width: 21.88rem;
+                border-radius: 0 0 5px 5px;
+                margin-bottom: 0.5rem;
+            }
+            .green>span{
+                font-size: 1.1rem;
+            }
+            .gray>p{
+                font-size: 0.6rem;
+            }
+            .green>span>img{
+                height: 1rem;
+                position: absolute;
+                right: 2rem;
+                top: 0.75rem;
+            }
+            section{
+                padding: 0.8rem;
+            }
+            footer{
+                display: flex;
+                flex-direction: column;
+            }
+            .parent-2{
+                margin-right: 0.75rem;
+                padding: 1.85rem;
+            }
+            .link{
+                padding: 0.5rem 3rem;
+            }
+            .display-n{
+                display: none;
+            }
+            footer>div{
+                padding: 0;
+            }
+            footer>div>div>img{
+                margin-right: 2rem;
+            }
+            .margin-t{
+                margin: 1.5rem 0 0 0.1rem;
+            }
+            .margin-t>div>img{
+                margin: 0.75rem 0.3rem;
+                height: 3rem;
+            }
+            .display-b{
+                display: flex;
+            }
+            article{
+                padding: 1rem 0.8rem;
+                display: block;
+            }
+            article>div>a>img{
+                margin-right: 1.5rem;
+            }
+            article>div>a{
+                margin: 0.35rem 0.3rem 0.35rem 0.25rem;
+                padding: 0.5rem 0.95rem;
+                width: 9rem;
+                height: 2.75rem;
+            }
+            article>div>a>span{
+                font-size: 0.85rem;
+            }
+            .sub-footer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .margin{
+                margin: 0;
+            }
+            .anuncios{
+                height: 12.85rem;
+                margin-top: 0.5rem;
+            }
+            footer>div>div>img{
+                height: 2.5rem;
+            }
+            footer>div{
+                margin: 0.75rem 0 0 -3.5rem;
+            }
+            .media{
+                display: flex !important;
+                flex-direction: column;
+            }
+        }
+        .media{
+            display: none;
+        }
+        .media>div{
+            display: flex;
+        }
+        .media>div>div{
+            background-color: white;
+            border-radius: 5px;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 4rem;
+        }
+        .media>div>div>img{
+            height: 2.8rem;
+        }
+        .media>div>div>p{
+            font-size: 0.8rem;
+        }
+        .margin-r{
+            margin: 0.5rem 0.53rem 0 ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="span-1">Atención 24/7</span>
+        <span class="span-2">+51 1 500 0460</span>
+    </header>
+    <div class="subheader">
+        <div>
+            <a href="https://platanitos.com/"><img src="../assets/img/platanitos-letter.svg" class="platanitos-letter"></a>
+        </div>
+        <div class="input-parent">
+            <img src="../assets/img/search-2.svg" class="search">
+            <input type="text" placeholder="Busca por ej. computadoras portátiles">
+            <div class="tooltip">
+                <p class="bold-2">Los más buscados</p>
+                <div>
+                    <span class="options">Zapatillas Mujer</span>
+                    <span class="options">Zapatillas Hombre</span>
+                    <span class="options">Sandalias Mujer</span>
+                    <span class="options">Nike</span>
+                    <span class="options">Zapatillas Adidas Hombre</span>
+                    <span class="options">Botines Mujer</span>
+                    <span class="options">Zapatillas Nike Hombre</span>
+                    <span class="options">Adidas</span>
+                    <span class="options">Zapatillas Nike Mujer</span>
+                    <span class="options">Zapatillas Adidas Mujer</span>
+                    <span class="options">Mochilas</span>
+                    <span class="options">Ivanno</span>
+                    <span class="options">Zapatillas Rebook</span>
+                    <span class="options">Botines</span>
+                    <span class="options">Zapatillas Nino</span>
+                    <span class="options">Zapatillas Puma Hombre</span>
+                    <span class="options">Rebook</span>
+                    <span class="options">Puma</span>
+                    <span class="options">Botas</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <a href="https://platanitos.com/iniciar-sesion">
+                <img src="../assets/img/star.svg">
+                <p>Puntos</p>
+            </a>
+            <a href="https://platanitos.com/carrito">
+                <img src="../assets/img/mini-car.svg">
+                <p>Carrito</p>
+            </a>
+            <a href="https://platanitos.com/iniciar-sesion">
+                <img src="../assets/img/user-3.svg">
+                <p>Cuenta</p>
+            </a>
+        </div>
+    </div>
+    <aside>
+        <div class="media">
+            <div class="dad">
+                <div class="margin-r">
+                    <img src="../assets/img/figures .svg">
+                    <p>Categorías</p>
+                </div>
+                <div class="margin-r">
+                    <img src="../assets/img/woman.svg">
+                    <p>Mujeres</p>
+                </div>
+                <div class="margin-r">
+                    <img src="../assets/img/man.svg">
+                    <p>Hombres</p>
+                </div>
+                <div class="margin-r">
+                    <img src="../assets/img/kids.svg">
+                    <p>Kids</p>
+                </div>
+            </div>
+            <div class="dad-2">
+                <div class="margin-r">
+                    <img src="../assets/img/house.svg">
+                    <p>Casa</p>
+                </div>
+                <div class="margin-r">
+                    <img src="../assets/img/brand.svg">
+                    <p>Marcas</p>
+                </div>
+                <div class="margin-r">
+                    <img src="../assets/img/ofers.svg">
+                    <p>Ofertas</p>
+                </div>
+                <div class="margin-r">
+                    <img src="../assets/img/micro.svg">
+                    <p>Novedades</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="label">
+                <div class="parent-3">
+                    <img src="../assets/img/figures .svg" class="icons figure">
+                    <p>Categorias</p>
+                    <img src="../assets/img/more.svg" class="more">
+                </div>
+            </label>
+            <input type="checkbox" id="label">
+            <div class="tooltip-2">
+                <div class="hover">
+                    <p>Moda</p>
+                    <p>Moda-Mujeres</p>
+                    <p>Moda-Hombres</p>
+                    <p>Deportes y aire libre</p>
+                    <p>Hogar y cocina</p>
+                    <p>Productos de oficina</p>
+                    <p>Libros</p>
+                    <p>Juguetes y juegos</p>
+                    <p>Salud personal</p>
+                    <p>Belleza</p>
+                    <p>Electrónica</p>
+                    <p>Bebé</p>
+                    <p>Moda-niños</p>
+                    <p>Moda-niñas</p>
+                    <p>Moda-bebés</p>
+                    <p>Computadoras</p>
+                    <p>Electrodomésticos</p>
+                    <p>Equipaje y artículos</p>
+                </div>
+                <div class="padding">
+                    <strong>Mujeres</strong>
+                    <p>Ropa</p>
+                    <p>Zapatos</p>
+                    <p>Carteras y billeteras</p>
+                    <p>Accesorios</p>
+                    <p>Tiendas</p>
+                    <p>Joyería</p>
+                    <p>Relojes</p>
+                    <strong>Hombres</strong>
+                    <p>Ropa</p>
+                    <p>Zapatos</p>
+                    <p>Accesorios</p>
+                    <p>Tiendas</p>
+                    <p>Joyería</p>
+                    <p>Relojes</p>
+                </div>
+                <div class="padding">
+                    <strong>Bebé</strong>
+                    <p>Bebitos</p>
+                    <p>Bebitas</p>
+                    <strong>Niños</strong>
+                    <p>Ropa</p>
+                    <p>Zapatos</p>
+                    <p>Accesorios</p>
+                    <strong>Niñas</strong>
+                    <p>Ropa</p>
+                    <p>Zapatos</p>
+                    <p>Accesorios</p>
+                    <p>joyería</p>
+                </div>
+                <div class="padding">
+                    <strong>Maletas y accesorios</strong><br>
+                    <strong> para viaje</strong>
+                    <p>Mochilas</p>
+                    <p>Accesorios de viaje</p>
+                    <p>Maletines para el gimnasio</p>
+                    <p>Maletas</p>
+                    <p>Canguros</p>
+                    <p>Maletines para laptop</p>
+                    <p>Bolsos tipo mensajero</p>
+                    <strong>Novedades y más</strong>
+                    <p>Ropa</p>
+                    <strong>Zapatos, joyería y</strong><br>
+                    <strong>accesorios de reloj</strong>
+                    <p>Cuidado y accesorios para calzado</p>
+                    <strong>Uniformes, trabajo y</strong><br>
+                    <strong>seguridad</strong>
+                    <p>Zapatos</p>
+                    <strong>Ver todo Moda</strong>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="label-2">
+                <div class="parent-4">
+                    <img src="../assets/img/woman.svg" class="icons">
+                    <p>Mujeres</p>
+                    <img src="../assets/img/more.svg" class="more">
+                </div>
+            </label>
+            <input type="checkbox" id="label-2">
+            <div class="tooltip-3">
+                <div class="hover">
+                    <p>Moda</p>
+                    <p>Moda-Mujeres</p>
+                    <p>Moda-Hombres</p>
+                    <p>Deportes y aire libre</p>
+                    <p>Hogar y cocina</p>
+                    <p>Productos de oficina</p>
+                    <p>Libros</p>
+                    <p>Juguetes y juegos</p>
+                    <p>Salud personal</p>
+                    <p>Belleza</p>
+                    <p>Electrónica</p>
+                    <p>Bebé</p>
+                    <p>Moda-niños</p>
+                    <p>Moda-niñas</p>
+                    <p>Moda-bebés</p>
+                    <p>Computadoras</p>
+                    <p>Electrodomésticos</p>
+                    <p>Equipaje y artículos</p>
+                </div>
+                <div class="padding">
+                    <strong>Ropa</strong>
+                    <p>Deportivo</p>
+                    <p>Lencería y ropa de dormir</p>
+                    <p>Pantalones</p>
+                    <p>Tops y polos</p>
+                    <p>Medias y pantimedias</p>
+                    <p>Vestidos</p>
+                    <p>Shorts</p>
+                    <p>Abrigos, casacas y chalecos</p>
+                    <p>Suéteres</p>
+                    <p>Trajes y blazers</p>
+                    <p>Hoodies, sudaderas de moda</p>
+                    <p>Leggings</p>
+                    <p>Trajes de baño y cubridores</p>
+                    <p>Monos, enterizos y overoles</p>
+                    <p>Faldas</p>
+                </div>
+                <div class="padding">
+                    <strong>Zapatos</strong>
+                    <p>Deportivo</p>
+                    <p>Sandalias</p>
+                    <p>Botas</p>
+                    <p>Zapatillas de moda</p>
+                    <p>Flats</p>
+                    <p>Outdoor</p>
+                    <p>Estiletos y pumps</p>
+                    <p>Mocasines y slip-ons</p>
+                    <p>Pantuflas</p>
+                    <p>Oxfords</p>
+                    <p>Zuecos y mulas</p>
+                    <p>Trabajo y seguridad</p>
+                </div>
+                <div class="padding">
+                    <strong>Carteras y billeteras</strong>
+                    <p>Carteras con asa</p>
+                    <p>Bolsas de hombro</p>
+                    <p>Mochilas de moda</p>
+                    <p>Bolsos cruzados</p>
+                    <p>Carteras</p>
+                    <p>Bolsas hobo</p>
+                    <p>Morrales</p>
+                    <p>Bolso de mano</p>
+                    <strong>Accesorios</strong>
+                    <p>Sombreros y gorros</p>
+                    <p>Bufandas y chales</p>
+                    <p>Accesorios para lentes</p>
+                    <p>Billeteras, tarjeteros</p>
+                    <p>Llaveros</p>
+                    <p>Correas y cinturones</p>
+                </div>
+                <div class="padding">
+                    <strong>Tiendas</strong>
+                    <p>Contemporánea y diseñador</p>
+                    <p>Tallas grandes</p>
+                    <p>Maternidad</p>
+                    <p>Uniformes y seguridad</p>
+                    <p>Petite</p>
+                    <strong>Joyería</strong>
+                    <p>Aretes</p>
+                    <p>Collares</p>
+                    <p>Brazaletes</p>
+                    <p>Sets de joyería</p>
+                    <strong>Relojes</strong>
+                    <p>Relojes de pulsera</p>
+                    <strong>Ver todo Moda - mujeres</strong>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="label-3">
+                <div class="parent-5">
+                    <img src="../assets/img/man.svg" class="icons">
+                    <p>Hombres</p>
+                    <img src="../assets/img/more.svg" class="more">
+                </div>
+            </label>
+            <input type="checkbox" id="label-3">
+            <div class="tooltip-4">
+                <div class="hover">
+                    <p>Moda</p>
+                    <p>Moda-Mujeres</p>
+                    <p>Moda-Hombres</p>
+                    <p>Deportes y aire libre</p>
+                    <p>Hogar y cocina</p>
+                    <p>Productos de oficina</p>
+                    <p>Libros</p>
+                    <p>Juguetes y juegos</p>
+                    <p>Salud personal</p>
+                    <p>Belleza</p>
+                    <p>Electrónica</p>
+                    <p>Bebé</p>
+                    <p>Moda-niños</p>
+                    <p>Moda-niñas</p>
+                    <p>Moda-bebés</p>
+                    <p>Computadoras</p>
+                    <p>Electrodomésticos</p>
+                    <p>Equipaje y artículos</p>
+                </div>
+                <div class="padding">
+                    <strong>Ropa</strong>
+                    <p>Deportivo</p>
+                    <p>Pantalones</p>
+                    <p>Camisas</p>
+                    <p>Polos y camisetas</p>
+                    <p>Shorts</p>
+                    <p>Ropa interior</p>
+                    <p>Sacos y abrigos</p>
+                    <p>Para dormir y descansar</p>
+                    <p>Medias</p>
+                    <p>Suéteres</p>
+                    <p>Hoodies y sudadera</p>
+                    <p>Trajes y abrigos deportivos</p>
+                </div>
+                <div class="padding">
+                    <strong>Zapatos</strong>
+                    <p>Deportivo</p>
+                    <p>Sandalias</p>
+                    <p>Zapatillas de moda</p>
+                    <p>Outdoor</p>
+                    <p>Mocasines y slip-ons</p>
+                    <p>Pantuflas</p>
+                    <p>Oxfords</p>
+                    <p>Zuecos y mulas</p>
+                    <strong>Accesorios</strong>
+                    <p>Sombreros y gorros</p>
+                    <p>Accesorios para lentes</p>
+                    <p>Llaveros</p>
+                    <p>Bufandas</p>
+                    <strong>Tiendas</strong>
+                    <p>Surf, skate y urbano</p>
+                    <strong>Joyería</strong>
+                    <p>Brazaletes</p>
+                </div>
+                <div class="padding">
+                    <strong>Relojes</strong>
+                    <p>Relojes de pulsera</p>
+                    <strong>Ver todo Moda -</strong><br>
+                    <strong>hombres</strong>
+                </div>
+            </div>
+        </div>
+        <a href="https://platanitos.com/catalogo?title=Kids&breadcrumbs[]=Juguetes+y+juegos&breadcrumbs[]=Moda+-+ni%C3%B1os&breadcrumbs[]=Moda+-+ni%C3%B1as&breadcrumbs[]=Beb%C3%A9&breadcrumbs[]=Moda+-+beb%C3%A9s&sort=timestamp_active+desc">
+            <img src="../assets/img/kids.svg" class="icons">
+            <p>Kids</p>
+        </a>
+        <a>
+            <img src="../assets/img/house.svg" class="icons">
+            <p>Casa</p>
+            <img src="../assets/img/more.svg" class="more">
+        </a>
+        <a href="https://platanitos.com/marcas">
+            <img src="../assets/img/brand.svg" class="icons">
+            <p>Marcas</p>
+        </a>
+        <a href="https://platanitos.com/ofertas">
+            <img src="../assets/img/ofers.svg" class="icons">
+            <p>Ofertas</p>
+        </a>
+        <a href="https://platanitos.com/novedades">
+            <img src="../assets/img/micro.svg" class="icons">
+            <p>Novedades</p>
+        </a>
+    </aside>
+    <main>
+        <a href="https://platanitos.com/ofertas?title=Ofertas&sort=timestamp_active+desc" class="parent">
+            <div class="circle-2">
+                <span class="material-icons row">arrow_back_ios</span>
+            </div>
+            <img src="../assets/img/oferta-platanitos.webp" class="oferta">
+            <div class="circle-3">
+                <span class="material-icons">arrow_forward_ios</span>
+            </div>
+        </a>
+        <a href="https://ayuda.platanitos.com/hc/es/articles/4614682004500" class="anuncio">
+            <div class="green">
+                <span>
+                    <img src="../assets/img/avion.svg" class="avion">
+                    <span>!Compra hoy</span>
+                    <span class="span-2 bold">y recíbelo mañana!</span>
+                </span> 
+            </div>
+            <div class="gray">
+                <p>*Válido solo para Lima Metropolitana. Ver terminos y condiciones.</p>
+            </div>
+        </a>
+        <a href="https://platanitos.com/zapatillas-nike?title=Zapatillas+Nike&breadcrumbs%5B%5D=Moda+-+mujeres+%3E+Zapatos&breadcrumbs%5B%5D=Moda+-+hombres+%3E+Zapatos&breadcrumbs%5B%5D=Moda+-+ni%C3%B1as+%3E+Zapatos&breadcrumbs%5B%5D=Moda+-+ni%C3%B1os+%3E+Zapatos&sort=discount_percentage+desc">
+            <img src="../assets/img/zapatillas.webp" class="anuncios margin">
+        </a>
+        <a href="https://platanitos.com/catalogo?title=Oferta+Zapatillas&breadcrumbs%5B%5D=Moda+%3E+Hombres+%3E+Zapatos+%3E+Deportivo&breadcrumbs%5B%5D=Moda+%3E+Mujeres+%3E+Zapatos+%3E+Deportivo&breadcrumbs%5B%5D=Moda+%3E+Ni%C3%B1as+%3E+Zapatos+%3E+Zapatillas&breadcrumbs%5B%5D=Moda+%3E+Ni%C3%B1as+%3E+Zapatos+%3E+Deportivo&breadcrumbs%5B%5D=Moda+%3E+Ni%C3%B1os+%3E+Zapatos+%3E+Zapatillas&breadcrumbs%5B%5D=Moda+%3E+Ni%C3%B1os+%3E+Zapatos+%3E+Deportivo&filter_brand%5B%5D=adidas&filter_brand%5B%5D=Reebok&sort=discount_percentage+desc">
+            <img src="../assets/img/zapatillas-2.webp" class="anuncios margin">
+        </a>
+        <a href="https://platanitos.com/catalogo?breadcrumbs%5B%5D=Moda+-+hombres+%3E+Zapatos&breadcrumbs%5B%5D=Moda+-+mujeres+%3E+Zapatos&filter_brand%5B%5D=Puma&sort=price+asc">
+            <img src="../assets/img/zapatillas-3.webp" class="anuncios">
+        </a>
+    </main>
+    <section>
+        <div>
+            <strong class="span-2">Principales marcas</strong>
+            <p>Más de 500 marcas que te van a encantar</p>
+        </div>
+        <div class="son">
+            <a href="https://platanitos.com/marca?m=Platanitos" class="parent-2">
+                <img src="../assets/img/platanitos-letter.svg">
+                <p>Platanitos</p>
+            </a>
+            <a href="https://platanitos.com/marca?m=Puma" class="parent-2">
+                <img src="../assets/img/puma.svg" class="puma">
+                <p>Puma</p>
+            </a>
+            <a href="https://platanitos.com/marca?m=adidas" class="parent-2 display-n">
+                <img src="../assets/img/adidas.svg" class="adidas">
+                <p>Adidas</p>
+            </a>
+            <a href="https://platanitos.com/marca?m=Nike" class="parent-2 display-n">
+                <img src="../assets/img/nike.svg" class="nike">
+                <p>Nike</p>
+            </a>
+            <a href="https://platanitos.com/marca?m=Reebok" class="parent-2 display-n">
+                <img src="../assets/img/rebook.svg" class="rebook">
+                <p>Rebook</p>
+            </a>
+            <a href="https://platanitos.com/marca?m=Umbro" class="parent-2 display-n">
+                <img src="../assets/img/umbro.svg" class="umbro">
+                <p>Umbro</p>
+            </a>
+        </div>
+        <div class="link-parent">
+            <a href="https://platanitos.com/marcas" class="link">
+                VER TODAS LAS MARCAS
+            </a>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <div class="margin-t">
+            <p>!Síguenos!</p>
+            <div>
+                <img src="../assets/img/facebook-2.svg">
+                <img src="../assets/img/instagram.svg">
+                <img src="../assets/img/tik-tok.svg">
+                <img src="../assets/img/youtube.svg">
+                <img src="../assets/img/twitter-3.svg">
+            </div>
+        </div>
+        <div class="margin-t">
+            <p>Descarga la app Platanitos</p>
+            <div>
+                <img src="../assets/img/google-play.svg">
+                <img src="../assets/img/app-store.svg" class="store">
+            </div>
+        </div>
+        <div class="margin-t">
+            <p>Métodos de pago</p>
+            <div>
+                <img src="../assets/img/visa.png">
+                <img src="../assets/img/mister-cards.png">
+                <img src="../assets/img/american-expres.png" class="border-r">
+                <img src="../assets/img/p.png">
+                <img src="../assets/img/club.png">
+            </div>
+        </div>
+    </footer>
+    <hr>
+    <article>
+        <div class="display-b">
+            <a href="https://s3.amazonaws.com/platanitos/find_voucher.html" target="blank">
+                <img src="../assets/img/paper.svg">
+                <span>Factura electrónica</span>
+            </a>
+            <a href="https://platanitos.com/libro-de-reclamaciones" target="blank d">
+                <img src="../assets/img/book.webp">
+                <span>Libro de Reclamaciones</span>
+            </a>
+        </div>
+        <div class="display-b">
+            <a href="https://ayuda.platanitos.com/hc/es/articles/360057494952" target="blank">
+                <img src="../assets/img/paper-2.svg">
+                <span>Términos y condiciones</span>
+            </a>
+            <a href="https://ayuda.platanitos.com/hc/es/articles/360057968651" target="blank">
+                <img src="../assets/img/lock.svg">
+                <span>Política de Privacidad</span>
+            </a>
+        </div>
+        <div class="display-b">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0YaRMEXV6yn9rPYx5aY-Vox36f2q1G2PNnBJ0Z0DHhcrzoA/viewform?usp=send_form" target="blank">
+                <img src="../assets/img/hands.svg">
+                <span>Socios Platanitos</span>
+            </a>
+            <a href="https://oea.sunat.gob.pe/" target="blank">
+                <img src="../assets/img/peru.webp">
+                <span>Operador Económico Autorizado</span>
+            </a>
+        </div>
+    </article>
+    <div class="sub-footer">
+        <span>Hecho con &nbsp</span>
+        <img src="../assets/img/green-heart.svg">
+        <span> &nbsp por Platanitos</span>
+    </div>
+    <a href="#">
+        <img src="../assets/img/question.svg" class="question">
+    </a>
+</body>
+</html>
