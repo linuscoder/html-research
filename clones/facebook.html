@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="../assets/css/facebook.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="short icon" href="../assets/img/facebook-logo.png">
+      <style>
+          *{
+              margin: 0;
+          }
+          @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+          }
+          @font-face{
+            font-family: netflix-2;
+            src: url(../assets/fonts/NetflixSans_W_Md.woff2);
+          }
+          html,body{
+              height: 100%;
+          }
+          body{
+            font-family: netflix;
+          }
+         
+          main{
+              padding: 0.6rem 0;
+          }
+         
+          section{
+              display: flex;
+              padding: 0.5rem 0.65rem;
+              justify-content: space-between;
+          }
+          article{
+              padding: 0.5rem 0;
+              position: relative;
+          }
+          .material-icons{
+              font-size: 1.5rem;
+              color: white;
+          }
+          input{
+              height: 1rem;
+              border: 0;
+              background-color: #3A5997;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.746);
+              width: 17rem;
+              outline: 0;
+              color: white;
+              font-size: 1rem;
+          }
+          aside{
+              position: relative;
+          }
+          .account{
+              margin-left: 0.9rem;
+          }
+          .camera{
+              margin-right: 0.9rem;
+          }
+          ::placeholder{
+              color: rgba(8, 8, 8, 0.719);
+              font-size: 0.9rem;
+              text-align: center;
+              padding: 0 0 0 1.7rem;
+          }
+          .search{
+              position: absolute;
+              left: 40.5%;
+              bottom: 0.5rem;
+              color: rgba(255, 255, 255, 0.718);
+              font-size: 1.4rem;
+          }
+          hr{
+              background-color: rgba(133, 133, 133, 0.336);
+              height: 0.15rem;
+              border: 0;
+          }
+          .blue{
+              color: #3c79f4;
+          }
+          .black{
+              color: rgb(59, 59, 59);
+          }
+          .icons{
+              margin: 0.5rem 2.65rem 0 0 !important;
+          }
+          .border-b{
+              background-color: #3c79f4;
+              width: 4.35rem;
+              margin: 0 0 0 -1.35rem;
+              height: 0.18rem;
+          }
+          .notifications{
+              font-size: 1.7rem;
+          }
+          .messenger{
+              height: 1.65rem;
+          }
+          .margin-l{
+            margin-left: -0.25rem !important;
+          }
+          .margin-t{
+              margin-top: 0.5rem;
+          }
+          .photo{
+              font-size: 1.85rem;
+          }
+          .family{
+              border-radius: 50px;
+              height: 2.5rem;
+          }
+          .input-2{
+              padding: 0.5rem 1rem;
+              background-color: white;
+              border: 1px solid rgba(111, 111, 111, 0.378);
+              border-radius: 20px;
+              color: black;
+              width: 14.5rem;
+              margin: 0.25rem 0.65rem;
+          }
+          .foto{
+              font-size: 0.8rem;
+              margin: -0.3rem -0 0 0.15rem;
+              display: flex;
+              color: rgb(0, 0, 0);
+          }
+          .hr-2{
+              background-color: rgba(60, 60, 60, 0.182);
+              height: 0.5rem;
+              margin-top: -0.25rem;
+          }
+          .space{
+              display: flex;
+              justify-content: space-between;
+              padding: 0 0.5rem;
+          }
+          .space>div>span{
+              font-size: 0.9rem;
+              color: rgba(0, 0, 0, 0.547);
+          }
+          .bold{
+            font-weight: bold;
+            font-size: 0.9rem;
+            font-family: netflix-2;
+            color: black !important;
+          }
+          .paisaje{
+              width: 5.7rem;
+              height: 10rem;
+              border-radius: 10px;
+              margin: 0.5rem 0 0 0.35rem;
+          }
+          .position-a{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .add{
+              margin: 1.5rem -2.5rem 0 0;
+              background-color: white;
+              border-radius: 50px;
+              padding: 0.5rem;
+              z-index: 1;
+              height: 1.5rem;
+          }
+          .display-f{
+              display: flex; 
+              overflow: auto;
+          }
+          .display-f>div{
+              display: flex;
+              cursor: pointer;
+          }
+          .position-a-2{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .position-a-3{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .position-a-4{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .position-a-5{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .position-a-6{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .position-a-7{
+              font-size: 0.8rem;
+              margin: 8rem 1.5rem 0 -4rem;
+              color: white;
+          }
+          .position-a-8{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -4.25rem;
+                color: white;
+            }
+            .position-a-9{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -3.25rem;
+                color: white;
+            }
+            .position-a-10{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -3.75rem;
+                color: white;
+            }
+            .position-a-11{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -3.3rem;
+                color: white;
+            }
+            .position-a-12{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -4.3rem;
+                color: white;
+            }
+            .position-a-13{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -4.65rem;
+                color: white;
+            }
+            .hr-3{
+                background-color: rgba(60, 60, 60, 0.182);
+                height: 0.5rem;
+            }
+            .tv-peru{
+                height: 2.5rem;
+                border: 2px solid rgb(83, 83, 217);
+                border-radius: 50px;
+                margin: 0 0.25rem 0 0.7rem;
+            }
+            main>div{
+                display: flex;
+            }
+            main>div>div{
+                display: flex;
+                flex-direction: column;
+            }
+            .more{
+                position: absolute;
+                right: 0.8rem;
+            }
+            .small{
+                color: gray;
+                font-size: 0.8rem;
+            }
+            .parent{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 1.3rem;
+            }
+            .peru{
+                margin: 0.5rem 0;
+                height: 21.75rem;
+                width: 23.4rem;
+            }
+            .lasaña{
+                border-radius: 50px;
+                height: 2.5rem;
+                width: 2.5rem;
+                border: 1px solid red;
+                padding: 0.2rem;
+            }
+            .parent-2{
+                display: flex;
+                padding: 0.5rem 0.8rem;
+                flex-direction: column;
+            }
+            .parent-2>div{
+                display: flex;
+                flex-direction: row;
+            } 
+            .parent-2>div>div{
+                padding: 0.25rem 0.5rem;
+            }
+            .kfc{
+                height: 15.25rem;
+                margin-top: 0.5rem;
+            }
+            .padding{
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column !important;
+            }
+            .parent-3>div{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0.35rem 3rem;
+                cursor: pointer;
+            }
+            .parent-3{
+                display: flex;
+                justify-content: center;
+            }
+            .icon{
+                font-size: 1.2rem !important;
+            }
+            .parent-3>div>span{
+            font-size: 0.9rem;
+            margin-right: 0.4rem;
+            }
+            .like{
+                font-size: 1.4rem !important;
+            }
+            .padding-r{
+                padding-right: 0.35rem;
+            }
+            .footer{
+                flex-direction: column;
+                padding: 0.5rem 0.8rem 0.5rem 2rem;
+            }
+            .sub-footer{
+                display: flex;
+                flex-direction: row;
+            }
+            iframe{
+                padding: 0.5rem;
+                height: 12rem;
+                width: 20.75rem;
+            }
+            .padding{
+                padding: 0.25rem 0.5rem;
+            }
+            .pixar{
+                border-radius: 50px;
+                height: 2.5rem;
+                width: 2.5rem;
+                border: 1px solid rgb(34, 110, 57);
+                padding: 0.2rem;
+                margin-left: -1.1rem;
+            }
+            iframe{
+                    height: 16rem;
+                    width: 23rem;
+                    margin-left: -0.9rem;
+                }
+            .new-1{
+                left: 20%;
+            }
+            .new-2{
+                left: 35%;
+                width: 1.75rem;
+            }
+            .new-3{
+                left: 50%;
+            }
+            .new-4{
+                left: 65.5%;
+                width: 1.75rem;
+            }
+            .news{
+                height: 1.5rem;
+                width: 1.5rem;
+                background-color: #D71C3B;
+                position: absolute;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 0.9rem;
+                top: 0;
+             }
+             a{
+                 text-decoration: none;
+             }
+          @media (min-width:1100px){
+             header input{
+                 width: 91.5%;
+             }
+             .search{
+                margin: 0 0 0.15rem 6.25rem;
+             }
+             aside>div{
+                 margin: 5.4rem;
+             }
+             aside>a{
+                 margin: 5.4rem;
+             }
+             aside{
+                 padding: 0 2rem;
+             }
+             .input-2{
+                 width: 81rem;
+             }
+             .peru{
+                 height: 40rem;
+                 width: 50rem;
+             }
+             .peru-parent{
+                display: flex;
+                justify-content: center;
+             }
+             .kfc{
+                 height: 32.5rem;
+             }
+             .kfc-parent{
+                 display: flex;
+                 justify-content: center;
+             }
+             iframe{
+                 height: 35rem;
+                 width: 51rem;
+                 margin-left: 20%;
+             }
+             .position-a{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.3rem;
+                color: white;
+            }
+            .position-a-2{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.6rem;
+                color: white;
+            }
+            .position-a-3{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.8rem;
+                color: white;
+            }
+            .position-a-4{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.25rem;
+                color: white;
+            }
+            .position-a-5{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.6rem;
+                color: white;
+            }
+            .position-a-6{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.1rem;
+                color: white;
+            }
+            .position-a-7{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.1rem;
+                color: white;
+            }
+            .position-a-8{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -4.65rem;
+                color: white;
+            }
+            .position-a-9{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5rem !important;
+                color: white;
+            }
+            .position-a-10{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5rem !important;
+                color: white;
+            }
+            .position-a-11{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5rem !important;
+                color: white;
+            }
+            .position-a-12{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -5.5rem !important;
+                color: white;
+            }
+            .position-a-13{
+                font-size: 0.8rem;
+                margin: 8rem 1rem 0 -4.65rem;
+                color: white;
+            }
+            .new-1{
+                left: 26%;
+            }
+            .new-2{
+                left: 42.2%;
+                width: 1.75rem;
+            }
+            .new-3{
+                left: 58.7%;
+            }
+            .new-4{
+                left: 74.9%;
+                width: 1.75rem;
+            }
+                .display-f{
+                gap: 0.5rem;
+            }
+            .parent-3{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 11.75rem;
+            }
+        }
+        .parent-3>div:hover{
+            background-color: #00000027;
+            transition: all 700ms;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <span class="material-icons account">account_circle</span>
+        <span class="material-icons search">search</span>
+        <input type="text" placeholder="Buscar">
+        <span class="material-icons camera">photo_camera</span>
+    </header>
+    <aside>
+        <a href="https://m.facebook.com/home.php">
+            <span class="material-icons blue icons">fact_check</span>
+            <hr class="border-b">
+        </a>
+        <a href="https://m.facebook.com/friends/center/requests/?rfj">
+            <span class="material-icons black icons notifications">people</span>
+            <div class="news new-1">
+                2
+            </div>
+        </a>
+        <a href="https://www.facebook.com/messages/t/100010265790052/">
+            <img src="../assets/img/messenger.jpeg" class="messenger icons margin-l">
+            <div class="news new-2">
+                3+
+            </div>
+        </a>
+        <a href="https://m.facebook.com/watch/">
+            <span class="material-icons icons black margin-l">ondemand_video</span>
+            <div class="news new-3">
+                +
+            </div>
+        </a>
+        <a href="https://m.facebook.com/notifications.php">
+            <span class="material-icons icons black margin-l notifications">notifications_none</span>
+            <div class="news new-4">
+                67
+            </div>
+        </a>
+        <a href="https://m.facebook.com/bookmarks/">
+            <span class="material-icons margin-t black margin-l">menu</span>
+        </a>
+    </aside>
+        <hr>
+    <section>
+        <a href="https://m.facebook.com/profile.php">
+            <img src="../assets/img/family.jpeg" class="family">
+        </a>
+        <div>
+            <input type="text" placeholder="Que esta pasando?" class="input-2">
+        </div>
+        <a href="https://m.facebook.com/home.php?soft=composer">
+            <span class="material-icons black photo">photo_library</span>
+            <span class="foto">Foto</span>
+        </a>
+    </section>
+    <hr class="hr-2">
+    <article>
+        <div class="space">
+            <span class="bold">Historias</span>
+            <div>
+                <span class="material-icons">timer</span>
+                <span>Tu archivo</span>
+            </div>
+        </div>
+        <div class="display-f">
+            <div>
+                <img src="../assets/img/add-google.svg" class="add">
+                <img src="../assets/img/paisaje.jpeg" class="paisaje">
+                <span class="position-a">Linus Quispe</span>
+            </div>
+            <div>
+                <img src="../assets/img/girasoles.jpeg" class="paisaje">
+                <span class="position-a-2">Bertha Quispe</span>
+            </div>
+            <div>
+                <img src="../assets/img/MacbookPro.webp" class="paisaje">
+                <span class="position-a-3">Cristian Quispe</span>
+            </div>
+            <div>
+                <img src="../assets/img/beach.webp" class="paisaje">
+                <span class="position-a-4">Cesia Quispe</span>
+            </div>
+            <div>
+                <img src="../assets/img/paisaje-2.jpg" class="paisaje">
+                <span class="position-a-5">Gladys Quispe</span>
+            </div>
+            <div>
+                <img src="../assets/img/aguas-termales.jpeg" class="paisaje">
+                <span class="position-a-6">Erick Quispe</span>
+            </div>
+            <div class="padding-r">
+                <img src="../assets/img/rosas.jpeg" class="paisaje">
+                <span class="position-a-7">Elba Quispe</span>
+            </div>
+            <div class="padding-r">
+                <img src="../assets/img/naturaleza.jpeg" class="paisaje">
+                <span class="position-a-8">Rosmery</span>
+            </div>
+            <div class="padding-r">
+                <img src="../assets/img/cristo.jpeg" class="paisaje">
+                <span class="position-a-9">Andy Arcos</span>
+            </div>
+            <div class="padding-r">
+                <img src="../assets/img/lightyear.jpeg" class="paisaje">
+                <span class="position-a-10">Jose Quiwie</span>
+            </div>
+
+            <div class="padding-r">
+                <img src="../assets/img/naturaleza-2.jpeg" class="paisaje">
+                <span class="position-a-11">Henry Ortiz</span>
+            </div>
+            <div class="padding-r">
+                <img src="../assets/img/rubik.jpeg" class="paisaje">
+                <span class="position-a-12">Dani Samanez</span>
+            </div>
+            <div class="padding-r">
+                <img src="../assets/img/dash.webp" class="paisaje">
+                <span class="position-a-13">Linus Quispe</span>
+            </div>
+        </div>
+    </article>
+    <hr class="hr-3">
+    <main>
+        <div>
+            <a href="https://m.facebook.com/search/top/?q=al%20repechaje&ref=content_filter&tsid=0.49326535111525116&source=typeahead"><img src="../assets/img/tv-peru.jpeg" class="tv-peru"></a>
+            <div>
+                <span>TVPerú Noticias👍</span>
+                <span class="small">11 horas . ⚽️</span>
+            </div>
+            <span class="material-icons black more">more_horiz</span>
+        </div>
+        <div class="parent">
+            <p>La selección peruana alistará en España el partido del repechaje para el Mundial de Qatar 2022 que disputará el 13 de junio frente a Australia o Emiratos Árabes Unidos. El equipo de todos disputará en tierras españoles un partido amistoso como parte de su preparación.</p>
+            <a href="https://m.facebook.com/search/top/?q=al%20repechaje&ref=content_filter&tsid=0.49326535111525116&source=typeahead" class="peru-parent"><img src="../assets/img/poster-peru.jpeg" class="peru"></a>
+        </div>
+        <hr>
+        <div class="parent-3">
+            <div>
+                <span class="material-icons black icon like">thumb_up_off_alt</span>
+                <span>Me gusta</span>
+            </div>
+            <div>
+                <span class="material-icons black icon">chat_bubble_outline</span>
+                <span>Comentar</span>
+            </div>
+            <div>
+                <span class="material-icons black icon">share</span>
+                <span>Compartir</span>
+            </div>
+        </div>
+        <hr>
+        <div class="parent-2">
+            <div class="margin-t">
+                <a href="https://m.facebook.com/search/top/?q=kfc&ref=content_filter&tsid=0.23667222453042402&source=typeahead"><img src="../assets/img/kfc.png" class="lasaña"></a>
+                <div>
+                    <p>KFC Mejores Comidas</p>
+                    <span class="small">3 horas . 🍔</span>
+                </div>
+                <span class="material-icons black more">more_horiz</span>
+            </div>
+            <div class="padding">
+                <p>LLevaté una hamburguesa a s/12.00 o puedes llevarté un combo de hamburguesas a solo s/30.00.</p>
+                <a href="https://m.facebook.com/search/top/?q=kfc&ref=content_filter&tsid=0.23667222453042402&source=typeahead" class="kfc-parent"><img src="../assets/img/anuncio-kfc.jpeg" class="kfc"></a>
+            </div>
+        </div>
+        <hr>
+        <div class="parent-3">
+            <div>
+                <span class="material-icons black icon like">thumb_up_off_alt</span>
+                <span>Me gusta</span>
+            </div>
+            <div>
+                <span class="material-icons black icon">chat_bubble_outline</span>
+                <span>Comentar</span>
+            </div>
+            <div>
+                <span class="material-icons black icon">share</span>
+                <span>Compartir</span>
+            </div>
+        </div>
+        <hr>
+        <div class="footer">
+            <div class="sub-footer">
+                <a href="https://m.facebook.com/PixarLatinoamerica/"><img src="../assets/img/ball-pixar.jpeg" class="pixar"></a>
+                <div class="padding">
+                    <p>Las Mejores peliculas</p>
+                    <span class="small">2 horas . 🎭</span>
+                </div>
+                <span class="material-icons black more">more_horiz</span>
+            </div>
+            <iframe src="https://www.youtube.com/embed/mYfJxlgR2jw" frameborder="0"></iframe>
+        </div>
+        <hr>
+        <div class="parent-3">
+            <div>
+                <span class="material-icons black icon like">thumb_up_off_alt</span>
+                <span>Me gusta</span>
+            </div>
+            <div>
+                <span class="material-icons black icon">chat_bubble_outline</span>
+                <span>Comentar</span>
+            </div>
+            <div>
+                <span class="material-icons black icon">share</span>
+                <span>Compartir</span>
+            </div>
+        </div>
+        <hr>
+    </main>
+</body>
+</html>
