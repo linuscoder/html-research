@@ -50,14 +50,14 @@ header span{
 .user{
     font-size: 2.3rem;
     position: absolute;
-    margin: -0.45rem 0 0 -1.6rem;
+    margin: -0.35rem -1rem 0 0 ;
 }
 a{
     text-decoration: none;
 }
 .menu{
     position: absolute;
-    margin: -0.25rem 0 0 2.25rem;
+    margin: 0 0 0 4.25rem;
     font-size: 1.7rem;
 }
 .form{
