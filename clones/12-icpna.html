@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICPNA</title>
+    <link rel="sort icon" href="../assets/img/icpna.webp">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+         @font-face{
+            font-family: netflix-2;
+            src: url(../assets/fonts/NetflixSans_W_Md.woff2)
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets//fonts/NetflixSans_W_Rg.woff2)
+        }
+        @font-face{
+            font-family: traductor;
+            src: url(../assets/fonts/Roboto-Thin.ttf);
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            font-family: traductor;
+        }
+        header{
+            height: 6rem;
+        }
+        main{
+            position: relative;
+        }
+        article{
+            background-color: #165FC8;
+            border-radius: 5px;
+            padding: 3rem 1rem 0.75rem;
+            height: 75%;
+        }
+        aside{
+            padding: 6rem 0 0;
+        }
+        footer{
+            background-color: #165FC8;
+            padding: 2rem 1rem;
+            margin-top: 5rem;
+        }
+        .sub-body{
+            position: fixed;
+            z-index: 2;
+        }
+        .menu{
+            color: rgb(153, 153, 153);
+            position: absolute;
+            right: 2rem;
+            top: 2.85rem;
+            font-size: 1.85rem;
+        }
+        .sub-header{
+            height: 1rem;
+            width: 100%;
+        }
+        .sub-header>div{
+            height: 1rem;
+            display: flex;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+        .sub-header a{
+            display: flex;
+            font-size: 0.75rem;
+        }
+        .options{
+            background-color: #fafafa;
+            padding: 0.6rem;
+            border-top: 2px solid #16469C;
+
+        }
+        .options>a{
+            color: #464646;
+            margin-right: 4rem;
+
+        }
+        .advertising{
+            width: 100%;
+        }
+        .options-button{
+            padding: 1rem 0.6rem;
+        }
+        .links{
+            color: white;
+            background-color: #EE2F42;
+            padding: 0.75rem 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            margin: -0.25rem 0.25rem;
+        }
+        .blue{
+            background-color: #16469C;
+        }
+        .color-blue{
+            color: #0d55db !important;
+        }
+        .icpna{
+            margin-right: 4.5rem;
+        }
+        .publish{
+            height: 30rem;
+            width: 100%;
+            margin-top: 10.5rem;
+            box-shadow: 1px 1px 4px rgb(68, 68, 74);
+        }
+        .dot{
+            height: 0.75rem;
+            margin-right: 0.35rem;
+        }
+        .big{
+            height: 1.5rem;
+            margin: 0 -0.1rem -0.35rem -0.4rem;
+        }
+        .parent-dot{
+            position: absolute;
+            bottom: 1rem;
+            right: 7rem;
+
+        }
+        article p{
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        article input{
+            display: block;
+            width: 92%;
+            padding: 1rem 0.75rem;
+            border-radius: 5px;
+            border: 0;
+            margin-top: 1rem;
+            position: relative;
+        }
+        .parent-p{
+            display: flex;
+            justify-content: center;
+            font-family: netflix;
+        }
+        input::placeholder{
+            color: rgba(124, 124, 124, 0.581);
+            font-size: 1rem;
+        }
+        .arrow{
+            position: absolute;
+            color: #7a7a7a;
+            font-size: 2rem;
+            z-index: 1;
+            right: 1.5rem;
+            margin-top: -2rem;
+        }
+        .div{
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .link-buttom{
+            background-color: #D7220E;
+            padding: 1rem;
+            color: white;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            font-family: netflix;
+        }
+        .frase{
+            font-family: netflix;
+            font-size: 1.25rem;
+            color: #16469C;
+            text-align: center;
+        }
+        .content{
+            border: 1px solid rgba(65, 65, 65, 0.068);
+            border-radius: 5px;
+            width: 15rem;
+            margin: 1.75rem 2rem 5rem 0;
+            padding: 1rem 1rem 2rem;
+            box-shadow: 1px -1px 3px  rgb(84, 84, 90);
+        }
+        .margin-l{
+            margin-left: 1rem;
+        }
+        .parent{
+            display: flex;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .user{
+            height: 13rem;
+        }
+        .phrase{
+            font-size: 1.2rem;
+            color: #0d55db;
+            text-align: center;
+            font-family: netflix;
+        }
+        .phrase-2{
+            font-size: 0.85rem;
+            color: rgb(55, 54, 54);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        .arrows{
+            color: #0d55db;
+            font-size: 1.25rem;
+        }
+        .link-2{
+            color:#0d55db;
+            font-size: 00.85rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: netflix-2;
+        }
+        .strong{
+            color: white;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        .container{
+            background-image: linear-gradient(to right, #155abc, #2E89F7);
+            border-radius: 5px;
+            padding: 1rem;
+            margin: 1rem 0 2rem;
+
+        }
+        .content-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: netflix-2;
+
+        }
+        .calendar{
+            font-size: 1.25rem;
+        }
+        .p{
+            font-size: 2.25rem;
+            color: white;
+            font-family: netflix-2;
+            text-align: center;
+            margin-top: 0.35rem;
+        }
+        .container-2>a{
+            background-color: white;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem 0.5rem 4rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            color: #16469C;
+            font-family: netflix;
+        }
+        .images{
+            height: 3rem;
+            margin-right: 3.75rem;
+        }
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="sub-body">
+        <header>
+            <img src="../assets/img/advertising-2.jpeg" alt="" class="advertising">
+            <span class="material-icons menu">menu</span>
+        </header>
+        <div class="sub-header">
+            <div class="options">
+                <a href="https://www.icpna.edu.pe/" class="color-blue">ENSEÑANZA</a>
+                <a href="https://cultural.icpna.edu.pe/letras/">BIBLIOTECA</a>
+                <a href="https://cultural.icpna.edu.pe/">CULTURAL</a>
+            </div>
+            <div class="options-button">
+                <a href="https://www.icpna.edu.pe/">
+                    <img src="../assets/img/icpna-2.svg" class="icpna">
+                </a>
+                <a href="" class="links">Matrícula en línea</a>
+                <a href="https://icpna.instructure.com/login/canvas" class="links blue">We Canvas</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <a href="https://services.icpna.edu.pe/ICPNABUSINESSENGLISH/"><img src="../assets/img/publish-icpna.jpeg" alt="" class="publish"></a>
+        <div class="parent-dot">
+            <img class="dot" src="../assets/img/dot.png"></img>
+            <img class="dot big" src="../assets/img/dot.png"></img>
+            <img class="dot" src="../assets/img/dot.png"></img>
+            <img class="dot" src="../assets/img/dot.png"></img>
+            <img class="dot" src="../assets/img/dot.png"></img>
+            <img class="dot" src="../assets/img/dot.png"></img>
+            <img class="dot" src="../assets/img/dot.png"></img>
+        </div>
+    </main>
+    <article>
+        <div class="parent-p">
+            <p class="https://www.icpna.edu.pe/horarios-costos">Conoce nuestro horarios y costos</p>
+        </div>
+        <div>
+            <input type="text" placeholder="Programa">
+            <span class="material-icons arrow">arrow_drop_down</span>
+            <input type="text" placeholder="Modalidad">
+            <span class="material-icons arrow">arrow_drop_down</span>
+            <input type="text" placeholder="Sede">
+            <span class="material-icons arrow">arrow_drop_down</span>
+            <input type="text" placeholder="Nivel">
+            <span class="material-icons arrow">arrow_drop_down</span>
+            <input type="text" placeholder="Frecuencia">
+            <span class="material-icons arrow">arrow_drop_down</span>
+            <input type="text" placeholder="Curso">
+            <span class="material-icons arrow">arrow_drop_down</span>
+        </div>
+        <div class="div">
+            <a href="" class="link-buttom">VER HORARIOS Y COSTOS</a>
+        </div>
+    </article>
+    <aside>
+        <div class="frase">
+            <p >Aprende con nosostros y escoje tu programa</p>
+        </div>
+        <a href="" class="parent">
+            <div class="content margin-l">
+                <img src="../assets/img/user-studying.png" alt="" class="user">
+                <p class="phrase">Inglés para Jóvenes y Adultos Semipesencial</p>
+                <p class="phrase-2">de 14 años a más</p>
+            </div>
+            <div class="content">
+                <img src="../assets/img/user-studying-2.png" alt="" class="user">
+                <p class="phrase">Inglés para Jóvenes y Adultos Presencial</p>
+                <p class="phrase-2">de 14 años a más</p>
+            </div>
+            <div class="content">
+                <img src="../assets/img/studying-computer.png" alt="" class="user">
+                <p class="phrase">Inglés para Jóvenes y Adultos Virtual</p>
+                <p class="phrase-2">de 14 años a más</p>
+            </div>
+            <div class="content">
+                <img src="../assets/img/kid-studying.png" alt="" class="user">
+                <p class="phrase">Inglés para Niños Presencial</p>
+                <p class="phrase-2">de 04 a 13 años</p>
+            </div>
+            <div class="content">
+                <img src="../assets/img/kid-studying-2.png" alt="" class="user">
+                <p class="phrase">Inglés para Niños Virtual</p>
+                <p class="phrase-2">de 06 a 13 años</p>
+            </div>
+            <a href="https://www.icpna.edu.pe/programas" class="link-2">VER TODOS LOS PROGRAMAS
+                <span class="material-icons arrows">double_arrow</span>
+            </a>
+        </a>
+    </aside>
+    <footer>
+        <p class="strong">Estudia con Nosotros, sé parte del ICPNA</p>
+        <div class="container">
+            <div class="content-2">
+                <span class="material-icons calendar">calendar_month</span>
+                <span>Inicio de clases</span>
+            </div>
+            <p class="p">6 de Sep</p>
+        </div>
+        <div class="container-2">
+            <a href="https://www.icpna.edu.pe/uploads/shares/institucional/PDF2020/matriculavirtual062020.pdf">
+                <img src="../assets/img/paper.png" alt="" class="images">
+                <span>Proceso de matrícula</span>
+            </a>
+            <a href="https://www.icpna.edu.pe/examen-clasificacion">
+                <img src="../assets/img/examen.png" alt="" class="images">
+                <span>Incripción al Examen de clasificación</span>
+            </a>
+            <a href="https://matricula.icpna.edu.pe/">
+                <img src="../assets/img/matricula-online.png" alt="" class="images">
+                <span>Matrícula online</span>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
