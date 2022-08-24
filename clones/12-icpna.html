@@ -79,6 +79,10 @@
             display: flex;
             font-size: 0.75rem;
         }
+        .sub-header label{
+            display: flex;
+            font-size: 0.75rem;
+        }
         .options{
             background-color: #fafafa;
             padding: 0.6rem;
@@ -193,7 +197,7 @@
             width: 15rem;
             margin: 1.75rem 2rem 5rem 0;
             padding: 1rem 1rem 2rem;
-            box-shadow: 1px -1px 3px  rgb(84, 84, 90);
+            box-shadow: 1px -1px 3px  rgba(0, 0, 0, 0.114);
         }
         .margin-l{
             margin-left: 1rem;
@@ -277,13 +281,533 @@
         input{
             outline: none;
         }
+        .content:hover{
+            transition: all 450ms;
+        }
+        .hover-1:hover{
+            background-color: #E93347;
+        }
+        .hover-2:hover{
+            background-color: #E93347;
+        }
+        .hover-3:hover{
+            background-color: #1B4A9A;
+        }
+        .hover-4:hover{
+            background-color: #E93347;
+        }
+        .hover-5:hover{
+            background-color: #1B4A9A;
+        }
+        .content:hover .phrase{
+            color: white;
+        }
+        .content:hover .phrase-2{
+            color: white;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        .tooltip a{
+            display: block;
+        }
+        .tooltip{
+            padding-bottom: 3.5rem;
+            margin-top: 4.75rem;
+            width: 75%;
+            background-color: white !important;
+            z-index: 3;
+            box-shadow: 1px -10px 4px 1px rgba(128, 128, 128, 0.328);
+            max-height: 100%;
+            overflow: auto;
+        }
+        .parent-2{
+            display: none;
+            height: 30.5rem;
+        }
+        .arrow-2{
+            font-size: 1.8rem;
+        }
+        .arrow-3{
+            font-size: 1.1rem;
+            color: rgba(128, 128, 128, 0.374);
+            margin-right: 0.35rem;
+        }
+        .lorem{
+            color: white;
+        }
+        .wraper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 0.5rem;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.16);
+        }
+        .wraper>p{
+            font-family: netflix;
+            font-size: 1.25rem;
+            color: rgba(45, 45, 45, 0.659);
+        }
+        .sub-wraper{
+            margin-top: 1.5rem;
+        }
+        .sub-wraper>p{
+            text-align: center;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        .button{
+            border: 2px solid rgba(113, 189, 219, 0.502);
+            color:#16469C;
+            width: 80%;
+            padding: 0.75rem 1rem;
+            margin: 0.35rem 0 0 0.7rem;
+            font-size: 0.85rem;
+            font-family: netflix;
+            text-align: center;
+        }
+        .second{
+            color: gray;
+            border: 2px solid rgba(128, 128, 128, 0.291);
+        }
+        .margin-t{
+            margin-top: 2.75rem;
+        }
+        #check:checked ~ .parent-2{
+            display: block;
+            background-color: rgba(0, 0, 0, 0.515);
+        }
+        .publish-3{
+            display: none ;
+        }
+        .dn{
+            display: none !important;
+        }
+        .links-2{
+            display: none !important;
+        }
+        .choser{
+            display: none !important;
+        }
+        .publish-icpna{
+            display: none !important;
+        }
+        .tooltip-2{
+            display: none !important;
+        }
+        .programas{
+            display: none !important;
+        }
+        .alumnos{
+            display: none !important;
+        }
+        .modal{
+            display: none !important;
+        }
+        .close{
+            display: none !important;
+        }
+        @media (min-width:1100px){
+            article{
+                padding: 2rem 1.5rem;
+                width: 80%;
+                margin: 3rem 0 0 10rem;
+                height: 13rem;
+            }
+            .advertising{
+                display: none;
+            }
+            .publish-3{
+                display: block;
+                width: 105%;
+            }
+            .menu{
+                display: none;
+            }
+            .publish{
+                display: none;
+            }
+            .sub-header{
+                display: flex;
+                margin-top: -1.25rem;
+            }
+            .sub-header>div{
+                width: 52rem;                
+            }
+            .options{
+                height: 1rem !important;
+                background-color: rgb(245, 245, 245) !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .icpna{
+                display: none;
+            }
+            .change{
+                border-radius: 0;
+                padding: 1.16rem 0.75rem;
+                font-size: 1rem !important;
+                margin: -1rem 0 0 -0.6rem ;
+                cursor: pointer;
+            }
+            .dn{
+                display: flex!important;
+            }
+            .margin{
+                margin-right: 0.75rem;
+            }
+            .links-2{
+                background-color: rgb(246, 246, 246);
+                padding: 1.16rem ;
+                margin: -1rem 0 0 0 ;
+                display: flex !important;
+                align-items: center;
+                font-size: 0.9zrem !important;
+                color:#0d55db;
+                font-weight: bold;
+            }
+            .choser{
+                display: flex !important;
+                align-items: center;
+                background-color: white;
+                height: 6rem;
+            }
+            .ipna{
+                height: 2.25rem !important;
+                margin: 1rem 0 0 11.25rem;
+            }
+            .arrows{
+                font-size: 2rem;
+                color:#0d55db !important;
+            }
+            .slider{
+                display: flex;
+                align-items: center;
+                margin: 1.5rem 0 0 22.5rem;
+                font-family: netflix;
+                font-size: 1.1rem;
+                cursor: pointer;
+            }
+            .slider>a{
+                margin-right: 1.25rem;
+                color: #000000;
+            }
+            .parent-icons{
+                display: flex;
+                align-items: center;
+                height: 5rem;
+            }
+            .publish-icpna{
+                display: flex !important;
+                margin-top: 10rem;
+                width: 100%;
+                height: 35rem;
+            }
+            .input-parent{
+                display: flex;
+            }
+            .input-parent>input{
+                width: 12rem;
+                margin-right: 1rem;
+                padding: 1.15rem 1rem;
+                cursor: pointer;
+
+            }
+            .parent-p>p{
+                font-size: 2rem;
+            }
+            .parent-p{
+                display: flex;
+                justify-content: left;
+            }
+            .arrow{
+                position: absolute;
+                margin-top: 1.75rem;
+                cursor: pointer;
+            }
+            .one{
+                right: 10.5rem;
+            }
+            .two{
+                right: 24.85rem;
+            }
+            .three{
+                right: 39rem;
+            }
+            .four{
+                right: 53rem;
+            }
+            .five{
+                left: 35.75rem;
+            }
+            .six{
+                left: 21.5rem;
+            }
+            .link-buttom{
+                width: 11rem;
+                padding: 1.25rem 1rem;
+                font-family: netflix-2;
+                font-size: 0.85rem;
+            }
+            .frase{
+                font-size: 2rem;
+                margin-bottom: 2.5rem;
+            }
+            .margin-l{
+                margin-left: 13.5rem;
+            }
+            .link-2{
+                display: flex;
+                justify-content: right;
+                margin: -1.5rem 12rem 0 0;
+            }
+            .arrows{
+                font-size: 1.5rem;
+                color: #000000;
+            }
+            .content{
+                width: 12rem;
+            }
+            .phrase{
+                font-size: 1.35rem;
+            }
+            .content>img{
+                height: 7rem;
+                margin-left: 2rem;
+            }
+            footer{
+                display: flex;
+                justify-content: center;
+                height: 8rem;
+            }
+            .container-2{
+                display: none;
+            }
+            .tooltip-2{
+                display: flex !important;
+                background-color: white;
+                width: 40rem;
+                margin: 0 4rem 0 6rem;
+                border-radius: 5px;
+                padding: 0 1rem;
+            }
+            .tooltip-2>a{
+                display: flex;
+                color:#16469C;
+                font-family: netflix;
+                padding: 2rem 1.75rem;
+            }
+            .tooltip-2>a>img{
+                margin-right: 1.5rem;
+            }
+            .border{
+                border-right: 1px solid rgba(0, 0, 0, 0.257);
+            }
+            .strong{
+                font-size: 2rem;
+                font-family: netflix;
+            }
+            .container{
+                margin-top: 0.5rem;
+                height: 3.5rem;
+                padding: 2rem;
+            }
+            .stong-parent{
+                width: 19rem;
+            }
+            .slider>a>span:hover{
+                color:#16469C;
+            }
+            .programas{
+                display: none;
+                position: absolute;
+                background-color: rgb(255, 255, 255);
+                margin: 29.9rem 0 0 -30rem;
+                box-shadow: 1px 1px 4px rgb(68, 68, 74);
+                padding: 3rem 3rem 5rem 3rem;
+                border-radius: 0 0 7px 7px;
+            }
+            .programas>div>div{
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                border-radius: 10px;
+            }
+            .programas>div>div:hover{
+                color: white;
+                background-color: #16469B;
+                transition: all 500ms;
+            }
+            .programas>div{
+                max-width: 25rem;
+            }
+            .programas img{
+                height: 2.5rem;
+                margin-right: 1.5rem;
+            }
+            .red:hover{
+                background-color: #EE2F42 !important;
+            }
+            .parent-icons:hover .programas{
+                display: flex!important;
+            }
+            .alumnos{
+                display: none;
+                position: absolute;
+                background-color: white;
+                margin: 23.2rem 0 0 -5rem ;
+                border-radius: 0 0 5px 5px;
+                padding: 0.75rem 0;
+                box-shadow: 1px 1px 4px rgb(68, 68, 74);
+                width: 16rem;
+            }
+            .alumnos>div{
+                display: flex;
+                justify-content: center;
+                padding: 1.5rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.166);
+                font-size: 1rem;
+            }
+            .alumnos>div:hover{
+                color: white;
+                transition: all 500ms;
+            }
+            .activities:hover{
+                background-color: #077DA0;
+            }
+            .activities-2:hover{
+                background-color: #214996;
+            }
+            .activities-3:hover{
+                background-color: #12178F;
+            }
+            .activities-4:hover{
+                background-color: #094168;
+            }
+
+            .border-n{
+                border-bottom: none !important;
+            }
+            .parent-hover:hover .alumnos{
+                display: block !important;
+            }
+            .modal{
+                display: none!important;
+                position: absolute;
+                width: 50rem;
+                background-image: linear-gradient(to right,#247bde,#3c97ff);
+                margin: 5.75rem 0 0 -28rem;
+                padding: 1rem;
+                border-radius: 6px;
+            }
+            .modal>div{
+                background-color: white;
+                width: 25rem;
+                border-radius: 5px;
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #0E4899;
+                padding: 1.75rem;
+            }
+            .firts-modal{
+                margin-right: 2rem;
+            }
+            .button-m{
+                color: white;
+                background-color: #5ED208;
+                border: 1px solid #5ED208;
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                width: 18.5rem;
+                border-radius: 5px;
+                margin-top: 4rem;
+                font-size: 0.85rem !important;
+                font-family: netflix;
+            }
+            .white{
+                background-color: white;
+                color: #5ED208;
+            }
+            .width{
+                max-width: 1rem;
+            }
+            .m-t{
+                margin-top: 7rem;
+            }
+            .close{
+                position: absolute;
+                height: 3.5rem;
+                width: 3.5rem;
+                background-color: #000000b5;
+                border-radius: 50%;
+                color: white;
+                display: none !important;
+                align-items: center;
+                justify-content: center;
+                margin: 5.75rem 0 0 23.5rem;
+                z-index: 1;
+            }
+            #check-2:checked ~ .modal{
+                display: flex !important;
+            }
+            #check-2:checked ~ .close{
+                display: flex !important;
+            }
+            #check-3:checked ~ .modal{
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="sub-body">
         <header>
+            <img src="../assets/img/advertising.jpeg" alt="" class="publish-3">
             <img src="../assets/img/advertising-2.jpeg" alt="" class="advertising">
-            <span class="material-icons menu">menu</span>
+            <label for="check">
+                <span class="material-icons menu">menu</span>
+            </label>
+            <input type="checkbox" id="check">
+            <div class="parent-2">
+                <div class="tooltip">
+                    <div class="wraper">
+                        <p>Programas</p>
+                        <span class="material-icons arrow-2">arrow_drop_down</span>
+                    </div>
+                    <div class="wraper">
+                        <p>Exámenes Internacionales </p>
+                        <span class="material-icons arrow-3">arrow_forward</span>
+                    </div>
+                    <div class="wraper">
+                        <p>Calendario de matrícula</p>
+                        <span class="material-icons arrow-3">arrow_forward</span>
+                    </div>
+                    <div class="wraper">
+                        <p>Zona de alumnos</p>
+                        <span class="material-icons arrow-2">arrow_drop_down</span>
+                    </div>
+                    <div class="sub-wraper">
+                        <p>FAQs</p>
+                        <p>Ayúdanos a mejorar</p>
+                        <p>Trabaja con nosotros</p>
+                    </div>
+                    <div>
+                        <div class="">
+                            <a href="https://icpna.instructure.com/login/canvas" class="button">We Canvas</a>
+                            <a href="" class="button second">Matrícula en línea</a>
+                        </div>
+                        <div>
+                            <a href="https://icpna.instructure.com/login/canvas" class="button margin-t change">We Canvas</a> 
+                            <a href="" class="button second">Matrícula en línea</a>
+                        </div>
+                        <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="sub-header">
             <div class="options">
@@ -295,11 +819,113 @@
                 <a href="https://www.icpna.edu.pe/">
                     <img src="../assets/img/icpna-2.svg" class="icpna">
                 </a>
-                <a href="" class="links">Matrícula en línea</a>
-                <a href="https://icpna.instructure.com/login/canvas" class="links blue">We Canvas</a>
+                <input type="checkbox" id="check-2">
+                <label for="check-2"><div class="links change margin matricula">Matrícula en línea</div></label>
+                <input type="checkbox" id="check-3">
+                <label class="close" for="check-3">
+                    <span class="material-icons">close</span>
+                </label>
+                <div class="modal">
+                    <div class="firts-modal">
+                        <img src="../assets/img/graduation.png" alt="">
+                        <p class="width">Soy alumno/ex-alumno</p>
+                        <a href="" class="button-m">REALIZA TU MATRICULA</a>
+                    </div>
+                    <div>
+                        <img src="../assets/img/sport-hat.png" alt="">
+                        <p>Aún no soy alumno</p>
+                        <a href="" class="button-m white m-t">REGISTRATE PARA MATRICULARTE</a>
+                    </div>
+                </div>
+                <a href="https://icpna.instructure.com/login/canvas" class="links blue change margin">We Canvas</a>
+                <a href="https://icpna.sherlockhr.com/" class="links blue change dn">Trabaja con Nosotros</a>
+                <a href="https://services.icpna.edu.pe/SugerenciasICPNA" class="links-2">Ayudanos a mejorar </a>
+                <a href="https://www.icpna.edu.pe/preguntas-frecuentes" class="links-2">FAQs</a>
             </div>
         </div>
+        <div class="choser">
+            <img src="../assets/img/icpna-2.svg" alt="" class="ipna">
+            <div class="slider">
+                <a href="" class="parent-icons">
+                    <span>Programas</span>
+                    <span class="material-icons arrows">arrow_drop_down</span>
+                    <div class="programas">
+                        <div>
+                            <div class="red">
+                                <img src="../assets/img/user-studying.png" alt="">
+                                <span>Programa para Jóvenes y Adultos (Semipresencial)</span>
+                            </div>
+                            <div class="red">
+                                <img src="../assets/img/user-studying-2.png" alt="">
+                                <span>Programa para Jóvenes y Adultos (Presencial)</span>
+                            </div>
+                            <div>
+                                <img src="../assets/img/studying-computer.png" alt="">
+                                <span>Programa para Jóvenes y Adultos (Virtual)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="red">
+                                <img src="../assets/img/kid-studying.png" alt="">
+                                <span>Programa para Niños (Presencial)</span>
+                            </div>
+                            <div>
+                                <img src="../assets/img/kid-studying-2.png" alt="">
+                                <span>Programa para Niños (Virtual)</span>
+                            </div>
+                            <div>
+                                <img src="../assets/img/speaking.png" alt="">
+                                <span>Conversation Program (Virtual)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="../assets/img/teaching.png" alt="">
+                                <span>Teaching English to Kids (Virtual)</span>
+                            </div>
+                            <div>
+                                <img src="../assets/img/teaching-2.png" alt="">
+                                <span>Methodology for EFL Teachers (Virtual)</span>
+                            </div>
+                            <div>
+                                <img src="../assets/img/teaching-3.png" alt="">
+                                <span>Program Corporativos y a medida - IBE</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.icpna.edu.pe/examenes">
+                    <span>Exámenes Internacionales</span>
+                </a>
+                <a href="https://www.icpna.edu.pe/calendario">
+                    <span>Calendario de matrícula</span>
+                </a>
+                <a class="parent-icons parent-hover">
+                    <span>Zona de alumnos</span>
+                    <span class="material-icons arrows">arrow_drop_down</span>
+                    <div class="alumnos">
+                        <div class="activities">
+                            <p>Actividades Estudiantiles</p>
+                        </div>
+                        <div class="activities-2">
+                            <p>Graduaciones Virtuales</p>
+                        </div>
+                        <div class="activities-3">
+                            <p>Videos Tutoriales</p>
+                        </div>
+                        <div class="border-n activities-4">
+                            <p>Virtual ICPNA</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
     </div>
+    <img src="../assets/img/search-2.svg" alt="" class="search">
+    <a href="https://services.icpna.edu.pe/ICPNABUSINESSENGLISH/">
+        <img src="../assets/img/publish-icpna-2.jpeg" alt="" class="publish-icpna">
+    </a>
     <main>
         <a href="https://services.icpna.edu.pe/ICPNABUSINESSENGLISH/"><img src="../assets/img/publish-icpna.jpeg" alt="" class="publish"></a>
         <div class="parent-dot">
@@ -316,19 +942,19 @@
         <div class="parent-p">
             <p class="https://www.icpna.edu.pe/horarios-costos">Conoce nuestro horarios y costos</p>
         </div>
-        <div>
+        <div class="input-parent">
             <input type="text" placeholder="Programa">
-            <span class="material-icons arrow">arrow_drop_down</span>
+            <span class="material-icons arrow one">arrow_drop_down</span>
             <input type="text" placeholder="Modalidad">
-            <span class="material-icons arrow">arrow_drop_down</span>
+            <span class="material-icons arrow two">arrow_drop_down</span>
             <input type="text" placeholder="Sede">
-            <span class="material-icons arrow">arrow_drop_down</span>
+            <span class="material-icons arrow three">arrow_drop_down</span>
             <input type="text" placeholder="Nivel">
-            <span class="material-icons arrow">arrow_drop_down</span>
+            <span class="material-icons arrow four">arrow_drop_down</span>
             <input type="text" placeholder="Frecuencia">
-            <span class="material-icons arrow">arrow_drop_down</span>
+            <span class="material-icons arrow five">arrow_drop_down</span>
             <input type="text" placeholder="Curso">
-            <span class="material-icons arrow">arrow_drop_down</span>
+            <span class="material-icons arrow six">arrow_drop_down</span>
         </div>
         <div class="div">
             <a href="" class="link-buttom">VER HORARIOS Y COSTOS</a>
@@ -339,27 +965,27 @@
             <p >Aprende con nosostros y escoje tu programa</p>
         </div>
         <a href="" class="parent">
-            <div class="content margin-l">
+            <div class="content margin-l hover-1">
                 <img src="../assets/img/user-studying.png" alt="" class="user">
                 <p class="phrase">Inglés para Jóvenes y Adultos Semipesencial</p>
                 <p class="phrase-2">de 14 años a más</p>
             </div>
-            <div class="content">
+            <div class="content hover-2">
                 <img src="../assets/img/user-studying-2.png" alt="" class="user">
                 <p class="phrase">Inglés para Jóvenes y Adultos Presencial</p>
                 <p class="phrase-2">de 14 años a más</p>
             </div>
-            <div class="content">
+            <div class="content hover-3">
                 <img src="../assets/img/studying-computer.png" alt="" class="user">
                 <p class="phrase">Inglés para Jóvenes y Adultos Virtual</p>
                 <p class="phrase-2">de 14 años a más</p>
             </div>
-            <div class="content">
+            <div class="content hover-4">
                 <img src="../assets/img/kid-studying.png" alt="" class="user">
                 <p class="phrase">Inglés para Niños Presencial</p>
                 <p class="phrase-2">de 04 a 13 años</p>
             </div>
-            <div class="content">
+            <div class="content hover-5">
                 <img src="../assets/img/kid-studying-2.png" alt="" class="user">
                 <p class="phrase">Inglés para Niños Virtual</p>
                 <p class="phrase-2">de 06 a 13 años</p>
@@ -370,7 +996,23 @@
         </a>
     </aside>
     <footer>
-        <p class="strong">Estudia con Nosotros, sé parte del ICPNA</p>
+        <div class="stong-parent">
+            <p class="strong">Estudia con Nosotros, sé parte del ICPNA</p>
+        </div>
+        <div class="tooltip-2">
+            <a href="https://www.icpna.edu.pe/uploads/shares/institucional/PDF2020/matriculavirtual062020.pdf" class="border">
+                <img src="../assets/img/paper.png" alt="" class="images">
+                <span>Proceso de matrícula</span>
+            </a>
+            <a href="https://www.icpna.edu.pe/examen-clasificacion" class="border">
+                <img src="../assets/img/examen.png" alt="" class="images">
+                <span>Incripción al Examen de clasificación</span>
+            </a>
+            <a href="https://matricula.icpna.edu.pe/">
+                <img src="../assets/img/matricula-online.png" alt="" class="images">
+                <span>Matrícula online</span>
+            </a>
+        </div>
         <div class="container">
             <div class="content-2">
                 <span class="material-icons calendar">calendar_month</span>
