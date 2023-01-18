@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess.com</title>
+    <link rel="shortcut icon" href="../assets/img/peon-verde.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        @font-face{
+            font-family: netflix;
+            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+        }
+        @font-face{
+            font-family: netflix-2;
+            src: url(../assets/fonts/NetflixSans_W_Md.woff2);
+        }
+        body{
+            display: flex;
+            font-family: netflix;
+        }
+        .first-child{
+            background-color: #21201E;
+            width: 9rem;
+        }
+        .second-child{
+            background-color: #302E2B;
+            flex: 1;
+            display: flex;
+        }
+        .size{
+            height: 2rem;
+            width: 6.75rem;
+            margin-left: -0.5rem;
+        }
+        .size-small{
+            height: 1.75rem;
+            margin-left: -0.5rem;
+        }
+        .padd{
+            padding: 0.65rem 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .text{
+            color: white;
+            margin-left: 0.65rem;
+        }
+        .size-verysmall{
+            height: 0.5rem;
+            margin-left: -0.25rem;
+        }
+        input{
+            background-color: #3C3B39;
+            border: 1px solid #504F4B;
+            border-radius: 2px;
+            padding:0.35rem 0.5rem;
+            width: 6.65rem;
+            margin: 0 0 0 -1rem;
+            outline: none;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .a-1{
+            background-color: #302E2B;
+            margin: 1.25rem 0 -0.35rem;
+        }
+        .a-2{
+            background-color: #7e9e3f;
+        }
+        .p{
+            margin-top: 1rem;
+            margin-left: -0.9rem;
+            width: 6rem;
+            padding: 0.75rem 1rem ;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .b-content{
+            margin: 16rem 0 0 0;
+            color: #90908F;
+            font-size: 0.8rem;
+            position: relative;
+        }
+        .b-content>div{
+            padding: 0.4rem 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .margin-r{
+            margin-right: 0.65rem;
+        }
+        .chess{
+            padding: 0.5rem 1.5rem;
+        }
+        .hover{
+            cursor: pointer;
+        }
+        .hover:hover{
+            background-color: #141312;
+        }
+        .hover:hover .color-w{
+            color: white ;
+        }
+        .padd-a{
+            padding-left: 1.35rem;
+        }
+        .padd-a-1:hover{
+            background-color: #494846;
+        }
+        .padd-a-2:hover{
+            background-color: #95BB4A;
+        }
+        .hover-input:hover{
+            border: 1px solid #777674;
+        }
+        .table-chess{
+            height: 50rem;
+            margin: 2.8rem 0 0 1.8rem;
+            border-radius: 5px;
+        }
+        .pieces{
+            height: 6.5rem;
+            position: absolute;
+            top: 2.65rem;
+        }
+        .torre{
+            left: 1.5rem;
+        }
+        .torre-2{
+            right: -0.25rem;
+        }
+        .caballo{
+            left: 7.8rem;
+        }
+        .caballo-2{
+            right: 6rem;
+        }
+        .arfil{
+            left: 14.15rem;
+        }
+        .arfil-2{
+            right: 12.25rem;
+        }
+        .reina{
+           left: 20.35rem; 
+        }
+        .rey{
+            right: 18.65rem;
+        }
+        .pieces-2{
+            position: absolute;
+            top: 8.75rem;
+            height: 6.5rem;
+        }
+        .peon1{
+            left: 1.65rem;
+        }
+        .peon2{
+            left: 7.85rem;
+        }
+        .peon3{
+            left: 14.1rem;
+        }
+        .peon4{
+            left: 20.35rem;
+        }
+        .peon5{
+            right: -0.2rem;
+        }
+        .peon6{
+            right: 6.1rem;
+        }
+        .peon7{
+            right: 12.35rem;
+        }
+        .peon8{
+            right: 18.65em;
+        }
+        .p-r{
+            position: relative;
+        }
+        .pieces-b{
+            position: absolute;
+            bottom: 0.15rem;
+            height: 6.5rem;
+        }
+        .torre-b{
+            left: 1.5rem;
+        }
+        .torre-b-2{
+            right: -0.25rem;
+        }
+        .caballo-b{
+            left: 7.8rem;
+        }
+        .caballo-b-2{
+            right: 6rem;
+        }
+        .arfil-b{
+            left: 14.15rem;
+        }
+        .arfil-b-2{
+            right: 12.25rem;
+        }
+        .reina-b{
+           left: 20.35rem; 
+        }
+        .rey-b{
+            right: 18.65rem;
+        }
+        .pieces-b-2{
+            position: absolute;
+            bottom: 6.5rem;
+            height: 6.5rem;
+        }
+        .peon-b-1{
+            left: 7.75rem;
+        }
+        .peon-b-2{
+            left: 1.5rem;
+        }
+        .peon-b-3{
+            left: 14.1rem;
+        }
+        .peon-b-4{
+            left: 20.35rem;
+        }
+        .peon-b-5{
+            right: -0.2rem;
+        }
+        .peon-b-6{
+            right: 6.1rem;
+        }
+        .peon-b-7{
+            right: 12.35rem;
+        }
+        .peon-b-8{
+            right: 18.65em;
+        }
+        .p-r{
+            position: relative;
+        }
+        .color-w{
+            color: white;
+        }
+        .image{
+            height: 2.5rem;
+            border-radius: 2px;
+            margin: 1rem 0.5rem -1.65rem 1.35rem;
+        }
+        
+        .container{
+            background-color: #262522;
+            margin: 1rem 0 1rem 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+            padding: 0 2rem 4rem;
+        }
+        .strong{
+            font-size: 2rem;
+            color:  white;
+            font-family: netflix-2;
+            margin-top: 0.35rem;
+        }
+        .hand{
+            margin-top: -1.5rem;
+        }
+        .parent{
+            background-color: #21201D;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+            display: flex;
+            margin: 0.5rem 0 -0.25rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.599);
+            align-items: center;
+            padding: 1.15rem 6.5rem 1rem 1.25rem;
+        }
+        .parent>div>img{
+            height: 3rem;
+            margin-right: 1.25rem;
+        }
+        .bold{
+            font-size: 1.5rem;
+            font-family: netflix-2;
+            margin: 0 !important;
+        }
+        .gray{
+            color: #BEBEBE;
+            margin: 0 !important;
+            font-size: 0.9rem;
+
+        }
+        .parent>div{
+            text-align: left;
+        }
+       .b-parent{
+            display: flex;
+            color: #BEBEBE;
+            margin-top: 1.85rem;
+            justify-content: center;
+        }
+        .b-parent>div>img{
+           height: 1.5rem;
+           margin-right: 0.5rem;
+        }
+        .b-parent>div{
+           display: flex;
+           align-items: center;
+           cursor: pointer;
+         }
+        .b-parent>div>span{
+          margin-right: 1.5rem;
+        }
+        .parent:hover{
+            background-color: #171614;
+        }
+        .b-parent>div:hover{
+            color: white;
+        }
+        .adds{
+            background-color:#ffffff;
+            margin: 1rem 0 10rem 1rem;
+            width: 8.5rem;
+            padding: 0.75rem;
+            display: inline-block;
+        }
+        .button{
+            background-color: #208fb7;
+            color: white;
+            width: 8rem;
+            padding: 0.35rem;
+            font-size: 0.7rem;
+            font-family: netflix-2;
+            text-align: center;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10rem;
+            right: 1.4rem;
+        }
+        .button:hover{
+            background-color: #1D82A8;
+            text-decoration:underline;
+        }
+        .adds>img{
+            height: 6rem;
+            margin: 1rem 0 0 1rem;
+            cursor: pointer;
+        }
+        
+        #label:checked ~ .adds{
+            display: none !important;
+        }
+        .check{
+            display: none;
+        }
+        .content{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .content>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .content>div:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .content>div>img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .hover-c:hover .content{
+            display: block;
+        }
+        .content-2{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .content-2>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .content-2>div:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .content-2>div>img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .hover-c-2:hover .content-2{
+            display: block;
+        }
+        .content-3{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .content-3>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .content-3>div:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .content-3>div>img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .hover-c-3:hover .content-3{
+            display: block;
+        }
+        .content-4{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .content-4>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .content-4>div:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .content-4>div>img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .hover-c-4:hover .content-4{
+            display: block;
+        }
+        .content-5{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .content-5>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .content-5>div:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .content-5>div>img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .hover-c-5:hover .content-5{
+            display: block;
+        }
+        .tooltip{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .tooltip img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .tooltip>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .back-hover:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .more{
+            height: 0.75rem !important;
+            position: absolute;
+            right: 1rem;
+        }
+        .special{
+            background-color: #2D2C2A;
+            padding: 0.5rem;
+            margin: 0.5rem 0 0.5rem !important;
+        }
+        .special-2{
+            background-color: #2D2C2A;
+            padding: -1rem !important;
+            margin: 1rem 0 1rem !important;
+        }
+        .countrys{
+            height: 0.65rem !important;
+            position: absolute;
+            right: 1rem;
+        }
+        .unidos{
+            height: 0.55rem !important;
+            position: absolute;
+            right: 1rem;
+        }
+        .special:hover{
+            color: white;
+        }
+        .special-2:hover{
+            color: white;
+        }
+        .heart{
+            height: 1.35rem !important;
+        }
+        .hover-tool:hover .tooltip{
+            display: block;
+        }
+        .tooltip-2{
+            position: absolute;
+            width: 19rem;
+            background-color: #1D1C1C;
+            top: 0;
+            left: 9rem;
+            z-index: 1;
+            padding: 0 0.5rem;
+            color:#bcbbb6;
+            height: 100%;
+            display: none;
+        }
+        .tooltip-2 img{
+            height: 1.75rem;
+            margin-right: 0.5rem;
+        }
+        .tooltip-2>div{
+            display: flex;
+            align-items: center;
+            margin-bottom: -0.5rem;
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+        .tooltip-2>div:hover{
+            color: white;
+            background-color: #141312;
+        }
+        .hover-tool-2:hover .tooltip-2{
+            display: block;
+        }
+        .space{
+            margin:  0.35rem 0 !important;
+        }
+        .space:hover{
+            color: white;
+        }
+        .help{
+            position: absolute;
+            background-color: #181716;
+            top :-4.5rem;
+            left: 8rem;
+            width: 10rem;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 0.5rem;
+            width: 11rem;
+            display: none;
+        }
+        .help>div{
+            padding: 0.5rem;
+            display: flex;
+        }
+        .help>div>p{
+            margin: 0;
+        }
+        .help img{
+            height: 1.25rem;
+            margin-right: 1rem;
+        }
+        .help>div:hover{
+            background-color: #494846;
+            color: white;
+        }
+        .w-c:hover >span{
+            color: white;
+        }
+        .w-c:hover .help{
+            display: block;
+        }
+        header{
+            display: none;
+        }
+        @media (max-width:1000px){
+            .first-child{
+                display: none;
+            }
+           .d-n{
+            display: none;
+           }
+           .second-child{
+            margin-bottom: -13.25rem;
+           }
+           .container{
+                margin: 1.5rem 1rem 1rem;
+           }
+           .parent{
+            padding: 1rem 0.9rem 1rem 1.5rem;
+           }
+           .b-parent{
+            margin-left: 1rem;
+           }
+           header{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 0.5rem;
+           }
+           header img{
+            height: 2rem;
+           }
+           .second-child{
+            display: block;
+            padding: 0.5rem 0 !important;
+           }
+           header span{
+            color: #98958f;
+            font-size: 2rem !important;
+            margin-right: 0.5rem;
+           }
+           .p{
+            width: 3rem;
+            padding: 0.35rem 0.5rem;
+            margin-top: -0.25rem;
+           }
+           a{
+            font-size: 0.8rem !important;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="first-child">
+        <div>
+            <div class="hover chess">
+                <img src="../assets/img/chess.com.png" alt=""  class="size">
+            </div>
+            <div class="padd hover hover-c">
+                <img src="../assets/img/hand-peon.svg" alt="" class="size-small">
+                <span class="text">Play</span>
+                <div class="content show">
+                    <div>
+                        <img src="../assets/img/hand-peon.svg" alt="">
+                        <p>Play</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/computer.svg" alt="">
+                        <p>Computer</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/medal.svg" alt="">
+                        <p>Tournaments</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/chess-variants.svg" alt="">
+                        <p>4 Players & Variants</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/leaderboard.svg" alt="">
+                        <p>leaderboard</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padd hover hover-c-2">
+                <img src="../assets/img/puzzles.png" alt="" class="size-small">
+                <span class="text">Puzzles</span>
+                <div class="content-2 show">
+                    <div>
+                        <img src="../assets/img/rayo.svg" alt="">
+                        <p>Puzzles</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/puzzles.png" alt="">
+                        <p>Puzzles Rush</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/thinking.jpeg" alt="">
+                        <p>Puzzles Battle</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/chess-variants.svg" alt="">
+                        <p>Daily Puzzles</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/carpet.svg" alt="">
+                        <p>Custom Puzzles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padd hover hover-c-3">
+                <img src="../assets/img/graduation.png" alt="" class="size-small">
+                <span class="text">Learn</span>
+                <div class="content-3 show">
+                    <div>
+                        <img src="../assets/img/largavistas.jpeg" alt="">
+                        <p>Lessons</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/ball-pixar.jpeg" alt="">
+                        <p>Insights</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/2hands.svg" alt="">
+                        <p>Openings</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/chess-variants.svg" alt="">
+                        <p>Endgames</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/hand-peon.svg" alt="">
+                        <p>Practice</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/carpet.svg" alt="">
+                        <p>Classroom</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/rey-b.png" alt="">
+                        <p>Analysis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padd hover hover-tool">
+                <img src="../assets/img/studying-computer.png" alt="" class="size-small">
+                <span class="text">Watch</span>
+                <div class="tooltip show">
+                    <div class="back-hover">
+                        <img src="../assets/img/2hands.svg" alt="">
+                        <p>ChessTV</p>
+                    </div>
+                    <div class="special">
+                        <img src="../assets/img/peon-verde.png" alt="">
+                        <span>Streamers</span>
+                        <img src="../assets/img/more.svg" alt="" class="more">
+                    </div>
+                    <div>
+                        <img src="../assets/img/caballo-b.png" alt="">
+                        <p>Daniel</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/torre-b.png" alt="">
+                        <p>joseph</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/arfil-b.png" alt="">
+                        <p>Linus</p>
+                    </div>
+                    <div class="special-2">
+                        <img src="../assets/img/medal.svg" alt=""class="heart">
+                        <p>Events</p>
+                        <img src="../assets/img/more.svg" alt="" class="more">
+                    </div>
+                    <div>
+                        <img src="../assets/img/green-heart.svg" alt="" class="heart">
+                        <p>Titles Tuesday Blitz January 10</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/green-heart.svg" alt="" class="heart">
+                        <p>Titles Tuesday Blitz febreary 21</p>
+                    </div>
+                    <div class="space">
+                        <img src="../assets/img/" alt="">
+                        <p>Playing Now</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/skweb.jpg" alt=""class="heart">
+                        <p>Linuscoder14   (1500)</p>
+                        <img src="../assets/img/peru.jpeg" alt="" class="countrys">
+                    </div>
+                    <div>
+                        <img src="../assets/img/phiraminx.webp" alt=""class="heart">
+                        <p>Cristiantemas (857)</p>
+                        <img src="../assets/img/argentina.webp" alt="" class="countrys">
+                    </div>
+                    <div>
+                        <img src="../assets/img/gan-mirrow.jpeg" alt=""class="heart">
+                        <p>cesiaqq@pro (539)</p>
+                        <img src="../assets/img/estados-unidos.png" alt="" class="unidos">
+                    </div>
+                    <div>
+                        <img src="../assets/img/gan4*4.jpeg" alt=""class="heart">
+                        <p>samanezdani13 (1221)</p>
+                        <img src="../assets/img/mexico.png" alt="" class="countrys">
+                    </div>
+                </div>
+            </div>
+            <div class="padd hover hover-c-4">
+                <img src="../assets/img/carpet.svg" alt="" class="size-small">
+                <span class="text">News</span>
+                <div class="content-4 show">
+                    <div>
+                        <img src="../assets/img/microfon.svg" alt="">
+                        <p>Chess Today</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/git hub-google.png" alt="">
+                        <p>news</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/peon-verde.png" alt="">
+                        <p>Articles</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/graduation.png" alt="">
+                        <p>Top Players</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/carpet.svg" alt="">
+                        <p>Chess Rankings</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padd hover hover-c-5">
+                <img src="../assets/img/students.png" alt="" class="size-small">
+                <span class="text">Social</span>
+                <div class="content-5 show">
+                    <div>
+                        <img src="../assets/img/youtube.svg" alt="">
+                        <p>Clubs</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/speaking.png" alt="">
+                        <p>Forums</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/user-01.png" alt="">
+                        <p>Members</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/rey-b.png" alt="">
+                        <p>Blogs</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/coach.png" alt="">
+                        <p>Coaches</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padd hover hover-tool-2">
+                <img src="../assets/img/dots.png" alt="" class="size-verysmall">
+                <span class="text">More</span>
+                <div class="tooltip-2 show">
+                    <p>Features</p>
+                    <div>
+                        <img src="../assets/img/newspaper.png" alt="">
+                        <p>Library</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/speaking.png" alt="">
+                        <p>Expllorer</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/peon.svg" alt="">
+                        <p>Solo Chess</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/traductor.png" alt="">
+                        <p>Vision</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/chess-variants.svg" alt="">
+                        <p>Vote Chess</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/examen.png" alt="">
+                        <p>Mobile Apps</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/coach.png" alt="">
+                        <p>ChessKid</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/medal.svg" alt="">
+                        <p>Treasure Chess</p>
+                    </div>
+                    <p>Resources</p>
+                    <div>
+                        <img src="../assets/img/youtube.svg" alt="">
+                        <p>Videos</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/gan12.webp" alt="">
+                        <p>Games Database</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/matricula-online.png" alt="">
+                        <p>Chess Terms</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/leaderboard.svg" alt="">
+                        <p>Rules</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/computer.svg" alt="">
+                        <p>Tools</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/arfil-b.png" alt="">
+                        <p>Shop</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/rosas.jpeg" alt="">
+                        <p>Gift</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/git hub-google.png" alt="">
+                        <p>Merch</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/paper.png" alt="">
+                        <p>Computer Championships</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/rayo.svg" alt="">
+                        <p>Verified</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padd">
+                <input type="text" placeholder="Search" class="hover-input">
+            </div>
+            <div class="padd-a">
+                <p class="a-1 p padd-a-1"><a href="">Sing Up</a></p>
+            </div>
+            <div class="padd-a">
+                <p class="a-2 p padd-a-2"><a href="">Log In</a></p>
+            </div>
+        </div>
+        <div class="b-content">
+            <div class="hover w-c">
+                <span class="material-icons margin-r">public</span>
+                <span>English</span>
+            </div>
+            <div class="hover w-c">
+                <span class="material-icons margin-r">sunny </span>
+                <span>Light Ul</span>
+            </div>
+            <div class="hover w-c">
+                <span class="material-icons margin-r">help</span>
+                <span>Help</span>
+                <div class="help">
+                    <div>
+                        <img src="../assets/img/question.svg" alt="">
+                        <p>Ask a Question</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/rey-b.png" alt="">
+                        <p>Report Abuse</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/casi-creativo.jpeg" alt="">
+                        <p>Make a Suggestion</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/carpet.svg" alt="">
+                        <p>Billing Issues</p>
+                    </div>
+                    <div>
+                        <img src="../assets/img/computer.svg" alt="">
+                        <p>Report a Bug</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-child">
+        <div class="d-n">
+            <div class="df">
+                <img src="../assets/img/opponent.png" alt="" class="image">
+                <span class="color-w m-t">Opponent</span>
+            </div>
+            <div class="p-r">
+                <img src="../assets/img/table-chess.png" alt="" class="table-chess">
+                <div>
+                    <img src="../assets/img/torre.png" alt="" class="pieces torre">
+                    <img src="../assets/img/caballo.png" alt="" class="pieces caballo">
+                    <img src="../assets/img/arfil.png" alt="" class="pieces arfil">
+                    <img src="../assets/img/reina.png" alt="" class="pieces reina">
+                    <img src="../assets/img/rey.png" alt="" class="pieces rey">
+                    <img src="../assets/img/arfil.png" alt="" class="pieces arfil-2">
+                    <img src="../assets/img/caballo.png" alt="" class="pieces caballo-2">
+                    <img src="../assets/img/torre.png" alt="" class="pieces torre-2">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon1">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon2">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon3">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon4">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon5">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon6">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon7">
+                    <img src="../assets/img/peon.png" alt="" class="pieces-2 peon8">
+                </div>
+                <div>
+                    <img src="../assets/img/torre-b.png" alt="" class="pieces-b torre-b">
+                    <img src="../assets/img/caballo-b.png" alt="" class="pieces-b caballo-b">
+                    <img src="../assets/img/arfil-b.png" alt="" class="pieces-b arfil-b">
+                    <img src="../assets/img/reina-b.png" alt="" class="pieces-b reina-b">
+                    <img src="../assets/img/rey-b.png" alt="" class="pieces-b rey-b">
+                    <img src="../assets/img/arfil-b.png" alt="" class="pieces-b arfil-b-2">
+                    <img src="../assets/img/caballo-b.png" alt="" class="pieces-b caballo-b-2">
+                    <img src="../assets/img/torre-b.png" alt="" class="pieces-b torre-b-2">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-1">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-2">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-3">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-4">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-5">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-6">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-7">
+                    <img src="../assets/img/peon-b.png" alt="" class="pieces-b-2 peon-b-8">
+                </div>
+            </div>
+            <div class="df">
+                <img src="../assets/img/peon.svg" alt="" class="image">
+                <span class="color-w m-t">Player</span>
+            </div>
+        </div>
+        <header>
+                <div>
+                    <span class="material-icons">menu</span>
+                    <img src="../assets/img/chess.com.png" alt="">
+                </div>
+                <div>
+                    <div class="padd-a">
+                        <p class="a-2 p padd-a-2"><a href="">Log In</a></p>
+                    </div>
+                </div>
+        </header>
+        <div class="container">
+            <div>
+                <p class="strong">Play Chess</p>
+                <img src="../assets/img/hand-peon.svg" alt="" class="hand">
+            </div>
+            <div>
+                <div class="parent">
+                    <div>
+                        <img src="../assets/img/rayo.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="bold">Play Online</p>
+                        <p class="gray">Play vs a person of similar skill</p>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div>
+                        <img src="../assets/img/computer.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="bold">Computer</p>
+                        <p class="gray">Challenge a bot from Easy to Master</p>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div>
+                        <img src="../assets/img/2hands.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="bold">Play a friend </p>
+                        <p class="gray">Invite a fried to a game of Chess</p>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div>
+                        <img src="../assets/img/medal.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="bold">Tournaments</p>
+                        <p class="gray">Join an Arena where anyone can win</p>
+                    </div>
+                </div>
+                <div class="parent">
+                    <div>
+                        <img src="../assets/img/chess-variants.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="bold">Chess variants</p>
+                        <p class="gray">Find fun new ways to play chess</p>
+                    </div>
+                </div>
+                <div class="b-parent">
+                    <div>
+                        <img src="../assets/img/carpet.svg" alt="">
+                        <span>Archive</span>
+                    </div>
+                    <div>
+                        <img src="../assets/img/leaderboard.svg" alt="">
+                        <span>Leadboard</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="label">
+            <p class="button d-n">Remove Ads</p>
+        </label>
+        <input type="checkbox" id="label" class="check">
+        <div class="adds d-n">
+            <img src="../assets/img/gan12.webp" alt="">
+            <img src="../assets/img/gan2*2.jpeg" alt="">
+            <img src="../assets/img/phiraminx.webp" alt="">
+            <img src="../assets/img/gan-mirrow.jpeg" alt="">
+            <img src="../assets/img/skweb.jpg" alt="">
+            <img src="../assets/img/gan4*4.jpeg" alt="">
+        </div>
+    </div>
+</body>
+</html>
