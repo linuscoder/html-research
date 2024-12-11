@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes moverse{
+            0%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translate(28rem);
+            }
+        }
+        @keyframes doblarse{
+            0%{
+                transform: skew(0);
+            }
+            100%{
+                transform: skew(30deg);
+            }
+        }
+        html, body{
+            height: 100%;
+        }
+        #content{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            align-items: center;
+            filter: contrast(30);
+            background-color: white;
+        }
+        #content>div{
+            background-color: red;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            filter: blur(10px) brightness(0.6);
+        }
+        .box{
+            animation: moverse 3s alternate 1s infinite;
+        }
+        .box2{
+            animation: doblarse 1.5s alternate 1s infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

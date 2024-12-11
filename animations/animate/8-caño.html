@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caño</title>
+    <style>
+        @keyframes caer{
+            0%{
+
+            }
+            100%{
+                transform: translate(0, 50rem);
+            }
+        }
+        html, body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        body>div>div{
+            background-color: white;
+            filter: blur(10px);
+        }
+        .gotas{
+            height: 7rem;
+            width: 5rem;
+            border-radius: 100%;
+            background-color: rgb(49, 168, 168);
+            animation: caer linear 2s infinite;
+        }
+        .gotita{
+            position: absolute;
+            bottom: -5rem;
+            margin-left: -2.7rem;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 100%;
+            background-color: rgb(49, 168, 168);
+        }
+        .content{
+            filter: contrast(30);
+            background-color: white;
+            padding: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="">
+    <div class="content">
+        <div class="gotas"></div>
+        <div class="gotita"></div>
+    </div>
+</body>
+</html>

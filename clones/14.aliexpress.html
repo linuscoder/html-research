@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliExpress</title>
+    <link rel="shortcut icon" href="../assets/img/aliexpress.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        *{
+            margin: 0;
+            user-select: none;
+        }
+        @font-face{
+            font-family: regular;
+            src: url(../assets/fonts/regular.woff2);
+        }
+        @font-face{
+            font-family: mediano;
+            src: url(../assets/fonts/medium.woff2);
+        }
+        @font-face{
+            font-family: negroStilo;
+            src: url(../assets/fonts/bold-style.ttf);
+        }
+        @font-face{
+            font-family: muyDelgado;
+            src: url(../assets/fonts/soThin.ttf);
+        }
+        @font-face{
+            font-family: normalito;
+            src: url(../assets/fonts/thin.woff2);
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 7.1fr 1fr;
+            font-family: regular;
+        }
+        .first-child{
+            display: flex;
+            display: block;
+        }
+        header{
+            background-color: #000000;
+            width: 100%;
+        }
+        .ali{
+            cursor: pointer;
+            height: 2.75rem;
+            position: absolute;
+            left: 13.25rem;
+        }
+        header>div{
+            display: flex;
+        }
+        .header-padding{
+            padding: 1.25rem 0 0 26.5rem;
+        }
+        .searcher{
+            border-radius: 2rem;
+            border: 0;
+            width: 22.85rem;
+            padding: 0.8rem 1rem 0.65rem 1.5rem;
+            font-size: 1rem;
+            outline: 0;
+        }
+        ::placeholder{
+            color: #c1c2c5;
+            font-size: 1rem;
+        }
+        .search{
+            cursor: pointer;
+            height: 1.25rem;
+            padding: 0.45rem 1.1rem;
+            background-color: #000000;
+            border-radius: 3rem;
+            position: absolute;
+            right: 0.25rem;
+            top: 0.23rem;
+        }
+        .relative{
+            position: relative;
+            margin-right: 1.25rem;
+        }
+        .material-icons{
+            color: white;
+        }
+        .white{
+            color: white;
+        }
+        .size{
+            font-size: 0.8rem;
+        }
+        .peru{
+            height: 1rem;
+            margin: 0.65rem 0.35rem 0 0;
+        }
+        .relative~div>div{
+            padding: 0 0.65rem;
+            display: flex;
+            cursor: pointer;
+        }
+        .relative~div{
+            display: flex;
+        }
+        .absolute{
+            position: absolute;
+            font-size: 1.75rem;
+            top: 1.4rem;
+        }
+        .margin-l{
+            margin-left: 2.25rem;
+        }
+        .user{
+            height: 1.75rem;
+            margin: 0.25rem 0.35rem 0 0 ;
+        }
+        .arrow{
+            height: 0.5rem;
+            margin: 1.35rem 0 0 0.25rem;
+        }
+        .bold{
+            font-family: mediano;
+            font-size: 0.8rem;
+        }
+        .cesta{
+            height: 4rem;
+            margin: -1rem -0.25rem 0 -1rem;
+        }
+        .icon{
+            background-color: white;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            width: 1.7rem;
+            font-family: mediano;
+        }
+        .margin-l-2{
+            margin-left: -0.5rem;
+        }
+        .menu{
+            height: 0.5rem !important;
+            margin-left: 0.25rem;
+        }
+        .sub-header{
+            padding: 0 0 0.65rem 3.35rem;
+            display: flex;
+            align-items: center;
+        }
+        .category{
+            cursor: pointer;
+            z-index: 1;
+            color: white;
+            border: #a0a0a0c2 1px solid;
+            border-radius: 2rem;
+            padding: 0.5rem 1.35rem 0.5rem 1.25rem;
+            margin-right: 0.5rem;
+        }
+        .discount{
+            color: #FD374F !important;
+            padding: 0.75rem 2rem !important;
+        }
+        .category:hover{
+            color: #000000;
+            background-color: #F5F5F5;
+            font-family: mediano;
+            padding: 0.5rem 1.2rem;
+            border-radius: 1.5rem 1.5rem 0 0;
+            border: 1px solid white;
+            width: 13.95rem;
+        }
+        .category:hover .tooltip{
+            display: block;
+        }
+        .hover{
+            cursor: pointer;
+            display: flex;
+            color: white;
+            padding: 0.75rem 1.35rem;
+            font-family: mediano;
+            display: flex;
+            align-items: center;
+        }
+        .hover:hover{
+            background-color: #474747;
+            border-radius: 2rem;
+            transition: all 405ms;
+        }
+        .offert{
+            width: 100%;
+            cursor: pointer;
+        }
+        main{
+            position: relative;
+        }
+        .letter{
+            position: absolute;
+            top: 1rem;
+            width: 100%;
+        }
+        .choice-b{
+            font-size: 1.8rem;
+            font-family: mediano;
+            right: 48.75%;
+            position: absolute;
+        }
+        .day-b{
+            font-size: 1.8rem;
+            font-family: mediano;
+            color: #FF354C;
+            right: 45%;
+            position: absolute;
+        }
+        .frase-b{
+            color: #FF354C;
+            font-size: 6rem;
+            font-family: mediano;
+            margin-left: 11rem;
+        }
+        .frase-b2{
+            color: #FF354C;
+            font-size: 2.5rem;
+            font-family: mediano;
+            position: absolute;
+            top: 1.75rem;
+        }
+        .icon-a{
+            background-color: #FF354C;
+            padding: 0.25rem;
+            border-radius: 2rem;
+            width: 1.65rem;
+            height: 1.65rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 24%;
+            top: 2.5rem;
+        }
+        .gradient{
+            background: linear-gradient(#FCE18D,white);
+            margin-top: -1.75rem;
+            display: flex;
+            gap: 1rem;
+            padding: 2rem 2rem 5rem;
+        }
+        .container{
+            background-color: white;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            display: flex;
+            cursor: pointer;
+        }
+        .container>div~div{
+            display: flex;
+        }
+        .container>div~div>img{
+            height: 8rem;
+            width: 7rem;
+            border-radius: 0.75rem;
+        }
+        h2{
+            font-weight: bold;
+            margin: 0.75rem 4rem 0 0;
+        }
+        .more-2{
+            background-color: #f6f6f6;
+            border: #BDBDBD 1px solid;
+            border-radius: 1rem;
+            padding: 1.25rem 0.15rem 1.25rem 0.65rem;
+            position: absolute;
+            margin: 2rem 0 0 -0.5rem;
+            cursor: pointer;
+        }
+        .first{
+            font-size: 1.2rem;
+            color: black;
+            font-weight: bold;
+        }
+        .second{
+            font-size: 1.2rem;
+            color: black;
+            font-weight: bold;
+        }
+        .more2{
+            background-color: #f4f4f4;
+            border: #BDBDBD 1px solid;
+            border-radius: 1rem;
+            padding: 1.25rem 0.35rem 1.25rem 0.5rem;
+            position: absolute;
+            cursor: pointer;
+            right: 1.35rem;
+            top: 17rem;
+        }
+        .morehover:hover{
+            background-color: #eeeeee;
+            border: rgba(0, 0, 0, 0.549) 1px solid;
+        }
+        .dots{
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            margin-top: 11rem;
+        }
+        .dots>div{
+            background-color: #898989;
+            height: 0.4rem;
+            width: 0.4rem;
+            border-radius: 1rem;
+            display: flex;
+        }
+        .content{
+            display: flex;
+            padding: 1rem 3rem 4rem;
+            position: relative;
+        }
+        .content>div{
+            border-radius: 1rem;
+            padding: 1.5rem;
+        }
+        .red{
+            color: #fd374c;
+            font-size: 1.65rem;
+            font-family: mediano;
+            
+        }
+        .choice{
+            height: 1.5rem;
+        }
+        .margin-left{
+            margin-left: 0.5rem;
+        }
+        .ifon{
+            height: 13rem;
+            margin: 1rem 2rem 0 0;
+        }
+        .display-f{
+            display: flex;
+            background-color: white;
+            padding: 3rem 0 4rem 1rem;
+            margin-top: 1rem;
+            border-radius: 1rem;
+        }
+        .titanic{
+            height: 7rem;
+            width: 8rem;
+        }
+        .gap{
+            height: 15rem;
+        }
+        .display-b{
+            display: flex;
+            flex-direction: column;
+        }
+        .gap{
+            height: 13rem;
+            width: 13rem;
+            margin-left: -3rem;
+        }
+        .index{
+            z-index: 1;
+        }
+        .family{
+            font-family: negroStilo;
+        }
+        h2{
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .lenovo{
+            height: 12rem;
+            width: 10rem;
+            border-radius: 1rem;
+        }
+        .jbl{
+            height: 12rem;
+            width: 10.5rem;
+            border-radius: 1rem;
+        }
+        .lenovo-2{
+            height: 12rem;
+            width: 11rem;
+            border-radius: 1rem;
+        }
+        .sapce-b{
+            display: flex;
+            gap: 1rem;
+            padding-top: 1.25rem;
+        }
+        .background{
+            background-color: #F5F5F5;
+            cursor: pointer;
+            max-height: 32.5rem;
+        }
+        .background-2{
+            background-color: #F5F5F5;
+            padding: 1.5rem 1.5rem 3rem 1.5rem;
+            border-radius: 1rem;
+            margin: -1.5rem -0.75rem 0 -0.75rem;
+            cursor: pointer;
+        }
+        .white{
+            color: white;
+        }
+        .gray{
+            color: #F5F5F5;
+        }
+        .ipad{
+            height: 8rem;
+            border-radius: 5px;
+            margin: 0 2rem 0 -2rem;
+        }
+        .mac{
+            height: 8rem;
+            border-radius: 0.5rem;
+        }
+        .d-f{
+            display: flex;
+        }
+        .black{
+            font-size: 1.5rem;
+            font-family: negroStilo;
+        }
+        .gancube{
+            height: 13rem;
+            border-radius: 1rem;
+            margin: 1.5rem 2rem 3rem;
+        }
+        .jeep{
+           height: 8.75rem;
+           border-radius: 1rem;
+           margin-left: 0.5rem;
+        }
+        .legos{
+            height: 8.75rem;
+            border-radius: 1rem;
+        }
+        .percent{
+            position: absolute;
+            color: red;
+            font-family: negroStilo;
+            font-size: 0.7rem;
+        }
+        .red-bold{
+            font-size: 1.25rem;
+        }
+        .discount-2{
+            padding: 0.15rem 0.5rem;
+            background-color: #FFE6E6;
+            border-radius: 0.5rem;
+        }
+        .personalize{
+            margin: 7.5rem 0 0 -0.75rem;
+        }
+        .personalize-2{
+            margin: 17.5rem 0 0 -0.5rem;
+        }
+        .personalize-3{
+            margin: 12.5rem 0 0 2rem;
+        }
+        .personalize-4{
+            margin: 12.5rem 0 0 13rem;
+        }
+        .personalize-5{
+            margin: 12.5rem 0 0 24.5rem;
+        }
+        .black-2{
+            color: black;
+        }
+        .personalize-6{
+            margin: 0.5rem 0 0 -3.5rem;
+        }
+        .personalize-7{
+            margin: 0.5rem 0 0 7.5rem;
+        }
+        .personalize-8{
+            margin: -3rem 0 0 3.5rem;
+        }
+        .personalize-9{
+            margin: 0 0 0 0rem;
+        }
+        .personalize-10{
+            margin: 0 0 0 10rem;
+        }
+        footer{
+            background-color: #E8E8E8;
+            padding: 1rem 2.5rem;
+            margin-top: 2rem;
+            display: flex;
+        }
+        .seemore{
+            background-color: #000000;
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 2rem;
+            width: 4rem;
+            font-family: mediano;
+            position: absolute;
+            bottom: 0;
+            right: 45%;
+            cursor: pointer;
+        }
+        footer>div{
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        footer p{
+            color: #757575;
+            font-family: muyDelgado;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .more{
+            margin: 0.15rem 0 0 0.25rem;
+        }
+        .negrito{
+            font-size: 1.15rem;
+            font-family: mediano;
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+        .displayf{
+            display: flex;
+        }
+        .displayf>img{
+            margin-right: 0.5rem;
+            height: 2.75rem;
+        }
+        .smal>img{
+            height: 2rem;
+            margin-left: 0.75rem;
+        }
+        a{
+            text-decoration: none;
+            font-family: mediano;
+        }
+        .second-child{
+            padding: 1.55rem 1rem;
+            box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.553);
+            z-index: 1;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.128);
+            padding-bottom: 1.25rem;
+        }
+        .black-little{
+            font-size: 0.9rem;
+            font-family: mediano;
+        }
+        .red-little{
+            color: red;
+            font-size: 0.8rem;
+            font-family: mediano;
+        }
+        .red-little ~ a{
+            padding: 0.3rem;
+            border-radius: 2rem;
+            margin-top: 0.5rem;
+            width: 92%;
+            text-align: center;
+        }
+        .button-red{
+            background-color: #FD374F;
+            color: white;
+        }
+        .button-white{
+            color: white;
+            border: 2px solid black;
+            color: black;
+        }
+        .side>img{
+            height: 6.5rem;
+            width: 6.75rem;
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+        .side{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.128);
+            padding-bottom: 1rem;
+        }
+        .choice-2{
+            height: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        .side-b{
+            padding: 1.5rem 0;
+        }
+        .mesage{
+            background-color: #F5F5F5;
+            padding: 0.75rem 0.75rem;
+            border-radius: 0.25rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            font-family: mediano;
+        }
+        .products>img{
+            height: 5rem;
+        }
+        .products{
+            margin-top: 1rem;
+            text-align: center;
+            background-color: #e8e8e8;
+            padding: 0.5rem 0.3rem;
+            border-radius: 0.25rem; 
+            position: relative;
+        }
+        .space{
+            gap: 0.5rem;
+        }
+        .gancube-2{
+            width: 4.45rem;
+        }
+        .check{
+            height: 1.1rem;
+            width: 1.1rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.301);
+            background-color: white;
+            cursor: pointer;
+            position: absolute; 
+            top: 0.75rem;
+            left: 0.5rems;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .plus{
+            background-color: white;
+            height: 1.5rem;
+            width: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2rem;
+            margin-top: 0.5rem;
+        }
+        .margin-t05{
+            margin-top: 0.5rem;
+        }
+        .space-b{
+            justify-content: space-between;
+        }
+        .scroll{
+            max-height: 51%;
+            overflow: scroll;
+        }
+        .scroll-2{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+        }
+        .tooltip{
+            background-color: #F5F5F5;
+            border-radius: 0 0 1.5rem 1.5rem;
+            padding: 0 0 1rem;
+            top: 7.5rem;
+            left: 3.35rem;
+            overflow: scroll;
+            height: 28.5rem;
+            width: 16.45rem;
+            display: none;
+            position: absolute;
+        }
+        .menu-icon{
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .tooltip>div{
+            padding:  1rem 3rem 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .tooltip>div>img{
+            height: 1.1rem;
+            margin-right: 0.75rem;
+        }
+        .tooltip>div>span{
+            font-family: regular;
+        }
+        .tooltip>div:hover{
+            background-color: white;
+        }
+        .tooltip>div:hover span{
+            font-family: mediano;
+        }
+        .tooltip-2{
+            background-color: white;
+            position: absolute;
+            border-radius: 1rem;
+            top: 0;
+            left: 19.8rem;
+            z-index: 2;
+            padding: 0.75rem 0.5rem 2.5rem;
+            display: none;
+            color: black;
+            font-family: mediano;
+        }
+        .tooltip-2>div{
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .tooltip-2>div>p{
+            color: gray;
+            font-family: muyDelgado;
+            font-weight: bold;
+        }
+        
+        .relojes:hover .tooltip-2{
+            display: flex;
+        }
+        .qrcode{
+            position: absolute;
+            background-color: white;
+            border-radius: 1.5rem;
+            padding: 1rem  1.5rem ;
+            display: none;
+            z-index: 1;
+            top: 5rem;
+            margin-left: -1rem;
+            cursor:auto;
+        }
+        .code{
+            height: 9rem;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+        .qr-buttons{
+            background-color: black;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            margin-right: 0.5rem;
+            color: white;
+            font-family: mediano;
+            width: 8rem;
+            justify-content: center;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+        }
+        .apple{
+            height: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        .play{
+            height: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        .big-bold{
+            font-family: mediano;
+            font-size: 1.5rem;
+            margin: 0.5rem 0 0.25rem;
+        }
+        .margin-t1{
+            margin-top: 1rem;
+        }
+        .triangle{
+            position: absolute;
+            background-color: white;
+            width: 1rem;
+            height: 0.65rem;
+            margin: -1.5rem 0 0 3.5rem;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        }
+        .qr-parent:hover .qrcode{
+            display: flex;
+        }
+        .qr-parent{
+            padding-bottom: 1.7rem;
+        }
+        .message{
+            background-color: #474747;
+            padding: 0.25rem 0.75rem;
+            position: absolute;
+            border-radius: 2rem;
+            margin-top: 5rem;
+            display: none;
+        }
+        .font-07{
+            font-size: 0.7rem;
+        }
+        .triangle-2{
+        }
+        .paddong-b1:hover .message{
+            display: block;
+        }
+        .paddong-b1{
+            padding-bottom: 1rem;
+        }
+        .more-tooltip{
+            position: absolute;
+            background-color: white;
+            border-radius: 1rem;
+            padding: 0.75rem 1rem;
+            z-index: 1;
+            top: 8.5rem;
+            margin-left: -7.25rem;
+            box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.373);
+        }
+        .more-tooltip>div{
+            color: black;
+            padding: 0.75rem;
+            font-family: muyDelgado;
+            font-weight: bold;
+        }
+        .more-tooltip>div:hover {
+            background-color: #F5F5F5;
+        }
+        .triangle-2{
+            position: absolute;
+            background-color: #474747;
+            width: 1rem;
+            height: 0.65rem;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            z-index: 1;
+            margin: -0.5rem 0 0 1.25rem !important;
+        }
+        .displayb{
+            display: block;
+        }
+        .parent{
+            display: none;
+        }
+        .more-hover:hover .parent{
+            display: block;
+        }
+        .margin-t05{
+            margin-top: 0.5rem;
+        }
+        img{
+            cursor: pointer;
+        }
+        .account-tooltip{
+            position: absolute;
+            background-color: white;
+            border-radius: 1rem;
+            padding: 1rem 1rem 2rem;
+            z-index: 1;
+            box-shadow: -0.5rem 0 1.5rem rgba(0, 0, 0, 0.373);
+            top: 4.5rem;
+            margin-left: -5rem;
+            display: none;
+        }
+        .user-account{
+            height: 3.5rem;
+        }
+        .account-first{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+            padding: 0.5rem 0.5rem 1rem;
+            margin-bottom: 1rem;
+        }
+        .account-first>div{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .user-link{
+            color: #4D83F0;
+            font-family: normalito;
+            text-align: center;
+            margin-left: 4rem;
+            font-size: 0.9rem;
+        }
+       .div-account{
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.65rem 1rem;
+            border-radius: 0.5rem;
+       }
+       .div-account:hover{
+            background-color: #F5F5F5;
+            color: red;
+       }
+       .div-account>img{
+            height: 1.25rem;
+       }
+       .account-second{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+       }
+       .account-third{
+            color: gray;
+            font-size: large;
+            font-family: muydelgado;
+            font-weight: bold;
+       }
+       .account-third>div{
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+       }
+       .account-third>div:hover{
+            background-color: #F5F5F5;
+            color: red;
+       }
+       .triangle-3{
+            position: absolute;
+            background-color: rgb(255, 255, 255) !important;
+            width: 1rem;
+            height: 0.65rem;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            z-index: 1;
+            margin: -1.6rem 0 0 8rem !important;
+       }
+       .account-tooltip-parent:hover .account-tooltip{
+            display: block;
+       }
+       .triangle-4{
+            position: absolute;
+            background-color: rgb(255, 255, 255) ;
+            width: 1rem;
+            height: 0.65rem;
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            z-index: 2;
+            margin: 1.5rem 0 0 -2rem;
+       }
+       .category:hover .menu-2{
+            color: black;
+       }
+       #label{
+            display: none;
+       }
+       .peru-parent{
+            width: 6rem;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            margin-top: -2rem;
+            cursor: pointer;
+       }
+       button{
+            cursor: pointer;
+       }
+       .absolute-2{
+            position: absolute;
+            margin: 2.25rem 0 0 1.8rem;
+       }
+       .container-2{
+            position: absolute;
+            background-color: white;
+            padding: 1rem 1.5rem 1.7rem!important;
+            border-radius: 1.5rem;
+            z-index: 1;
+            box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.553);
+            margin: 3.5rem 0 0 3rem;
+            display: none;
+       }
+       .peru-2{
+            height: 1rem;
+       }
+       .fake-input{
+            border: 1px solid rgba(0, 0, 0, 0.396);
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.5rem 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8rem;
+            margin: 0.35rem 0 1rem;
+            cursor: pointer;
+       }
+       .button{
+            background-color: black;
+            padding: 0.75rem 1rem;
+            border-radius: 2rem;
+            border: none;
+            color: white;
+            width: 100%;
+            font-size: 1rem;
+            font-family: mediano;
+       }
+       .mediano{
+            font-family: mediano;
+       }
+       input:checked ~ .container-2{
+            display: block;
+       }
+       .changing{
+            position: absolute;
+            display: none;
+            margin-left: 12.25rem;
+            color: black;
+       }
+       .category:hover .menu{
+            display: none;
+       }
+       .category:hover .changing{
+            display: block;
+       }
+       .changing-2{
+            position: absolute;
+            display: none;
+            color: white !important;
+            margin: 0.75rem 0 0 6rem;
+       }
+       .account-tooltip-parent:hover .changing-2{
+            display: block;
+       }
+       .account-tooltip-parent:hover {
+            width: 7.25rem;
+       }
+       .account-tooltip-parent:hover .none{
+            display: none;
+       }
+       .more-hover:hover .changing-3{
+            display: block;
+       }
+       .more-hover:hover .none-2{
+            display: none;
+       }
+       .changing-3{
+            position: absolute;
+            display: none;
+            color: white !important;
+            margin: 0.15rem 0 0 1.85rem;
+            font-size: 1.2rem;
+       }
+       .radio:checked ~.check{
+            background-color: red;
+            border: 1px solid red;
+       }
+       .radio:checked ~.check img{
+            display: block;
+       }
+       .check-img{
+            height: 0.85rem;
+            display: none;
+            border-radius: 2rem;
+       }
+       .radio-2:checked ~.check{
+            background-color: red;
+            border: 1px solid red;
+       }
+       .radio-2:checked ~.check img{
+            display: block;
+       }
+       input[type=checkbox]{
+            display: none;
+       }
+       .radio-3:checked ~.check{
+            background-color: red;
+            border: 1px solid red;
+       }
+       .radio-3:checked ~.check img{
+            display: block;
+       }
+       .radio-4:checked ~.check{
+            background-color: red;
+            border: 1px solid red;
+       }
+       .radio-4:checked ~.check img{
+            display: block;
+       }
+    </style>
+    </head>
+    <body>
+        <div class="first-child">
+            <header>
+                <div class="header-padding">
+                    <div>
+                        <img src="../assets/img/aliexpress-letter.jpeg" alt="" class="ali">
+                    </div>
+                    <div class="relative">
+                        <input type="text" class="searcher" placeholder="Gan Cubes">
+                        <img src="../assets/img/search-2.svg" alt="" class="search">
+                    </div>
+                    <div>
+                        <div>
+                            <div class="qr-parent">
+                                <span class="material-icons absolute">table</span>
+                                <div class="margin-l">
+                                    <p class="white size text">Descarga la app <br> de AliExpress</p>
+                                </div>
+                                <div class="qrcode">
+                                    <div>
+                                        <div class="triangle"></div>
+                                    </div>
+                                    <div>
+                                        <img src="../assets/img/qrcode.webp" alt="" class="code">
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <p class="big-bold">Descarga la App de AliExpress</p>
+                                            <p>Escanea el codigo QR para descargarla</p>
+                                        </div>
+                                        <div class="displayf margin-t1">
+                                            <div class="paddong-b1">
+                                                <div class="qr-buttons">
+                                                    <img src="../assets/img/apple.jpeg" alt="" class="apple">
+                                                    <span>App Store</span>
+                                                    <div class="message">
+                                                        <div class="triangle-2"></div>
+                                                        <p class="font-07">Install now</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="paddong-b1">
+                                                <div class="qr-buttons">
+                                                    <img src="../assets/img/googlePlay.webp" alt="" class="play">
+                                                    <span>Google Play</span>
+                                                    <div class="message">
+                                                        <div class="triangle-2"></div>
+                                                        <p class="font-07 white">Install now</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="checkbox" id="label">
+                        <label class="peru-parent" for="label">
+                            <img src="../assets/img/peru-2.jpeg" alt="" class="peru">
+                            <span class="white size">ES/</span>
+                            <p class="white size absolute-2">PEN</p>
+                            <img src="../assets/img/more.svg" alt="" class="arrow">
+                        </label>
+                        <aside class="container-2 displayb">
+                            <div>
+                                <div class="triangle-3"></div>
+                            </div>
+                            <div>
+                                <h3 class="mediano">Enviar a </h3>
+                                <div class="fake-input">
+                                    <div class="margin-t05">
+                                        <img src="../assets/img/peru-2.jpeg" alt="" class="peru-2">
+                                        <span>Perú</span>
+                                    </div>
+                                    <span class="material-icons black-2">expand_more</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="mediano">Idioma</h3>
+                                <div class="fake-input">
+                                    <div class="margin-t05">
+                                        <span>Español</span>
+                                    </div>
+                                    <span class="material-icons black-2">expand_more</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="mediano">Moneda</h3>
+                                <div class="fake-input">
+                                    <div class="margin-t05">
+                                        <span>EUR ( Euro )</span>
+                                    </div>
+                                    <span class="material-icons black-2">expand_more</span>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="button">Guardar</button>
+                            </div>
+                        </aside>
+                        <div class="account-tooltip-parent">
+                            <img src="../assets/img/user.png" alt="" class="user">
+                            <span class="white size">Hola, Linus<br> Mi Cuenta</span>
+                            <img src="../assets/img/more.svg" alt="" class="arrow none">
+                            <span class="material-icons changing-2">expand_less</span>
+                            <div class="account-tooltip">
+                                <div>
+                                    <div class="triangle-3"></div>
+                                </div>
+                                <div class="account-first">
+                                    <div>
+                                        <img src="../assets/img/user2.png" alt="" class="user-account">
+                                        <span>Hola,Linus</span>
+                                    </div>
+                                    <a href="blank" class="user-link">Cerrar sesión</a>
+                                </div>
+                                <div class="account-second">
+                                    <div class="div-account">
+                                        <img src="../assets/img/camera.webp" alt="">
+                                        <span>mis pedidos</span>
+                                    </div>
+                                    <div class="div-account">
+                                        <img src="../assets/img/herramienta-pintar.webp" alt="">
+                                        <span>Mis monedas</span>
+                                    </div>
+                                    <div class="div-account">
+                                        <img src="../assets/img/consola.webp" alt="">
+                                        <span>Centro de mensajes</span>
+                                    </div>
+                                    <div class="div-account">
+                                        <img src="../assets/img/house.webp" alt="">
+                                        <span>Pago</span>
+                                    </div>
+                                    <div class="div-account">
+                                        <img src="../assets/img/woman-hair.webp" alt="">
+                                        <span>Lista de deseos</span>
+                                    </div>
+                                    <div class="div-account">
+                                        <img src="../assets/img/t-shirt.webp" alt="">
+                                        <span>Mis cupones</span>
+                                    </div>
+                                </div>
+                                <div class="account-third">
+                                    <div>
+                                        <span>Centro de dropshipping</span>
+                                    </div>
+                                    <div>
+                                        <span>Iniciar sesión como vendedor</span>
+                                    </div>
+                                    <div>
+                                        <span>Protección del comprador</span>
+                                    </div>
+                                    <div>
+                                        <span>Atención al cliente</span>
+                                    </div>
+                                    <div>
+                                        <span>Disputas</span>
+                                    </div>
+                                    <div>
+                                        <span>Informar de una infracción DPI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="../assets/img/cesta.png" alt="" class="cesta">
+                            <div class="margin-l-2">
+                                <div class="icon">6</div>
+                                <span class="white size bold">Cesta</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-header">
+                    <div class="category">
+                        <div>
+                            <div class="displayf menu-icon">
+                                <span class="material-icons menu-2">menu</span>
+                                <span>Todas las Categorías</span>
+                                <img src="../assets/img/more.svg" alt="" class="menu">
+                                <span class="material-icons changing">expand_less</span>
+                            </div>
+                            <div class="tooltip">
+                                <div class="relojes margin-t05">
+                                    <img src="../assets/img/collar.webp" alt="">
+                                    <span>Bisutería y relojes</span>
+                                    <div class="tooltip-2">
+                                        <div>
+                                            <h3>Elaboración de <br> bisutería</h3>
+                                            <p>Resina DIY</p>
+                                            <p>Embalajes de joyeria</p>
+                                            <p>Accesorios de joyeria</p>
+                                            <p>Herramientas</p>
+                                            <p>Abalorios</p>
+                                            <p>Cadenas</p>
+                                            <h3>Materiales</h3>
+                                            <p>Plata 925</p>
+                                            <p>Perlas</p>
+                                            <p>Oro k</p>
+                                            <p>Gemas</p>
+                                            <p>Mossinato></p>
+                                        </div>
+                                        <div>
+                                            <h3>Otra bisutería</h3>
+                                            <p>Clips y corbata y gem...</p>
+                                            <p>Conjunto de joyas</p>
+                                            <p>Llavero</p>
+                                            <p>Broches</p>
+                                            <p>Joyeria para el cabello</p>
+                                            <h3>Pendientes</h3>
+                                            <p>Pendientes de oro k</p>
+                                            <p>Juegos pendientes</p>
+                                            <p>Pendientes de plata</p>
+                                            <p>Pendientes de aro</p>
+                                            <p>Collares de perlas</p>
+                                            <p>Pendientes de gota y c...</p>
+                                        </div>
+                                        <div>
+                                            <h3>Novedades</h3>
+                                            <p>Nuevo en llaveron</p>
+                                            <p>Nuevos relojes para h...</p>
+                                            <p>Nuevos de collares</p>
+                                            <p>Nuevos de pulseras</p>
+                                            <p>Nuevos de anillos</p>
+                                            <p>hallazgos</p>
+                                            <h3>Relojes</h3>
+                                            <p>Reloges electronicos</p>
+                                            <p>Pulseras de cuarzo</p>
+                                            <p>Relog winers</p>
+                                        </div>
+                                        <div>
+                                            <h3>Pulseras y <br> brazaletes</h3>
+                                            <p>Pulseras de plata</p>
+                                            <p>Pulseras de piedra</p>
+                                            <p>Pulseras de cadena</p>
+                                            <p>Pulseras de hilo</p>
+                                            <p>Pulseras de oro k</p>
+                                            <h3>Collares</h3>
+                                            <p>Collares para mujer</p>
+                                            <p>Collares de plata</p>
+                                            <p>Collares de hip hop</p>
+                                            <p>Collares para hombres</p>
+                                        </div>
+                                        <div>
+                                            <h3>Bisutería corporal</h3>
+                                            <p>Piercing para oreja</p>
+                                            <p>Prrilas dentales</p>
+                                            <p>Anillos de ombligo</p>
+                                            <p>Cadenas corporales</p>
+                                            <p>Pircings de nariz</p>
+                                            <h3>Relojes de hombre</h3>
+                                            <p>Reloges de pulsera digi...</p>
+                                            <p>Fundas de reloj</p>
+                                            <p>Correas</p>
+                                            <p>Reloges de pulsera me...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/camera.webp" alt="">
+                                    <span>Electrónica</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/herramienta-pintar.webp" alt="">
+                                    <span>Hogar e iluminación</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/consola.webp" alt="">
+                                    <span>Juguetes y juegos</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/house.webp" alt="">
+                                    <span>Hogar y jardín</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/woman-hair.webp" alt="">
+                                    <span>Cabello y pelucas</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/t-shirt.webp" alt="">
+                                    <span>Moda hombre</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/clock.webp" alt="">
+                                    <span>Accesorios</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/refri.webp" alt="">
+                                    <span>Electrodo-mésticos</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/helmet.webp" alt="">
+                                    <span>Motor</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/maleta.webp" alt="">
+                                    <span>Bolsos y maletas</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/shoes.webp" alt="">
+                                    <span>Zapatos</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/disfraces.webp" alt="">
+                                    <span>Disfraces</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/dress.webp" alt="">
+                                    <span>Moda mujer</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/basketball.webp" alt="">
+                                    <span>Deporte</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/phone.webp" alt="">
+                                    <span>Telefonía</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/puppy.webp" alt="">
+                                    <span>Mascotas</span>
+                                </div>
+                                <div>
+                                    <img src="../assets/img/herramienta.webp" alt="">
+                                    <span>Herramientas</span>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discount hover">
+                        <p>Los más rápidos, -50% dto.</p>
+                    </div>
+                    <div class="hover">
+                        <p>Choice</p>
+                    </div>
+                    <div class="hover">
+                        <p>Top shopper</p>
+                    </div>
+                    <div class="hover">
+                        <p>SuperOfertas</p>
+                    </div>
+                    <div class="hover">
+                        <p>Plaza</p>
+                    </div>
+                    <div class="hover">
+                        <p>Nuevo</p>
+                    </div>
+                    <div class="hover">
+                        <p>Juguetes y Juegos</p>
+                    </div>
+                    <div class="hover more-hover">
+                        <p>Más</p>
+                        <img src="../assets/img/more.svg" alt="" class="more none-2">
+                        <span class="material-icons changing-3">expand_less</span>
+                        <div class="parent">
+                            <div>
+                                <div class="triangle-4"></div>
+                            </div>
+                            <div class="more-tooltip">
+                                <div>
+                                    <p>Hogar e iluminacion</p>
+                                </div>
+                                <div>
+                                    <p>Juguetes y juegos</p>
+                                </div>
+                                <div>
+                                    <p>Hogar y jardin</p>
+                                </div>
+                                <div>
+                                    <p>Cabello y pelucas</p>
+                                </div>
+                                <div>
+                                    <p>Moda hombre</p>
+                                </div>
+                                <div>
+                                    <p>Accesorios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div>
+                        <img src="../assets/img/aliexpress-offert.webp" alt="" class="offert">
+                    </div>
+                    <div class="letter">
+                        <img src="" alt="">
+                        <span class="choice-b">Choice</span>
+                        <span class="day-b">Day</span>
+                        <span class="frase-b">-50%</span>
+                        <span class="frase-b2"> Disfruta de envíos rápidos y gratis</span>
+                        <div class="icon-a">
+                            <span class="material-icons">east</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient">
+                    <article class="more-2 morehover">
+                        <span class="material-icons first">arrow_back_ios</span>
+                    </article>
+                    <div class="scroll-2">
+                        <div class="container">
+                            <div>
+                                <img src="../assets/img/amazon-choice.webp" alt="">
+                                <h2>Novedades</h2>
+                            </div>
+                            <div>
+                                <img src="../assets/img/car-white.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div>
+                                <img src="../assets/img/amazon-choice.webp" alt="">
+                                <h2>Ofertas para <br> el hogar</h2>
+                            </div>
+                            <div>
+                                <img src="../assets/img/play-5.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div>
+                                <img src="../assets/img/amazon-choice.webp" alt="">
+                                <h2>Superventas</h2>
+                            </div>
+                            <div>
+                                <img src="../assets/img/legos.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div>
+                                <img src="../assets/img/amazon-choice.webp" alt="">
+                                <h2>Cars and <br> Toys</h2>
+                            </div>
+                            <div>
+                                <img src="../assets/img/lamborgini.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <article class="more2 morehover">
+                    <span class="material-icons second">arrow_forward_ios</span>
+                </article>
+                <div class="content">
+                    <div class="background">
+                        <div>
+                            <p class="red">Los más rápidos, 50% dto.</p>
+                            <img src="../assets/img/choice.webp" alt="" class="choice">
+                            <span class="margin-left">Envío gratis</span>
+                        </div>
+                        <div class="display-f">
+                            <div class="index">
+                                <img src="../assets/img/ifon.jpeg" alt="" class="ifon">
+                                <div class="percent">
+                                    <span>PEN</span>
+                                    <span class="red-bold">5,899</span>
+                                    <span>.99</span>
+                                    <span class="discount-2">25%</span>
+                                </div>
+                            </div>
+                            <div class="display-b">
+                                <img src="../assets/img/titanic-lego.jpg" alt="" class="titanic">
+                                <div class="percent personalize">
+                                    <span>PEN</span>
+                                    <span class="red-bold">799</span>
+                                    <span>.99</span>
+                                    <span class="discount-2">35%</span>
+                                </div>
+                                <img src="../assets/img/gap-hat.png" alt="" class="gap">
+                                <div class="percent personalize-2">
+                                    <span>PEN</span>
+                                    <span class="red-bold">69</span>
+                                    <span>.99</span>
+                                    <span class="discount-2">15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="background-2">
+                            <div>
+                                <h2 class="family">Plus</h2>
+                                <p>Marcas destacadas con descuentos</p>
+                            </div>
+                            <div class="sapce-b">
+                                <img src="../assets/img/airpods.webp" alt="" class="lenovo">
+                                <div class="percent personalize-3 black-2">
+                                    <span>PEN</span>
+                                    <span class="red-bold">95</span>
+                                    <span>.99</span>
+                                </div>
+                                <img src="../assets/img/jbl.webp" alt="" class="jbl">
+                                <div class="percent personalize-4 black-2">
+                                    <span>PEN</span>
+                                    <span class="red-bold">259</span>
+                                    <span>.99</span>
+                                </div>
+                                <img src="../assets/img/lenovo-airpods.webp" alt="" class="lenovo-2">
+                                <div class="percent personalize-5 black-2">
+                                    <span>PEN</span>
+                                    <span class="red-bold">119</span>
+                                    <span>.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="white">d</p>
+                        <p class="gray">fd</p>
+                        <aside class="background-2 d-f">
+                            <div>
+                                <h2 class="red">ENVÍO GRATIS </h2>
+                                <img src="../assets/img/choice.webp" alt="" class="choice">
+                                <h4>Artículos Seleccionados</h4>
+                            </div>
+                            <div>
+                                <img src="../assets/img/ipad.jpg" alt="" class="ipad">
+                                <div class="percent personalize-6">
+                                    <span>PEN</span>
+                                    <span class="red-bold">1,299</span>
+                                    <span>.99</span>
+                                    <span class="discount-2">20%</span>
+                                </div>
+                                <img src="../assets/img/mac.webp" alt="" class="mac">
+                                <div class="percent personalize-7">
+                                    <span>PEN</span>
+                                    <span class="red-bold">3.199</span>
+                                    <span>.99</span>
+                                    <span class="discount-2">25%</span>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="background">
+                        <div>
+                            <span class="black">Super</span>
+                            <span class="red">Ofertas</span>
+                            <p>Ofertas diarias del 50% y más</p>
+                            <img src="../assets/img/gan-cube.webp" alt="" class="gancube">
+                            <div class="percent personalize-8">
+                                <span>PEN</span>
+                                <span class="red-bold">149</span>
+                                <span>.99</span>
+                                <span class="discount-2">15%</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="../assets/img/legos-2.webp" alt="" class="legos">
+                            <div class="percent personalize-9">
+                                <span>PEN</span>
+                                <span class="red-bold">199</span>
+                                <span>.99</span>
+                                <span class="discount-2">35%</span>
+                            </div>
+                            <img src="../assets/img/car-jeep.webp" alt="" class="jeep">
+                            <div class="percent personalize-10">
+                                <span>PEN</span>
+                                <span class="red-bold">89</span>
+                                <span>.99</span>
+                                <span class="discount-2">25%</span>
+                            </div>
+                            <div class="seemore">
+                                <p>Ver más</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div>
+                    <p class="negrito">Atención al cliente</p>
+                    <p>Acuerdo de servicios</p>
+                    <p>Transacción para consumidores</p>
+                    <p>Terminos y condiciones</p>
+                    <p>Encuesta de satisfaccion</p>
+                    <p>Cosumidores de EU / UK</p>
+                </div>
+                <div>
+                    <p class="negrito">Guía de compra</p>
+                    <p>Crear una cuenta</p>
+                    <p>Pago</p>
+                    <p>Envío</p>
+                    <p>Protección del comprador</p>
+                </div>
+                <div>
+                    <p class="negrito">Colabora con nosotros</p>
+                    <p>Colaboraciones</p>
+                    <p>Programa de afiliados</p>
+                    <p>Centro de dropshipping</p>
+                    <p>Iniciar sesión como vendedor</p>
+                    <p>Registrarme como vendedor</p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p class="negrito">Pagar con</p>
+                    <div class="displayf">
+                        <img src="../assets/img/visa.png" alt="">
+                        <img src="../assets/img/mister-cards.png" alt="">
+                        <img src="../assets/img/p.png" alt="">
+                        <img src="../assets/img/american-expres.png" alt="">
+                        <img src="../assets/img/club.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <p class="negrito">No te olvides de seguirnos en:</p>
+                    <div class="displayf smal">
+                        <img src="../assets/img/facebook-2.svg" alt="">
+                        <img src="../assets/img/tik-tok.svg" alt="">
+                        <img src="../assets/img/instagram.svg" alt="">
+                        <img src="../assets/img/youtube.svg" alt="">
+                        <img src="../assets/img/twitter-3.svg" alt="">
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="second-child">
+            <div class="flex">
+                <p class="black-little">PEN136.18</p>
+                <p class="red-little">Guardado:PEN7.64</p>
+                <a href="" class="button-red">Pagar</a>
+                <a href="" class="button-white">Ir a la Cesta</a>
+            </div>
+            <div class="scroll">
+                <div class="side">
+                    <img src="../assets/img/gan-mirrow.jpeg" alt="">
+                    <img src="../assets/img/gan12.webp" alt="">
+                    <img src="../assets/img/gan2*2.jpeg" alt="">
+                    <img src="../assets/img/gan4*4.jpeg" alt="">
+                </div>
+                <div class="side-b">
+                    <div class="displayf">
+                        <div>
+                            <img src="../assets/img/choice.webp" alt="" class="choice-2">
+                        </div>
+                        <p class="black-little">Enviado por <br> AliExpress</p>
+                    </div>
+                    <div class="mesage">
+                        <span>Envío: gratis sobre PEN40. Añade PEN40 artículos Choice para envío gratis</span>
+                    </div>
+                    <div class="displayf space">
+                        <div class="products">
+                            <img src="../assets/img/car-jeep.webp" alt="">
+                            <p class="black-little">89.99</p>
+                            <label for="check">
+                                <input type="checkbox" id="check" class="radio">
+                                <div class="check"><img src="../assets/img/check.png" alt="" class="check-img"> </div>
+                            </label>
+                            <div class="displayf space-b">
+                                <div class="plus">-</div>
+                                <span class="margin-t05">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <img src="../assets/img/ipad.jpg" alt="">
+                            <p class="black-little">1,299.99</p>
+                            <label for="check-2">
+                                <input type="checkbox" id="check-2" class="radio-2">
+                                <div class="check"><img src="../assets/img/check.png" alt="" class="check-img"> </div>
+                            </label>
+                            <div class="displayf space-b">
+                                <div class="plus">-</div>
+                                <span class="margin-t05">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="displayf space">
+                        <div class="products">
+                            <img src="../assets/img/lamborgini.webp" alt="">
+                            <p class="black-little">69.99</p>
+                            <label for="check-3">
+                                <input type="checkbox" id="check-3" class="radio-3">
+                                <div class="check"><img src="../assets/img/check.png" alt="" class="check-img"> </div>
+                            </label>
+                            <div class="displayf space-b">
+                                <div class="plus">-</div>
+                                <span class="margin-t05">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <img src="../assets/img/gan-cube.webp" alt="" class="gancube-2">
+                            <p class="black-little">149.99</p>
+                            <label for="check-4">
+                                <input type="checkbox" id="check-4" class="radio-4">
+                                <div class="check"><img src="../assets/img/check.png" alt="" class="check-img"> </div>
+                            </label>
+                            <div class="displayf space-b">
+                                <div class="plus">-</div>
+                                <span class="margin-t05">1</span>
+                                <div class="plus">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

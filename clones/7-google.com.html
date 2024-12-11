@@ -17,7 +17,7 @@
         }
         @font-face{
             font-family: netflix;
-            src: url(../assets/fonts/NetflixSans_W_Rg.woff2);
+            src: url(../assets/fonts/regular.woff2);
         }
         body{
             background-color: #202124;
@@ -259,9 +259,6 @@
         .chat{
             background-position: 0 -1656px;
         }
-        input:checked ~ .container{
-            display: flex;
-        }
         input[type="checkbox"]{
             display: none;
         }
@@ -495,6 +492,9 @@
         }
         hr{
             border-color: #7a7b7e;
+        }
+        input:checked ~ .container{
+            display: flex;
         }
     </style>
 </head>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 5rem;
+        }
+        body>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .box{
+            background-color: aqua;
+            height: 10rem;
+            width: 10rem;
+            transition: all 2s;
+        }
+        .box:hover{
+            transform: scale(1.2);
+            font-size: 2rem;
+        }
+
+
+        .box2{
+            background-color: violet;
+            height: 10rem;
+            width: 10rem;
+            transition: all 1s;
+        }
+        .box2:hover{
+            transform: scaleX(1.8) translate(150px);
+        }
+
+
+        .skewb{
+            background-color: red;
+            height: 10rem;
+            width: 10rem;
+            transition: all 1s 0.2s;
+        }
+        .skewb:hover{
+            transform: skew(-20deg);
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Hola</div>
+    <div class="skewb">Linus</div>
+    <div class="box2">Sama</div>
+</body>
+</html>

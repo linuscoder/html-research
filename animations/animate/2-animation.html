@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes desplazarse{
+            0%{
+                left: 0;
+            }
+            25%{
+                left: 25%;
+                background-color: bisque;
+            }
+            50%{
+                left: 50%;
+                background-color: aqua;
+            }
+            75%{
+                left: 75%;
+                background-color: antiquewhite;
+            }
+            100%{
+                left: 96%;
+                background-color: blueviolet;
+            }
+        }
+        .content{
+            background-color: red;
+            width: 4rem;
+            height: 4rem;
+            transition: all 2s;
+
+            position: absolute;
+            animation: desplazarse 5s alternate 4;
+        }
+        .content:hover{
+            width: 9rem;
+            height: 9rem;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes moverse{
+            0%{
+                top:0;
+                left: 0;
+            }
+            25%{
+                top: 0;
+                left: 15rem;
+            }
+            50%{
+                top: 15rem;
+                left: 15rem;
+            }
+            75%{
+                top: 15rem;
+                left: 0;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        
+        }
+        body, html{
+            margin: 0;
+        }
+        .content>div{
+            background-color: rgb(22, 173, 173);
+            height: 7rem;
+            width: 7rem;
+        }
+        .box{
+            animation: moverse linear 4s 1s infinite;
+            position: absolute;
+        }
+        .box2{
+            animation: moverse reverse 4s 1s infinite;
+            position: absolute;
+        }
+        .box3{
+            animation: ir linear 4s 1s infinite;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box">
+        </div>
+        <div class="box2">
+        </div>
+        <div class="box3">
+        </div>
+    </div>
+</body>
+</html>

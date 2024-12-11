@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes desplazar{
+            0%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translate(13rem);
+            }
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            filter: contrast(30);
+            background-color: white;
+            margin-top: 5rem;
+        }
+        #container>div{
+            height: 10rem;
+            width: 10rem;
+            background-color: red;
+            border-radius: 50%;
+            margin: 4.8rem;
+            filter: blur(10px) brightness(0.59);
+        }
+        .box{
+            animation: desplazar 2s alternate 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

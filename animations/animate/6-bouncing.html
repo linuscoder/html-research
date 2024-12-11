@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         @keyframes rebota{
+            0%{
+                transform: translate(0);
+            }
+            15%{
+                transform: translate(98rem, 51rem);
+            }
+            25%{
+                transform: translate(30rem);
+            }
+            35%{
+                transform: translate(0, 51rem);
+            }
+            45%{
+                transform: translate(70rem,0);
+            }
+            50%{
+                transform: translate(98rem, 21rem);
+            }
+            60%{
+                transform: translate(49rem, 51rem);
+            }
+            70%{
+                transform: translate(0);
+            }
+            77%{
+                transform: translate(18rem, 51rem);
+            }
+            87%{
+                transform: translate(98rem, 31rem);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+        html,body{
+            margin: 0;
+        }
+        .ball{
+            height: 7rem;
+            width: 7rem;
+            background-color: red;
+            animation: rebota linear 20s 1s infinite;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="ball">
+        </div>
+    </div>
+</body>
+</html>

@@ -7,7 +7,7 @@ html,body{
 }
 @font-face{
     font-family: netflix;
-    src: url(../fonts/NetflixSans_W_Rg.woff2);
+    src: url(../fonts/regular.woff2);
 }
 body{
     background-image: url(../img/microsoft.jpeg);

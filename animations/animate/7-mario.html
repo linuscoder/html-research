@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes saltar{
+            0%{
+                transform: translate(0);
+            }
+            50%{
+                transform: translate(0,-10rem);
+            }
+            100%{
+                transform: translate(0);
+            }
+        }
+        html, body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            height: 25rem;
+        }
+        .minion{
+            height: 10rem;
+            position: absolute;
+            margin: -22rem 0 0 6rem;
+            animation: saltar alternate steps(15) 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="img2">
+        <img src="../../assets/img/mario.png" alt="" class="minion">
+    </div>
+    <div class="img">
+        <img src="../../assets/img/mario.png" alt="">
+    </div>
+</body>
+</html>
